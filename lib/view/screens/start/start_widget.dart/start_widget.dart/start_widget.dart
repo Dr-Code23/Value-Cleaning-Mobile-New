@@ -22,6 +22,7 @@ class StartWidget extends StatelessWidget {
     return Form(
         child:  Column(
           children: [
+
             ButtonValuCustom(text: TextManager.SIGN_UP,colorManager: ColorManager.colorPrimary,onPressed: (){
               Get.toNamed(PageName.SIGN_UP);
 

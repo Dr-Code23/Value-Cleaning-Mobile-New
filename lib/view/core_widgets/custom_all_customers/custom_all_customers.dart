@@ -43,6 +43,15 @@ class CustomAllCustomers extends StatelessWidget {
                   padding:  EdgeInsets.only(right: 182.w,left: 8.w,top: 8.h,bottom: 8.h),
                   child: Row(
                     children: [
+                      CircleAvatar(
+                        radius: 30.r,
+                        backgroundColor: ColorManager.colorWhite,
+                        child: CircleAvatar(
+                          radius: 30.r,
+                          backgroundImage: NetworkImage("https://th.bing.com/th/id/R.4b38b1945e88a36e2308debb1c766e94?rik=15AY1JjLsPP5PQ&pid=ImgRaw&r=0"),
+                        ),
+                      ),
+                      SizedBox(width: 8.w,),
                       Column(
                         children: [
                           Text(
@@ -55,15 +64,6 @@ class CustomAllCustomers extends StatelessWidget {
                           CustomRattingBar(),
 
                         ],
-                      ),
-                      SizedBox(width: 8.w,),
-                      CircleAvatar(
-                        radius: 30.r,
-                        backgroundColor: ColorManager.colorWhite,
-                        child: CircleAvatar(
-                          radius: 30.r,
-                          backgroundImage: NetworkImage("https://th.bing.com/th/id/R.4b38b1945e88a36e2308debb1c766e94?rik=15AY1JjLsPP5PQ&pid=ImgRaw&r=0"),
-                        ),
                       ),
                     ],
                   ),

@@ -28,20 +28,20 @@ class PriceSummaryCard extends StatelessWidget {
           Padding(
             padding:  EdgeInsets.all(16.sp),
             child: Column (
-              crossAxisAlignment: CrossAxisAlignment.end,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(TextManager.PRICE_SUMMARY,style: getBoldStyle(color: ColorManager.colorDeepGreen,fontSize: 18),),
                 SizedBox(height: 16.h,),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Text("september:",style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 12),),
-                    SizedBox(width: 8.w,),
-                    Text(TextManager.TIME,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 14),),
-                    SizedBox(width: 76.w,),
-                    Text("september:",style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 12),),
-                    SizedBox(width: 8.w,),
                     Text(TextManager.DATE,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 14),),
+                    SizedBox(width: 8.w,),
+                    Text(":september",style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 12),),
+                    SizedBox(width: 76.w,),
+                    Text(TextManager.TIME,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 14),),
+                    SizedBox(width: 8.w,),
+                    Text(":september",style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 12),),
                   ],
                 ),
                 SizedBox(height: 16.h,),

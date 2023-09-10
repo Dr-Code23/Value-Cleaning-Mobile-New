@@ -4,6 +4,8 @@ import 'package:flutter_credit_card/flutter_credit_card.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:value_cleaning/core/color_manager/color_manager.dart';
 import 'package:value_cleaning/core/style_font_manager/style_manager.dart';
+import 'package:value_cleaning/core/text_manager/text_manager.dart';
+import 'package:value_cleaning/view/core_widgets/Check_Box_Widget/Check_Box_Widget.dart';
 import 'package:value_cleaning/view/core_widgets/elevated_button/elevated_button_custom.dart';
 class AddPaymentCardWidget extends StatefulWidget {
   const AddPaymentCardWidget({super.key});
@@ -59,6 +61,15 @@ class AddPaymentCardWidgetState extends State<AddPaymentCardWidget> {
           cardBgColor: ColorManager.colorPrimary,
           isSwipeGestureEnabled: true,
           onCreditCardWidgetChange: (CreditCardBrand creditCardBrand) {},
+        ),
+        SizedBox(height: 16.h,),
+        Padding(
+          padding:  EdgeInsets.only(left: 16.w),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+            CheckBoxWidget(text: TextManager.SAVE_CARD,x: false),
+          ],),
         ),
         Column(
           children: [

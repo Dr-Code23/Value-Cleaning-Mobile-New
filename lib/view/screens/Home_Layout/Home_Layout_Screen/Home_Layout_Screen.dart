@@ -31,17 +31,17 @@ class _LayoutScreenState extends State<LayoutScreen> {
         return Scaffold(
           body: layoutCubit.pageList[LayoutCubit.get(context).currentIndex],
           bottomNavigationBar: CurvedNavigationBar(
-
+            index: 3,
             backgroundColor: ColorManager.colorWhite,
             buttonBackgroundColor: ColorManager.colorPrimary,
             height: 69.h,
             color: ColorManager.colorPrimary,
             animationDuration: Duration(milliseconds: 300),
             items: [
-              SvgPicture.asset(AssetsManager.SETTING,color: ColorManager.colorWhite,),
-              SvgPicture.asset(AssetsManager.CHAT,color: ColorManager.colorWhite,),
-              SvgPicture.asset(AssetsManager.HISTORY,color: ColorManager.colorWhite,),
               SvgPicture.asset(AssetsManager.HOME,color: ColorManager.colorWhite,),
+              SvgPicture.asset(AssetsManager.HISTORY,color: ColorManager.colorWhite,),
+              SvgPicture.asset(AssetsManager.CHAT,color: ColorManager.colorWhite,),
+              SvgPicture.asset(AssetsManager.SETTING,color: ColorManager.colorWhite,),
             ],
             animationCurve: Curves.easeInOut,
             onTap: (index) {

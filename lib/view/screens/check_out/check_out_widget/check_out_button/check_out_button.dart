@@ -6,6 +6,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:value_cleaning/view/screens/check_out/check_out_Screen/check_out_Screen.dart';
+import 'package:value_cleaning/view/screens/order_details/order_details_screen/order_details_screen.dart';
 import 'package:value_cleaning/view/screens/picture/picture_screen/picture_screen.dart';
 
 import '../../../../../core/assets_manager/assets_manager.dart';
@@ -88,9 +89,9 @@ class _CheckOutButtonState extends State<CheckOutButton> {
                              padding:  EdgeInsets.only(right: 30.w),
                              child: Row(
                                children: [
-                                 Text("10805128:",style: getBoldStyle(color: ColorManager.colorDeepGreen,fontSize: 24)),
-                                 SizedBox(width: 2.w,),
                                  Text(TextManager.ORDER_CODE,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 20)),
+                                 SizedBox(width: 2.w,),
+                                 Text("10805128:",style: getBoldStyle(color: ColorManager.colorDeepGreen,fontSize: 24)),
                                ],
                              ),
                            ),
@@ -98,6 +99,11 @@ class _CheckOutButtonState extends State<CheckOutButton> {
                            ElevatedButtonCustom(
                              onPressed: (){
                                Navigator.pop(context);
+                               Get.to(()=>OrderDetailsScreen(),transition: Transition.rightToLeft,duration: Duration(
+                                 milliseconds: 650,
+                               )
+
+                               );
                              },
                                width: 278.w,
                                height: 48.h,
@@ -108,8 +114,6 @@ class _CheckOutButtonState extends State<CheckOutButton> {
                            ),
                          ],
                        ),
-
-
                     ),
                   );
                 },

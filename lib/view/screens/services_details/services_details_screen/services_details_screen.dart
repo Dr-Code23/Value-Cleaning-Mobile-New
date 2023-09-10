@@ -25,17 +25,17 @@ class ServicesDetailsScreen extends StatelessWidget
         children:<Widget> [
           Row(
             children: [
-              Padding(
-                padding:  EdgeInsets.only(bottom: 181.99.h,right: 16.w,top: 61.92.h),
-                child: SvgPicture.asset(AssetsManager.HEART,color: ColorManager.colorPrimary,),
-              ),
               CustomLeftArrowIcon(
                   right: 310,
                   left: 16,
                   top: 60,
                   bottom: 181,
                   onPressed: (){
-              }),
+                  }),
+              Padding(
+                padding:  EdgeInsets.only(bottom: 181.99.h,right: 16.w,top: 61.92.h),
+                child: SvgPicture.asset(AssetsManager.HEART,color: ColorManager.colorPrimary,),
+              ),
             ],
           ),
       Image.asset(
@@ -45,7 +45,7 @@ class ServicesDetailsScreen extends StatelessWidget
           SafeArea(
             child: SingleChildScrollView(
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children:
                 [
                   Padding(
@@ -64,7 +64,7 @@ class ServicesDetailsScreen extends StatelessWidget
                           child: Padding(
                             padding:  EdgeInsets.only(bottom: 20.0.h,left: 16.w),
                             child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.end,
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children:
                               [
                                 ServicesForm(),

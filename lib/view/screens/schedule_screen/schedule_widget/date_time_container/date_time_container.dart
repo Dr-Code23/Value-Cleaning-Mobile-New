@@ -33,15 +33,6 @@ final bool? x;
       ),
       child: Row(
         children: [
-          if(x==true)
-          Padding(
-            padding:  EdgeInsets.only(right: 8.w),
-            child: SvgPicture.asset(AssetsManager.Arrow_Down!,color: ColorManager.colorPrimary,width: 10,height: 10,),
-           ),
-          Padding(
-            padding:  EdgeInsets.only(right: rightPadding!.w),
-            child: Text(text!,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 12),),
-          ),
           Padding(
             padding:  EdgeInsets.only(right: 18.w),
             child: Container(
@@ -54,6 +45,15 @@ final bool? x;
               child: SvgPicture.asset(icon!,color: ColorManager.colorWhite,width: 10,height: 10,),
             ),
           ),
+          Padding(
+            padding:  EdgeInsets.only(right: rightPadding!.w),
+            child: Text(text!,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 12),),
+          ),
+          if(x==true)
+          Padding(
+            padding:  EdgeInsets.only(right: 8.w),
+            child: SvgPicture.asset(AssetsManager.Arrow_Down!,color: ColorManager.colorPrimary,width: 10,height: 10,),
+           ),
 
         ],
       ),

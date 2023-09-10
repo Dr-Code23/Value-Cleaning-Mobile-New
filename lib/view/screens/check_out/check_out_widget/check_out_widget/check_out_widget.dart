@@ -42,19 +42,6 @@ class _CheckOutWidgetState extends State<CheckOutWidget> {
                 ),
                 child: Row(
                   children: [
-                    InkWell(
-                      child: Padding(
-                        padding:  EdgeInsets.only(right: 16.w,left: 0.w,),
-                        child: Text("Add Payment Card",style: getBoldStyle(color: ColorManager.colorPrimary,fontSize: 14),),
-                      ),
-                      onTap: (){
-                        Get.to(()=>AddPaymentCardScreen(),duration: Duration(
-                          milliseconds: 650,
-                        )
-                        );
-
-                      },
-                    ),
                     Padding(
                       padding:  EdgeInsets.only(left: 16.w,right: 8.w),
                       child: Container(
@@ -67,6 +54,19 @@ class _CheckOutWidgetState extends State<CheckOutWidget> {
                           ),
                           child: Center(child: Icon(Icons.add,color: ColorManager.colorPrimary,size: 20,))
                       ),
+                    ),
+                    InkWell(
+                      child: Padding(
+                        padding:  EdgeInsets.only(right: 16.w,left: 0.w,),
+                        child: Text("Add Payment Card",style: getBoldStyle(color: ColorManager.colorPrimary,fontSize: 14),),
+                      ),
+                      onTap: (){
+                        Get.to(()=>AddPaymentCardScreen(),duration: Duration(
+                          milliseconds: 650,
+                        )
+                        );
+
+                      },
                     ),
                   ],
                 ),

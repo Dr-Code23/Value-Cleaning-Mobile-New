@@ -36,6 +36,7 @@ class AssetsManager
   static const String CREDIT_CARD = '${_iconsPath}credit_Card.svg';
   static const String Receipt = '${_iconsPath}receipt.svg';
   static const String CCLOGO = '${_iconsPath}cclogo.svg';
+  static const String search = '${_iconsPath}search.svg';
 
 
 

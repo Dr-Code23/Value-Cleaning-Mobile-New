@@ -51,19 +51,19 @@ int index=0;
       listener: (context,state){},
       builder: (context,state){
         return Column(
-          crossAxisAlignment: CrossAxisAlignment.end,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Column(
-              crossAxisAlignment: CrossAxisAlignment.end,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(height: 24.h,),
                 Padding(
                   padding:  EdgeInsets.only(right: 182.w),
                   child: Row(
                     children: [
-                      Text("(15\$ /m2)",style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 14),),
-                      SizedBox(width: 5.w,),
                       Text(TextManager.WORK_AREA,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 24),),
+                      SizedBox(width: 5.w,),
+                      Text("(15\$ /m2)",style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 14),),
                     ],
                   ),
                 ),
@@ -76,9 +76,9 @@ int index=0;
             SizedBox(height: 8.h,),
             Row(
               children: [
-                DateTimeContainer(icon: AssetsManager.TIME,text: "04:35 pm",rightPadding: 70,width: 170,),
-                SizedBox(width: 16.w,),
                 DateTimeContainer(icon: AssetsManager.DATE,text: "september 21,2023",rightPadding: 15,width: 170,),
+                SizedBox(width: 16.w,),
+                DateTimeContainer(icon: AssetsManager.TIME,text: "04:35 pm",rightPadding: 70,width: 170,),
               ],
             ),
             SizedBox(height: 24.h,),

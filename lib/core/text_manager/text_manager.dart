@@ -19,7 +19,7 @@ class TextManager
   static const String CONFIRM_PASSWORD = "Confirm password";
   static const String OR_SIGN_IN_WITH = "or sign in with";
   static const String WELCOE_BACK = "Welcome back";
-  static const String FORGET_PASSWORD = "? forget password ";
+  static const String FORGET_PASSWORD = " forget password ? ";
   static const String REMEMBER_ME = "Remember me";
   static const String DONT_WORRY = "Dont worry! it's happening";
   static const String ENTER_EMAIL_PHONE_NUMBER = "Enter email/ phone number";
@@ -33,7 +33,7 @@ class TextManager
   static const String SHIPPING_COMPANY = "Shipping Company";
   static const String COMPANY_ID = "Enter company ID";
   static const String HI = "Hi,Dr Code";
-  static const String NEED_SOME_HELP = "? Need Some Help";
+  static const String NEED_SOME_HELP = "Need Some Help ?";
   static const String FIND_IT_HERE = "find it here";
   static const String ALL_CATEGORIES = "All Category";
   static const String OUR_SERVICES = "Our Services";
@@ -79,6 +79,11 @@ class TextManager
   static const String DONE = "Done";
   static const String ADD_PAYMENT_CARD = "Add Payment Card";
   static const String ADD_NEW_CARD = "Add New Card";
+  static const String SAVE_CARD = "Sava Card";
+  static const String TRANSPORT_COMPANIES = "Transport Companies";
+  static const String DOWNLOAD_PDF = "Download as pdf";
+  static const String PAYMENT_SETTING = "Payment Setting";
 
+  static const String DELETE_CARD = "Delete Card";
 
 }

@@ -61,18 +61,6 @@ class CheckOutScreen extends StatelessWidget
                                           child: Row(
                                             children: [
                                               Padding(
-                                                padding:  EdgeInsets.only(right: 16.w,top: 16.w),
-                                                child: Column(
-                                                  children: [
-                                                    SvgPicture.asset(AssetsManager.CCLOGO,width: 45.w,height: 27.61.h,color: ColorManager.colorWhite,),
-                                                    SizedBox(height: 20.19.h,),
-                                                    Text("07/24",style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 14),),
-
-                                                  ],
-                                                ),
-                                              ),
-                                              SizedBox(width: 136.w,),
-                                              Padding(
                                                 padding:  EdgeInsets.only(left: 16.w,top: 16.w),
                                                 child: Column(
                                                   crossAxisAlignment: CrossAxisAlignment.end,
@@ -84,10 +72,21 @@ class CheckOutScreen extends StatelessWidget
                                                   ],
                                                 ),
                                               ),
+                                              SizedBox(width: 136.w,),
+                                              Padding(
+                                                padding:  EdgeInsets.only(right: 16.w,top: 16.w),
+                                                child: Column(
+                                                  children: [
+                                                    SvgPicture.asset(AssetsManager.CCLOGO,width: 45.w,height: 27.61.h,color: ColorManager.colorWhite,),
+                                                    SizedBox(height: 20.19.h,),
+                                                    Text("07/24",style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 14),),
+
+                                                  ],
+                                                ),
+                                              ),
                                             ],
                                           ),
                                         ),
-
                                       ),
                                       SizedBox(height: 11.h,),
                                       Container(

@@ -26,30 +26,6 @@ backgroundColor: Colors.black,
       body: Stack(
         children:<Widget> [
           Padding(
-            padding:EdgeInsets.only(bottom: 30.h,top: 100.h,left: 25.w,right: 0.w),
-            child: Column(
-                 children: [
-                   Text(
-                     TextManager.DEEP_CLEANING,
-                     style: getBoldStyle(color: ColorManager.colorWhite ,
-                         fontSize: 20
-                     ),
-                   ),
-                   SizedBox(height: 15.h,),
-                   Padding(
-                     padding:  EdgeInsets.only(right: 160.w),
-                     child: Row(
-                       children: [
-                         Text("4.5",style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 14),),
-                         SizedBox(width: 16.w,),
-                         CustomRattingBar(),
-                       ],
-                     ),
-                   ),
-                 ],
-               ),
-          ),
-          Padding(
             padding:EdgeInsets.only(bottom: 30.h,top: 90.h,left: 15.w,right: 250.w),
             child: Container(
                 height: 96.h,
@@ -61,12 +37,33 @@ backgroundColor: Colors.black,
                 child:Image.asset(AssetsManager.DEEPCLEANING,width: 72,height: 72,)
             ),
           ),
+          Padding(
+            padding:EdgeInsets.only(bottom: 30.h,top: 100.h,left: 25.w,right: 0.w),
+            child: Column(
+              children: [
+                Text(
+                  TextManager.DEEP_CLEANING,
+                  style: getBoldStyle(color: ColorManager.colorWhite ,
+                      fontSize: 20
+                  ),
+                ),
+                SizedBox(height: 15.h,),
+                Padding(
+                  padding:  EdgeInsets.only(right: 160.w),
+                  child: Row(
+                    children: [
+                      CustomRattingBar(),
+                      SizedBox(width: 16.w,),
+
+                      Text("4.5",style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 14),),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
           Row(
             children: [
-              Padding(
-                padding:  EdgeInsets.only(bottom: 136.h,right: 19.w,top: 59.h),
-                child: SvgPicture.asset(AssetsManager.CHAT,color: ColorManager.colorWhite,),
-              ),
               CustomLeftArrowIcon(
                   color: ColorManager.colorWhite,
                   right: 308,
@@ -75,6 +72,10 @@ backgroundColor: Colors.black,
                   bottom: 135,
                   onPressed: (){
                   }),
+              Padding(
+                padding:  EdgeInsets.only(bottom: 136.h,right: 19.w,top: 59.h),
+                child: SvgPicture.asset(AssetsManager.CHAT,color: ColorManager.colorWhite,),
+              ),
             ],
           ),
           SafeArea(

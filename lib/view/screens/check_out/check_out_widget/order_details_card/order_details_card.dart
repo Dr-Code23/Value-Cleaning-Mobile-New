@@ -28,31 +28,42 @@ class OrderDetailsCard extends StatelessWidget {
           Padding(
             padding:  EdgeInsets.all(16.sp),
             child: Column (
-              crossAxisAlignment: CrossAxisAlignment.end,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(TextManager.ORDER_DETAILS,style: getBoldStyle(color: ColorManager.colorDeepGreen,fontSize: 18),),
                 SizedBox(height: 16.h,),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Text("september:",style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 12),),
-                    SizedBox(width: 8.w,),
-                    Text(TextManager.TIME,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 14),),
-                    SizedBox(width: 76.w,),
-                    Text("september:",style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 12),),
-                    SizedBox(width: 8.w,),
                     Text(TextManager.DATE,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 14),),
+                    SizedBox(width: 8.w,),
+                    Text(":september",style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 12),),
+                    SizedBox(width: 76.w,),
+                    Text(TextManager.TIME,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 14),),
+                    SizedBox(width: 8.w,),
+                    Text(":september",style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 12),),
                   ],
                 ),
                 SizedBox(height: 16.h,),
                 Text(TextManager.ADDRESS,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 14),),
                 SizedBox(height: 8.h,),
-                Text("........opposite ",style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 14),),
+                Text("opposite.... ",style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 14),),
               ],
             ),
           ),
           Row(
             children: [
+              Container(
+                width: 178.w,
+                height: 40.h,
+                decoration: BoxDecoration(
+                    color: ColorManager.colorPrimary,
+                    borderRadius: BorderRadius.only(bottomLeft: Radius.circular(16.r))
+                ),
+                child:Center(child: Text(TextManager.SEE_ALL_DEAILS,style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 14),)),
+
+              ),
+              SizedBox(width: 2.w,),
               Container(
                 width: 178.w,
                 height: 40.h,
@@ -63,17 +74,6 @@ class OrderDetailsCard extends StatelessWidget {
                 child:Center(child: Text(TextManager.EDIT,style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 14),)),
 
               ),
-              SizedBox(width: 2.w,),
-              Container(
-                width: 178.w,
-                height: 40.h,
-                decoration: BoxDecoration(
-                    color: ColorManager.colorPrimary,
-                    borderRadius: BorderRadius.only(bottomLeft: Radius.circular(16.r))
-                ),
-                child:Center(child: Text(TextManager.SEE_ALL_DEAILS,style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 14),)),
-
-              )
             ],
           ),
 

@@ -28,7 +28,6 @@ class HomeScreen extends StatelessWidget
             crossAxisAlignment: CrossAxisAlignment.start,
             children:
             [
-              // search
               Padding(
                 padding:  EdgeInsets.only(top: 48.h,left: 16.w),
                 child: Container(
@@ -43,7 +42,7 @@ class HomeScreen extends StatelessWidget
                   child: Padding(
                     padding:  EdgeInsets.only(bottom: 20.0.h),
                     child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.end,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children:
                       [
                         TopHome(),

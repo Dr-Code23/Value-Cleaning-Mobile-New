@@ -35,6 +35,23 @@ class ServiceDetailsButtons extends StatelessWidget {
                 ),
                 child:Row(
                   children: [
+                    Padding(
+                      padding:  EdgeInsets.all(16.sp),
+                      child: ElevatedButtonCustom(
+                        width: 172.w,
+                        height: 48.h,
+                        radius: 8,
+                        colors: ColorManager.colorDeepBlue,
+                        widget: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            SvgPicture.asset(AssetsManager.CHAT,color: ColorManager.colorWhite,),
+                            SizedBox(width: 8.w,),
+                            Text(TextManager.CHAT,style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 18),)
+                          ],
+                        ),
+                      ),
+                    ),
                     Row(
                       children: [
                         Padding(
@@ -62,23 +79,6 @@ class ServiceDetailsButtons extends StatelessWidget {
                           ),
                         ),
                       ],
-                    ),
-                    Padding(
-                      padding:  EdgeInsets.all(16.sp),
-                      child: ElevatedButtonCustom(
-                        width: 172.w,
-                        height: 48.h,
-                        radius: 8,
-                        colors: ColorManager.colorDeepBlue,
-                        widget: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            SvgPicture.asset(AssetsManager.CHAT,color: ColorManager.colorWhite,),
-                            SizedBox(width: 8.w,),
-                            Text(TextManager.CHAT,style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 18),)
-                          ],
-                        ),
-                      ),
                     ),
                   ],
                 )

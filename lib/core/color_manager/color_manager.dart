@@ -20,5 +20,6 @@ class   ColorManager
   static const Color colorGrey2 = Color(0xffC5C5C5);
   static const Color colorDeepGreen = Color(0xff00702D);
   static const Color colorBlue = Color(0xff017BAB);
+  static const Color colorLightBlue = Color(0xff0099D6);
 
 }

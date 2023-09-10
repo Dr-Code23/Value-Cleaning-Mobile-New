@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
           splitScreenMode: true,
           builder: (context , child) {
             return GetMaterialApp(
-              locale: const Locale('ar'),
+              locale: const Locale('en'),
               debugShowCheckedModeBanner: false,
               initialRoute: PageName.TRANSLATION_PAGE,
               title: 'Everest',

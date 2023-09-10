@@ -16,6 +16,17 @@ class TopHome extends StatelessWidget {
     return  Row(
       children: [
         Padding(
+          padding:  EdgeInsets.only(right: 140.w),
+          child: Column(
+            children: [
+              Text(TextManager.HI,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 24),),
+              Text(TextManager.NEED_SOME_HELP,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 14),),
+            ],
+          ),
+        ),
+        SvgPicture.asset(AssetsManager.NOTIFICATION,color: ColorManager.colorBlack,),
+        SizedBox(width: 16.w,),
+        Padding(
           padding:  EdgeInsets.only(right: 16.w),
           child: CircleAvatar(
             radius: 30.r,
@@ -24,17 +35,6 @@ class TopHome extends StatelessWidget {
               radius: 30.r,
               backgroundImage: NetworkImage("https://th.bing.com/th/id/R.4b38b1945e88a36e2308debb1c766e94?rik=15AY1JjLsPP5PQ&pid=ImgRaw&r=0"),
             ),
-          ),
-        ),
-        SizedBox(width: 16.w,),
-        SvgPicture.asset(AssetsManager.NOTIFICATION,color: ColorManager.colorBlack,),
-        Padding(
-          padding:  EdgeInsets.only(right: 140.w),
-          child: Column(
-            children: [
-              Text(TextManager.HI,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 24),),
-              Text(TextManager.NEED_SOME_HELP,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 14),),
-            ],
           ),
         ),
       ],

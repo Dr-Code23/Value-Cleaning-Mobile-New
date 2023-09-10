@@ -14,6 +14,15 @@ class OtherRowWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Row(
       children: [
+        Padding(
+        padding:  EdgeInsets.only(right: 140.w),
+        child: Row(
+          children: [
+            Text(TextManager.ROOM,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 18),),
+            Text("(15\$)",style: getBoldStyle(color: ColorManager.colorGrey,fontSize: 14),),
+          ],
+        ),
+      ),
         Container(
           width: 136.w,
           height: 32.h,
@@ -23,6 +32,19 @@ class OtherRowWidget extends StatelessWidget {
           ),
           child: Row(
             children: [
+              Container(
+                width: 30.w,
+                height: 30.h,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8.r),
+                  color: ColorManager.colorPrimary,
+                ),
+                child:SvgPicture.asset(AssetsManager.MINUS,width: 5.w,height: 5.h,) ,
+              ),
+              Padding(
+                padding:  EdgeInsets.only(right: 0.w,left: 30.w),
+                child: Text("1"),
+              ),
               Padding(
                 padding:  EdgeInsets.only(left: 35),
                 child: Container(
@@ -35,29 +57,7 @@ class OtherRowWidget extends StatelessWidget {
                   child:SvgPicture.asset(AssetsManager.ADD,width: 19.w,height: 5.h,) ,
                 ),
               ),
-              Padding(
-                padding:  EdgeInsets.only(right: 0.w,left: 30.w),
-                child: Text("1"),
-              ),
-              Container(
-                width: 30.w,
-                height: 30.h,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8.r),
-                  color: ColorManager.colorPrimary,
-                ),
-                child:SvgPicture.asset(AssetsManager.MINUS,width: 5.w,height: 5.h,) ,
-              ),
 
-            ],
-          ),
-        ),
-        Padding(
-          padding:  EdgeInsets.only(right: 140.w),
-          child: Row(
-            children: [
-              Text("(15\$)",style: getBoldStyle(color: ColorManager.colorGrey,fontSize: 14),),
-              Text(TextManager.ROOM,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 18),),
             ],
           ),
         ),

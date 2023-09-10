@@ -7,6 +7,7 @@ import '../../../../../model/top_services_model/top_services_model.dart';
 import '../../../../core_widgets/custom_card_offer/custom_card_offer.dart';
 import '../../../../core_widgets/custom_category/custom_category.dart';
 import '../../../../core_widgets/custom_top_services/custom_top_services.dart';
+import '../../../../core_widgets/custom_transport_companies/custom_transport_compaines.dart';
 
 
 

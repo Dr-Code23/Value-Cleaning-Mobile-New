@@ -36,6 +36,11 @@ class NextButtonWidget extends StatelessWidget {
             ),
             child:Row(
               children: [
+                Padding(
+                    padding:  EdgeInsets.only(right: 100.w,bottom: 10.h,left: 20.w),
+                    child: Text("(50\$)",style: getBoldStyle(color: ColorManager.colorPrimary,fontSize: 18),)
+
+                ),
                 Row(
                   children: [
                     Padding(
@@ -62,11 +67,6 @@ class NextButtonWidget extends StatelessWidget {
                       ),
                     ),
                   ],
-                ),
-                Padding(
-                  padding:  EdgeInsets.only(right: 100.w,bottom: 10.h),
-                  child: Text("(50\$)",style: getBoldStyle(color: ColorManager.colorPrimary,fontSize: 18),)
-
                 ),
               ],
             )

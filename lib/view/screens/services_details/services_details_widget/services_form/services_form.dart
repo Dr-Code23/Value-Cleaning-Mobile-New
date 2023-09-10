@@ -18,16 +18,12 @@ class ServicesForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Column(
-      crossAxisAlignment: CrossAxisAlignment.end,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Row(
           children: [
-            Padding(
-              padding:  EdgeInsets.only(right: 16.w),
-              child: Text("15 \$ /hr",style: getBoldStyle(color: ColorManager.colorGreen,fontSize: 18),),
-            ),
             Column(
-              crossAxisAlignment: CrossAxisAlignment.end,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(height: 16.h,),
                 Text(TextManager.DEEP_CLEANING,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 24),),
@@ -39,20 +35,21 @@ class ServicesForm extends StatelessWidget {
                       Text("4.5",style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 14),),
                       SizedBox(width: 16.w,),
                       CustomRattingBar(),
-
                     ],
                   ),
                 ),
               ],
+            ),
+            Padding(
+              padding:  EdgeInsets.only(right: 16.w),
+              child: Text("15 \$ /hr",style: getBoldStyle(color: ColorManager.colorGreen,fontSize: 18),),
             ),
           ],
         ),
         SizedBox(height: 32.h,),
         Text(TextManager.ABOUT_THIS_SERVICE,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 18),),
         SizedBox(height: 16.h,),
-        Directionality(
-            textDirection: TextDirection.ltr,
-            child: Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam....",maxLines: 3,overflow: TextOverflow.ellipsis,style: getBoldStyle(color: ColorManager.colorLightGrey,fontSize: 14),)),
+        Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam....",maxLines: 3,overflow: TextOverflow.ellipsis,style: getBoldStyle(color: ColorManager.colorLightGrey,fontSize: 14),),
         SizedBox(height: 24.h,),
         Container(
           width: 365.w,
@@ -64,6 +61,7 @@ class ServicesForm extends StatelessWidget {
 
           child: Row(
             children: [
+              Text(TextManager.JOBS_DONE,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 16),),
               Padding(
                 padding:  EdgeInsets.only(left: 180),
                 child: Container(
@@ -86,14 +84,17 @@ class ServicesForm extends StatelessWidget {
                   ),
                 ),
               ),
-              Text(TextManager.JOBS_DONE,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 16),),
             ],
           ),
         ),
         SizedBox(height: 24.h,),
         Row(
-          mainAxisAlignment: MainAxisAlignment.end,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
+            Text(TextManager.REVIEWS,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 18),),
+            Text("(15)",style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 14),),
+            SizedBox(width: 210.w,),
+            SizedBox(width: 8.w,),
             InkWell(
                 onTap: (){
                   Get.to(()=>ReviewScreen(),transition: Transition.leftToRight,duration: Duration(
@@ -102,10 +103,7 @@ class ServicesForm extends StatelessWidget {
                   );
                 },
                 child: Text(TextManager.SEE_ALL,style: getBoldStyle(color: ColorManager.colorPrimary,fontSize: 14),)),
-            SizedBox(width: 210.w,),
-            Text("(15)",style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 14),),
-            SizedBox(width: 8.w,),
-            Text(TextManager.REVIEWS,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 18),),
+
           ],
         ),
       ],

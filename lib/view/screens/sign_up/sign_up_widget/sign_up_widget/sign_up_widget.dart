@@ -36,15 +36,15 @@ String selectedValue=TextManager.USER;
             Expanded(
               child: RadioListTile(
                 contentPadding: EdgeInsets.zero,
-                value: TextManager.SHIPPING_COMPANY,
                 activeColor: ColorManager.colorPrimary,
+                title: Text(TextManager.USER),
+                value: TextManager.USER,
                 groupValue: selectedValue,
                 onChanged: (value) {
                   setState(() {
                     selectedValue = value as String;
                   });
                 },
-                title: Text(TextManager.SHIPPING_COMPANY),
               ),
             ),
             Expanded(
@@ -64,15 +64,15 @@ String selectedValue=TextManager.USER;
             Expanded(
               child: RadioListTile(
                 contentPadding: EdgeInsets.zero,
+                value: TextManager.SHIPPING_COMPANY,
                 activeColor: ColorManager.colorPrimary,
-                title: Text(TextManager.USER),
-                value: TextManager.USER,
                 groupValue: selectedValue,
                 onChanged: (value) {
                   setState(() {
                     selectedValue = value as String;
                   });
                 },
+                title: Text(TextManager.SHIPPING_COMPANY),
               ),
             ),
           ],
