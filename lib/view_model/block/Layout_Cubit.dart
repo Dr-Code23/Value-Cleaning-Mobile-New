@@ -17,9 +17,9 @@ class LayoutCubit extends Cubit<LayoutState> {
 
   List<Widget> pageList = [
     HomeScreen(),
-    OrderHistoryScreen(),
-    HomeTransportScreen(),
-    SoylentCorpScreen(),
+    HomeScreen(),
+    HomeScreen(),
+    HomeScreen(),
 
     // ProfileScreen(),
   ];
