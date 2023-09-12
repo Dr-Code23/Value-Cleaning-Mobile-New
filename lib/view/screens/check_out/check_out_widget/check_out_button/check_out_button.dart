@@ -2,19 +2,11 @@ import 'package:confetti/confetti.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:value_cleaning/view/screens/check_out/check_out_Screen/check_out_Screen.dart';
-import 'package:value_cleaning/view/screens/order_details/order_details_screen/order_details_screen.dart';
-import 'package:value_cleaning/view/screens/picture/picture_screen/picture_screen.dart';
-
-import '../../../../../core/assets_manager/assets_manager.dart';
 import '../../../../../core/color_manager/color_manager.dart';
-import '../../../../../core/route_manager/page_name.dart';
 import '../../../../../core/style_font_manager/style_manager.dart';
 import '../../../../../core/text_manager/text_manager.dart';
 import '../../../../core_widgets/elevated_button/elevated_button_custom.dart';
+import '../show_dialog_button/show_dialog_button.dart';
 class CheckOutButton extends StatefulWidget {
   @override
   State<CheckOutButton> createState() => _CheckOutButtonState();
@@ -30,7 +22,6 @@ class _CheckOutButtonState extends State<CheckOutButton> {
     super.initState();
 
   }
-
   @override
   Widget build(BuildContext context) {
 
@@ -71,9 +62,9 @@ class _CheckOutButtonState extends State<CheckOutButton> {
                        title:  Column(
                          children: [
                            Center(child: Text(TextManager.PAYMENT_SUCCESSFLY,style: getBoldStyle(color: ColorManager.colorDeepGreen,fontSize: 24) ,)),
-                           SizedBox(height: 291.h,),
+                           SizedBox(height: 50.h,),
                            Align(
-                             alignment: Alignment.center,
+                             alignment: Alignment.topCenter,
                              child: ConfettiWidget(
                                confettiController: _confettiController,
                                maxBlastForce: 100,
@@ -85,6 +76,7 @@ class _CheckOutButtonState extends State<CheckOutButton> {
                                gravity: 1,
                              ),
                            ),
+                           SizedBox(height: 100.h,),
                            Padding(
                              padding:  EdgeInsets.only(right: 30.w),
                              child: Row(
@@ -96,22 +88,7 @@ class _CheckOutButtonState extends State<CheckOutButton> {
                              ),
                            ),
                            SizedBox(height: 50.h,),
-                           ElevatedButtonCustom(
-                             onPressed: (){
-                               Navigator.pop(context);
-                               Get.to(()=>OrderDetailsScreen(),transition: Transition.rightToLeft,duration: Duration(
-                                 milliseconds: 650,
-                               )
-
-                               );
-                             },
-                               width: 278.w,
-                               height: 48.h,
-                               radius: 8,
-                               colors: ColorManager.colorPrimary,
-                               widget: Text(TextManager.DONE,style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 18),)
-
-                           ),
+                           ShowDialogButton(),
                          ],
                        ),
                     ),
@@ -122,7 +99,6 @@ class _CheckOutButtonState extends State<CheckOutButton> {
                 radius: 8,
                 colors: ColorManager.colorPrimary,
                 widget: Text(TextManager.PAYMENT_CONFIRMATIO,style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 18),)
-
               ),
             )
 
