@@ -39,9 +39,9 @@ class _PictureWidgetState extends State<PictureWidget> {
                 height: 171.h,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(16.w,),
-                    border: Border.all(color: ColorManager.colorDeepGrey)
+                  image: DecorationImage(image: AssetImage(AssetsManager.PHOTO)),
                 ),
-                child: Icon(Icons.add,color: ColorManager.colorDeepGrey,size: 80.sp,)
+                child: Icon(Icons.add,color: ColorManager.colorLightBlack,size: 80.sp,)
             ),
             SizedBox(height: 16.h,),
             Container(

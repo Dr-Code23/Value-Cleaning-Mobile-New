@@ -14,8 +14,8 @@ import '../../elevated_button/elevated_button_custom.dart';
 
 
 class NextButtonWidget extends StatelessWidget {
-  final Widget? pushTo;
-  const NextButtonWidget({super.key, this.pushTo});
+  final Function? onPressed;
+  const NextButtonWidget({super.key, this.onPressed});
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -45,12 +45,7 @@ class NextButtonWidget extends StatelessWidget {
                     Padding(
                       padding:  EdgeInsets.only(right: 16.w,top: 16.h,bottom: 16.h),
                       child: ElevatedButtonCustom(
-                        onPressed: (){
-                          Get.to(()=>pushTo!,transition: Transition.leftToRight,duration: Duration(
-                            milliseconds: 650,
-                          )
-                          );
-                        },
+                        onPressed:onPressed!,
                         width: 172.w,
                         height: 48.h,
                         radius: 8,

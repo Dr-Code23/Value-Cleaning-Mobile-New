@@ -2,10 +2,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/src/routes/transitions_type.dart';
 import 'package:value_cleaning/core/style_font_manager/style_manager.dart';
 import 'package:value_cleaning/core/text_manager/text_manager.dart';
 import 'package:value_cleaning/view/core_widgets/custom_arrow_left/custom_arrow_left.dart';
 import 'package:value_cleaning/view/core_widgets/elevated_button/elevated_button_custom.dart';
+import 'package:value_cleaning/view/screens/check_out/check_out_Screen/check_out_Screen.dart';
 import '../../../../core/assets_manager/assets_manager.dart';
 import '../../../../core/color_manager/color_manager.dart';
 import '../../../core_widgets/next_button_Widget/next_button_Widget/next_button_Widget.dart';
@@ -57,7 +61,12 @@ backgroundColor: ColorManager.colorScaffold,
                                     ],
                                   ),
                                 ),
-                                NextButtonWidget(pushTo: PictureScreen()),
+                                NextButtonWidget(onPressed: (){
+                                  Get.to(()=>CheckOutScreen()!,transition: Transition.leftToRight,duration: Duration(
+                                    milliseconds: 650,
+                                  )
+                                  );
+                                },),
                               ],
                             ),
                           ),

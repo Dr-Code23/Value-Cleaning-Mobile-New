@@ -9,6 +9,8 @@ import 'package:value_cleaning/view/core_widgets/Check_Box_Widget/Check_Box_Widg
 import 'package:value_cleaning/view/core_widgets/elevated_button/elevated_button_custom.dart';
 
 import '../add_paymaent_butttom/add_payment_button.dart';
+import '../card_widget/card_widget.dart';
+import '../credit_Card_form/credit_Card_Form.dart';
 class AddPaymentCardWidget extends StatefulWidget {
   const AddPaymentCardWidget({super.key});
 
@@ -44,26 +46,7 @@ class AddPaymentCardWidgetState extends State<AddPaymentCardWidget> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        CreditCardWidget(
-          glassmorphismConfig:
-          useGlassMorphism ? Glassmorphism.defaultConfig() : null,
-          cardNumber: cardNumber,
-          expiryDate: expiryDate,
-          cardHolderName: cardHolderName,
-          cvvCode: cvvCode,
-          bankName: 'Axis Bank',
-          frontCardBorder:
-          !useGlassMorphism ? Border.all(color: Colors.grey) : null,
-          backCardBorder:
-          !useGlassMorphism ? Border.all(color: Colors.grey) : null,
-          showBackView: isCvvFocused,
-          obscureCardNumber: true,
-          obscureCardCvv: true,
-          isHolderNameVisible: true,
-          cardBgColor: ColorManager.colorPrimary,
-          isSwipeGestureEnabled: true,
-          onCreditCardWidgetChange: (CreditCardBrand creditCardBrand) {},
-        ),
+        CardWidget(cardHolderName: cardHolderName,cardNumber: cardNumber,cvvCode: cvvCode,expiryDate: expiryDate,isCvvFocused: isCvvFocused,useGlassMorphism: useGlassMorphism),
         SizedBox(height: 16.h,),
         Padding(
           padding:  EdgeInsets.only(left: 16.w),
@@ -75,52 +58,7 @@ class AddPaymentCardWidgetState extends State<AddPaymentCardWidget> {
         ),
         Column(
           children: [
-            CreditCardForm(
-              formKey: formKey,
-              obscureCvv: true,
-              obscureNumber: true,
-              cardNumber: cardNumber,
-              cvvCode: cvvCode,
-              isHolderNameVisible: true,
-              isCardNumberVisible: true,
-              isExpiryDateVisible: true,
-              cardHolderName: cardHolderName,
-              expiryDate: expiryDate,
-              themeColor: Colors.blue,
-              textColor: ColorManager.colorPrimary,
-              cardNumberDecoration: InputDecoration(
-                labelText: 'Number',
-                hintText: 'XXXX XXXX XXXX XXXX',
-                hintStyle: const TextStyle(color: ColorManager.colorPrimary),
-                labelStyle: const TextStyle(color: ColorManager.colorPrimary),
-                focusedBorder: border,
-                enabledBorder: border,
-              ),
-              expiryDateDecoration: InputDecoration(
-                hintStyle: const TextStyle(color: ColorManager.colorPrimary),
-                labelStyle: const TextStyle(color: ColorManager.colorPrimary),
-                focusedBorder: border,
-                enabledBorder: border,
-                labelText: 'Expired Date',
-                hintText: 'XX/XX',
-              ),
-              cvvCodeDecoration: InputDecoration(
-                hintStyle: const TextStyle(color: ColorManager.colorPrimary),
-                labelStyle: const TextStyle(color: ColorManager.colorPrimary),
-                focusedBorder: border,
-                enabledBorder: border,
-                labelText: 'CVV',
-                hintText: 'XXX',
-              ),
-              cardHolderDecoration: InputDecoration(
-                hintStyle: const TextStyle(color: ColorManager.colorPrimary),
-                labelStyle: const TextStyle(color: ColorManager.colorPrimary),
-                focusedBorder: border,
-                enabledBorder: border,
-                labelText: 'Card Holder',
-              ),
-              onCreditCardModelChange: onCreditCardModelChange,
-            ),
+            CardForm(border: border,cardNumber: cardNumber,cardHolderName: cardHolderName,expiryDate: expiryDate,cvvCode: cvvCode,formKey: formKey, ),
             SizedBox(
               height: 10.h,
             ),
@@ -166,15 +104,5 @@ class AddPaymentCardWidgetState extends State<AddPaymentCardWidget> {
         ),
       ],
     );
-  }
-
-  void onCreditCardModelChange(CreditCardModel? creditCardModel) {
-    setState(() {
-      cardNumber = creditCardModel!.cardNumber;
-      expiryDate = creditCardModel.expiryDate;
-      cardHolderName = creditCardModel.cardHolderName;
-      cvvCode = creditCardModel.cvvCode;
-      isCvvFocused = creditCardModel.isCvvFocused;
-    });
   }
 }

@@ -1,11 +1,11 @@
-class CreditCardModel {
+class CreditCardWidgetModel {
   final String cardNumber;
   final String expiryDate;
   final String cardHolderName;
   final String cvvCode;
   final bool showBackView;
 
-  CreditCardModel(
+  CreditCardWidgetModel(
       {required this.cardNumber,
         required this.expiryDate,
         required this.cardHolderName,
@@ -13,8 +13,8 @@ class CreditCardModel {
         required this.showBackView});
 }
 
-List<CreditCardModel> listData = [
-  CreditCardModel(
+List<CreditCardWidgetModel> listData = [
+  CreditCardWidgetModel(
       cardHolderName: 'Alice',
       cardNumber: '5242424242424242',
       cvvCode: '124',

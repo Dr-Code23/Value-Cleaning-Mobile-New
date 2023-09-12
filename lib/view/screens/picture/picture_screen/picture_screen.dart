@@ -2,9 +2,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:value_cleaning/core/style_font_manager/style_manager.dart';
 import 'package:value_cleaning/core/text_manager/text_manager.dart';
 import 'package:value_cleaning/view/core_widgets/custom_arrow_left/custom_arrow_left.dart';
+import 'package:value_cleaning/view/screens/payment/payment_screen/payment_screen.dart';
 import 'package:value_cleaning/view/screens/picture/picture_widget/picture_widget.dart';
 import '../../../../core/assets_manager/assets_manager.dart';
 import '../../../../core/color_manager/color_manager.dart';
@@ -55,7 +58,12 @@ class PictureScreen extends StatelessWidget
                                     ],
                                   ),
                                 ),
-                                NextButtonWidget(pushTo: CheckOutScreen()),
+                                NextButtonWidget(onPressed: (){
+                                  Get.to(()=>PaymentMethodScreen()!,transition: Transition.leftToRight,duration: Duration(
+                                    milliseconds: 650,
+                                  )
+                                  );
+                                },),
                               ],
                             ),
                           ),

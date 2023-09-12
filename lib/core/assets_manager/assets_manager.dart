@@ -15,6 +15,7 @@ class AssetsManager
   static const String BACK_GROUMD_CARD = '${_imagesPath}back_ground_Card.png';
   static const String QR_CODE_image = '${_imagesPath}QR_CODE.png';
   static const String back_Ground = '${_imagesPath}back_Ground.png';
+  static const String PHOTO = '${_imagesPath}photo.png';
 
 
   // icons
@@ -45,6 +46,7 @@ class AssetsManager
   static const String soylant = '${_iconsPath}soylant_corp.svg';
   static const String CALL = '${_iconsPath}call.svg';
   static const String EMAIL = '${_iconsPath}email.svg';
+  static const String ADD_PHOTP = '${_iconsPath}addphoto.svg';
 
 
 

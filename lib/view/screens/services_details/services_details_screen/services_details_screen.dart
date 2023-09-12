@@ -83,7 +83,6 @@ class ServicesDetailsScreen extends StatelessWidget
                         ),
                       ),
                       ServiceDetailsButtons(),
-
                     ],
                   ),
                 ],

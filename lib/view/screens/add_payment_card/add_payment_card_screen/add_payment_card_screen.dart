@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_credit_card/credit_card_brand.dart';
-import 'package:flutter_credit_card/flutter_credit_card.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:value_cleaning/core/color_manager/color_manager.dart';
 import 'package:value_cleaning/core/style_font_manager/style_manager.dart';
 import 'package:value_cleaning/view/core_widgets/elevated_button/elevated_button_custom.dart';
-
 import '../../../../core/text_manager/text_manager.dart';
 import '../../../core_widgets/tab_bar_widget/tab_bar_widget.dart';
 import '../add_payment_card_widget.dart/add_payment_Card_Widget/add_payment_card_widget.dart.dart';
