@@ -57,7 +57,7 @@ final bool ? disable;
               side: BorderSide(color: borderColor!, width: 1),
             ), backgroundColor: colors ,
             elevation: elevation,
-            textStyle: TextStyle(fontWeight: FontWeight.bold,fontSize: 400),
+            textStyle: const TextStyle(fontWeight: FontWeight.bold,fontSize: 400),
             fixedSize: Size(width!.w, height!.h),
 
             // padding:

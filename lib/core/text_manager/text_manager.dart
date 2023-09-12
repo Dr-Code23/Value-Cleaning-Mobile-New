@@ -79,6 +79,38 @@ class TextManager
   static const String DONE = "Done";
   static const String ADD_PAYMENT_CARD = "Add Payment Card";
   static const String ADD_NEW_CARD = "Add New Card";
+  static const String USER_PROFILE = "User Profile";
+  static const String PROFILE_SETTINGS = "Profile Settings";
+  static const String FAVOURITE_LIST = "Favourite\nList";
+  static const String PAYMENT_SETTINGS = "Payment\nSettings";
+  static const String TERMS_AND_CONDITIONS = "Terms and conditions";
+  static const String FAQS = "FAQ'S";
+  static const String CONTACT_US = "Contact Us";
+  static const String CHAT_WITH_US = "Chat with us";
+  static const String PHONE_CALL = "Phone call";
+  static const String WEBSITE = "Website";
+  static const String EMAIL_ADDRESS = "E-mail address";
+  static const String ADD_ADDRESS = "Add Address";
+  static const String LOG_OUT = "Log out";
+  static const String ACCOUNT= "Account";
+  static const String SAVE_CHANGE= "Save Change";
+  static const String CHANGE_PASSWORD= "Change Password";
+  static const String OLD_PASSWORD= "Old Password";
+  static const String NEW_PASSWORD= "New Password";
+  static const String NOTIFICATIONS= "Notifications";
+  static const String DISCOUNT= "Discount";
+  static const String RATE_EXPERIENCE= "Rate experience";
+  static const String RATE_OVER_EXPERIENCE= "Rate overall experience";
+  static const String SUBMIT_FEEDBACK= "Submit Feedback";
+  static const String THANKS_FOR_RATING= "Thanks for rating us";
+  static const String DELETE_ACCOUNT= 'Delete Account';
+  static const String DELETE= 'Delete';
+  static const String SURE_DELETE= 'Are you sure to delete your account ?';
+  static const String SURE_LOG_OUT= 'Are you sure to log out?';
+  static const String YES= 'YES';
+  static const String NO= 'NO';
+
+
 
 
 }

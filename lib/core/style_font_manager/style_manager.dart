@@ -33,7 +33,7 @@ TextStyle getLightStyle(
 }
 TextStyle getLight2Style(
     {double fontSize = 12, required Color color}) {
-  return _getTextStyle(fontSize, color, FontWeight.bold);
+  return _getTextStyle(fontSize, color,FontWeight.w600);
 }
 
 // bold style

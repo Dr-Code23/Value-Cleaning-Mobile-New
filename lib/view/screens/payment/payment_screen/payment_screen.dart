@@ -22,7 +22,7 @@ class PaymentMethodScreen extends StatelessWidget
 backgroundColor: ColorManager.colorScaffold,
         body: Stack(
           children:<Widget> [
-            TabBarWidget(text: TextManager.PAYMENT_METHOD,rightPadding: 78.08,rightPaddingText: 100,),
+            const TabBarWidget(text: TextManager.PAYMENT_METHOD,rightPadding: 78.08,rightPaddingText: 100,),
             SafeArea(
               child: SingleChildScrollView(
                 child: Column(

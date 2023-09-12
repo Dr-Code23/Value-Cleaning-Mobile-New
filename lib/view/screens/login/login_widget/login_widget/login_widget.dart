@@ -53,7 +53,7 @@ class LoginWidget extends StatelessWidget {
                           },
                           child: Text(TextManager.FORGET_PASSWORD,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 14),)),
                       SizedBox(width: 89.w,),
-                      CheckBoxWidget(text: TextManager.REMEMBER_ME,x: false,Price: '9'),
+                      const CheckBoxWidget(text: TextManager.REMEMBER_ME,x: false,Price: '9'),
 
                     ],
                   ),
@@ -62,7 +62,7 @@ class LoginWidget extends StatelessWidget {
                     Get.toNamed(PageName.LAYOUT);
 
                   },),
-                  SignInWithGoogleOrFaceBook(),
+                  const SignInWithGoogleOrFaceBook(),
 
                 ],
               ),

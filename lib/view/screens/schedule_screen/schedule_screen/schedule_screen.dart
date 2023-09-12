@@ -16,7 +16,7 @@ import '../../services_details/services_details_widget/services_form/services_fo
 import '../schedule_widget/schedule_form/schedule_form.dart';
 class ScheduleScreen extends StatelessWidget
 {
-   ScheduleScreen({super.key});
+   const ScheduleScreen({super.key});
   // Initial Selected Value
   @override
   Widget build(BuildContext context)
@@ -42,7 +42,7 @@ backgroundColor: Colors.black,
                        children: [
                          Text("4.5",style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 14),),
                          SizedBox(width: 16.w,),
-                         CustomRattingBar(),
+                         const CustomRattingBar(),
                        ],
                      ),
                    ),
