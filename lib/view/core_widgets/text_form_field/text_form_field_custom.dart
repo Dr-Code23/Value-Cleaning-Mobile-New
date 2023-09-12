@@ -108,7 +108,7 @@ class TextFormFieldCustom extends StatelessWidget {
               },
               onSaved: onSaved,
               keyboardType: keyboardType,
-              cursorColor: ColorManager.colorWhite,
+              cursorColor: ColorManager.colorPrimary,
               onTap: () {
                 onTab != null ? onTab!() : null;
               },
@@ -190,7 +190,7 @@ class TextFormFieldCustom extends StatelessWidget {
                 labelText: label,
                 hintText: hint,
                 hintStyle: TextStyle(
-                  color: ColorManager.colorLightBlack,
+                  color: ColorManager.colorGrey,
                   fontSize: 14.sp,
                   fontWeight: FontWeight.bold,
                 ),

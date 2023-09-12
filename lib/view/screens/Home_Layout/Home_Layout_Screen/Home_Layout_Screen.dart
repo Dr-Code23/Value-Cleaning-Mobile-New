@@ -36,7 +36,7 @@ class _LayoutScreenState extends State<LayoutScreen> {
             buttonBackgroundColor: ColorManager.colorPrimary,
             height: 69.h,
             color: ColorManager.colorPrimary,
-            animationDuration: Duration(milliseconds: 300),
+            animationDuration: const Duration(milliseconds: 300),
             items: [
               SvgPicture.asset(AssetsManager.HOME,color: ColorManager.colorWhite,),
               SvgPicture.asset(AssetsManager.HISTORY,color: ColorManager.colorWhite,),

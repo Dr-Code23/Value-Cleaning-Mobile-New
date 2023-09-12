@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:value_cleaning/core/assets_manager/assets_manager.dart';
+import 'package:get/get.dart';
 
 import '../../../core/color_manager/color_manager.dart';
 import '../../../core/style_font_manager/style_manager.dart';
@@ -26,17 +27,22 @@ final bool? isSearch;
       height: height!.h,
       decoration: BoxDecoration(
         color: ColorManager.colorGreen,
-        borderRadius: BorderRadius.circular(16.r),
+        borderRadius: BorderRadius.only(bottomLeft: Radius.circular(16.w),bottomRight: Radius.circular(16.w)),
       ),
       child:  Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
+          const Spacer(flex: 4),
+          Text(text!,style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 22,),),
+          const Spacer(flex: 1,),
           CustomLeftArrowIcon(
               color: ColorManager.colorWhite,
-              right:rightPadding,
-              left: 16,
-              top: 60,
+              right:rightPadding!.w,
+              left: 16.w,
+              top: 20.h,
               bottom: bottomIcon!,
               onPressed: (){
+                Get.back();
               }),
           Padding(
             padding:  EdgeInsets.only(right: rightPaddingText!.w,top: 59.h,bottom: bottomText!.h),

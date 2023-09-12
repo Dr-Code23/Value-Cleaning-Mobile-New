@@ -16,6 +16,7 @@ class AssetsManager
   static const String QR_CODE_image = '${_imagesPath}QR_CODE.png';
   static const String back_Ground = '${_imagesPath}back_Ground.png';
   static const String PHOTO = '${_imagesPath}photo.png';
+  static const String THANKS_RATING = '${_imagesPath}thanks_rating.jpg';
 
 
   // icons
@@ -47,6 +48,19 @@ class AssetsManager
   static const String CALL = '${_iconsPath}call.svg';
   static const String EMAIL = '${_iconsPath}email.svg';
   static const String ADD_PHOTP = '${_iconsPath}addphoto.svg';
+  static const String FAV = '${_iconsPath}fav.svg';
+  static const String FAQ = '${_iconsPath}faq.svg';
+  static const String WEBSITE = '${_iconsPath}website.svg';
+  static const String EMAIL = '${_iconsPath}email.svg';
+  static const String LOG_OUT = '${_iconsPath}log_out.svg';
+  static const String PHONE_CALL = '${_iconsPath}phone_call.svg';
+  static const String CONTACT_US = '${_iconsPath}contact_us.svg';
+  static const String PERSON = '${_iconsPath}person.svg';
+  static const String PHOTO = '${_iconsPath}take_photo.svg';
+  static const String EDIT = '${_iconsPath}edit.svg';
+  static const String CLEANING = '${_iconsPath}cleaning.svg';
+  static const String GIFT = '${_iconsPath}gift.svg';
+  static const String TERMS_CONDITIONS = '${_iconsPath}terms_and_conditions.svg';
 
 
 

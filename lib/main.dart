@@ -32,11 +32,11 @@ class MyApp extends StatelessWidget {
             return GetMaterialApp(
               locale: const Locale('en'),
               debugShowCheckedModeBanner: false,
-              initialRoute: PageName.TRANSLATION_PAGE,
+              initialRoute: PageName.PROFILE,
               title: 'Everest',
               getPages: pages,
               theme: ThemeData(
-                useMaterial3: true,
+                useMaterial3: false,
               ),
             );
 

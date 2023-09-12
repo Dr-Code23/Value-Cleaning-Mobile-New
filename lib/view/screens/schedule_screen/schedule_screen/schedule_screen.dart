@@ -18,7 +18,7 @@ import '../schedule_widget/app_bar_schedule/app_bar_schedule.dart';
 import '../schedule_widget/schedule_form/schedule_form.dart';
 class ScheduleScreen extends StatelessWidget
 {
-   ScheduleScreen({super.key});
+   const ScheduleScreen({super.key});
   // Initial Selected Value
   @override
   Widget build(BuildContext context)
