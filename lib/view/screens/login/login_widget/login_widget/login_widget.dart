@@ -46,7 +46,7 @@ class LoginWidget extends StatelessWidget {
                   SizedBox(height: 16.h,),
                   Row(
                     children: [
-                      CheckBoxWidget(text: TextManager.REMEMBER_ME,x: false,Price: '9'),
+                      const CheckBoxWidget(text: TextManager.REMEMBER_ME,x: false,Price: '9'),
                       SizedBox(width: 89.w,),
                       InkWell(
                           onTap: (){
@@ -64,7 +64,7 @@ class LoginWidget extends StatelessWidget {
                     Get.toNamed(PageName.LAYOUT);
 
                   },),
-                  SignInWithGoogleOrFaceBook(),
+                  const SignInWithGoogleOrFaceBook(),
                   const SignInWithGoogleOrFaceBook(),
 
                 ],

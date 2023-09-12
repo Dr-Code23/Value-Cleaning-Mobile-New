@@ -3,6 +3,7 @@ import 'package:bloc/bloc.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:value_cleaning/view/screens/chat_screen/chat_screen.dart';
 import 'package:value_cleaning/view/screens/profile/profile_screen/profile_screen.dart';
 import '../../view/screens/home/home_screen/home_screen.dart';
 import '../../view/screens/home_transport/home_transport_screen/home_transport_screen.dart';
@@ -19,7 +20,7 @@ class LayoutCubit extends Cubit<LayoutState> {
   List<Widget> pageList = [
     HomeScreen(),
     HomeScreen(),
-    HomeScreen(),
+    const ChatScreen(),
     const ProfileScreen(),
   ];
 

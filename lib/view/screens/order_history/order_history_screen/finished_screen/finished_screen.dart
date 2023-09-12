@@ -8,7 +8,7 @@ class FinishedScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return OrderItem(
+    return const OrderItem(
       text: TextManager.RATE_EXPERIENCE,
       text2: TextManager.MAKE_NEW_ORDER,
       sizedBox: 27,

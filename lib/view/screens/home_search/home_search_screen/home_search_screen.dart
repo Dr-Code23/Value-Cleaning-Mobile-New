@@ -2,6 +2,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:value_cleaning/core/text_manager/text_manager.dart';
 import 'package:value_cleaning/view/core_widgets/custom_arrow_left/custom_arrow_left.dart';
 import '../../../../core/assets_manager/assets_manager.dart';
@@ -10,7 +12,7 @@ import '../../../core_widgets/text_form_field/text_form_field_custom.dart';
 import '../home_search_list/home_search_list/home_search_list.dart';
 class HomeSearchScreen extends StatelessWidget
 {
-  HomeSearchScreen({super.key});
+  const HomeSearchScreen({super.key});
   // Initial Selected Value
   @override
   Widget build(BuildContext context)
@@ -22,7 +24,9 @@ class HomeSearchScreen extends StatelessWidget
             children: [
               Row(
                 children: [
-                  CustomLeftArrowIcon(onPressed: (){},left: 16,top: 75,bottom: 32,right: 0,color: ColorManager.colorDeepGrey),
+                  CustomLeftArrowIcon(onPressed: (){
+                    Get.back();
+                  },left: 16,top: 75,bottom: 32,right: 0,color: ColorManager.colorDeepGrey),
                   Expanded(
                     child: Padding(
                       padding: EdgeInsets.only(top: 44.h,right: 16.w,left: 16.w),

@@ -63,16 +63,16 @@ class OrderHistoryScreenState extends State<OrderHistoryScreen> with SingleTicke
                     borderRadius: BorderRadius.circular(17.r),
                   ),
                 ),
-                SizedBox(height: 40.42,),
+                const SizedBox(height: 40.42,),
                 Padding(
                   padding:  EdgeInsets.all(16.0.sp),
                   child: SizedBox(
                     width: 600.w,
                     height: 1.sh,
                     child: TabBarView(
-                        physics: BouncingScrollPhysics(),
+                        physics: const BouncingScrollPhysics(),
                         controller: controller,
-                        children: [
+                        children: const [
                           CurrentScreen(),
                           CancelledScreen(),
                           FinishedScreen(),

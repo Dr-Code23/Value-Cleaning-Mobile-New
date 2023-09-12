@@ -48,7 +48,7 @@ class OrderItem extends StatelessWidget {
                     details!?Padding(
                       padding:  EdgeInsets.only(left: 150.w),
                       child: Text(TextManager.DETAILS,style: getBoldStyle(color: ColorManager.colorBlue,fontSize: 18),),
-                    ):SizedBox(),
+                    ):const SizedBox(),
                     cancel!?Padding(
                       padding:  EdgeInsets.only(left: 150.w),
                       child: Container(
@@ -109,8 +109,8 @@ class OrderItem extends StatelessWidget {
                    x!?Padding(
                       padding:  EdgeInsets.only(left: 35.w,right: 10.w),
                       child: SvgPicture.asset(AssetsManager.QR_CODE,color: ColorManager.colorWhite,width: 24.w,height: 24.h,),
-                    ):SizedBox(),
-                     !x!?SizedBox(width: sizedBox!.w,):SizedBox(),
+                    ):const SizedBox(),
+                     !x!?SizedBox(width: sizedBox!.w,):const SizedBox(),
                     Center(child: Text(text2!,style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 14),)),
                   ],
                 ),

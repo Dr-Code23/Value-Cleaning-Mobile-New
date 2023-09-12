@@ -1,5 +1,6 @@
 
 import 'package:get/get_navigation/src/routes/get_route.dart';
+import 'package:get/get_navigation/src/routes/transitions_type.dart';
 import 'package:value_cleaning/core/route_manager/page_name.dart';
 import 'package:value_cleaning/view/screens/faq_screen/faq_screen/faq_screen.dart';
 import 'package:value_cleaning/view/screens/favourite_screen/favourite_screen/favourite_screen.dart';
@@ -14,6 +15,7 @@ import 'package:value_cleaning/view/screens/verify_email/verify_email_screen/ver
 
 import '../../view/screens/Home_Layout/Home_Layout_Screen/Home_Layout_Screen.dart';
 import '../../view/screens/forget_password/forget_password/forget_password_screen.dart';
+import '../../view/screens/home_search/home_search_screen/home_search_screen.dart';
 import '../../view/screens/login/login_screen/login_screen.dart';
 import '../../view/screens/onboarding/onboarding_screen/onboarding_screen.dart';
 import '../../view/screens/reiews/reiews_screen/reiews_screen.dart';
@@ -42,6 +44,12 @@ List<GetPage> pages  =
   GetPage(name: PageName.FAQ, page: () =>   const FaqScreen()),
   GetPage(name: PageName.NOTIFICATIONS, page: () =>   const NotificationsScreen()),
   GetPage(name: PageName.RATE_EXPERIENCE, page: () =>   const RateExperienceScreen()),
+  GetPage(name: PageName.HOME_SEARCH, page: () =>    const HomeSearchScreen(),
+      transition: Transition.downToUp,
+    transitionDuration: const Duration(
+        milliseconds: 250,
+      )
+  ),
 
 
 ];

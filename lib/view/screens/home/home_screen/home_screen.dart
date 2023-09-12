@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
+import 'package:value_cleaning/core/route_manager/page_name.dart';
 import 'package:value_cleaning/core/style_font_manager/style_manager.dart';
 import 'package:value_cleaning/view/screens/home_search/home_search_screen/home_search_screen.dart';
 
@@ -47,25 +48,16 @@ class HomeScreen extends StatelessWidget
                       children:
                       [
                           const TopHome(),
-                          SizedBox(
-                            height: 24.h,
+                          Padding(
+                            padding:  EdgeInsets.symmetric(vertical: 24.h),
+                            child: CustomHomeSearch(onPressed: () {
+                              Get.toNamed(PageName.HOME_SEARCH);
+                            }),
                           ),
-                          CustomHomeSearch(onPressed: () {
-                            Get.to(() => HomeSearchScreen(),
-                                transition: Transition.downToUp,
-                                duration: const Duration(
-                                  milliseconds: 650,
-                                ));
-                          }),
-                          SizedBox(
-                            height: 24.h,
+                          Padding(
+                            padding:  EdgeInsets.symmetric(vertical: 24.h),
+                            child: CardOffer(),
                           ),
-                          //  CardOffer(),
-                          SizedBox(
-                            height: 24.h,
-                          ),
-                          CardOffer(),
-                        SizedBox(height: 24.h,),
                         Text(TextManager.ALL_CATEGORIES,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 18),),
                         SizedBox(height: 8.h,),
                         CategoriesSectionWidget(),
