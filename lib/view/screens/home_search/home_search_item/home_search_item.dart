@@ -24,6 +24,13 @@ class CustomHomeSearch extends StatelessWidget {
             height: 66.h,
             width: 358.w,
             decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                  color: ColorManager.colorBlack.withOpacity(0.20),
+                  blurRadius: 8,
+                  offset:  Offset(0, 8.h),
+                ),
+              ],
               borderRadius: BorderRadius.circular(10.r),
               color: ColorManager.colorWhite,
             ),

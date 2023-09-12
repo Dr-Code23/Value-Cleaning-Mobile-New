@@ -43,7 +43,6 @@ class ALLTransportCompanies extends StatelessWidget {
       image: "assets/images/soylant_corp.png",
     ),
   ];
-
   @override
   Widget build(BuildContext context) {
     return Container(
