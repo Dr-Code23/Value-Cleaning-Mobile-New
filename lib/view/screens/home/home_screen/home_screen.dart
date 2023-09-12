@@ -11,8 +11,10 @@ import '../../../../core/assets_manager/assets_manager.dart';
 import '../../../../core/color_manager/color_manager.dart';
 import '../../../../core/route_manager/page_name.dart';
 import '../../../../core/text_manager/text_manager.dart';
+import '../../../core_widgets/custom_home_search/cusom_home_search.dart';
 import '../../../core_widgets/text_form_field/text_form_field_custom.dart';
 import '../../qr_code/qr_code_screen/qr_code_screen.dart';
+import '../../transport_search/transport_search_screen/transport_search_screen.dart';
 import '../home_widget/card_offer_widget/custom_card_offer_widget.dart';
 import '../home_widget/custom_category_section_widget/custom_category_section_widget.dart';
 import '../home_widget/our_services_widget/our_services_widget.dart';
@@ -52,30 +54,12 @@ class HomeScreen extends StatelessWidget
                       [
                         TopHome(),
                         SizedBox(height: 24.h,),
-                        Padding(
-                          padding:  EdgeInsets.only(
-                            top: 8.h,
-                            right: 16.w,
-                            bottom: 8.h,
-                          ),
-                          child: TextFormFieldCustom(validate: (value)
-                          {
-                            return null;
-                          },
-                            onTab: (){
-                              Get.to(()=>HomeSearchScreen(), transition: Transition.downToUp,duration: Duration(
-                                milliseconds: 650,
-                              ),
-                              );
-                            },
-                            hint:TextManager.FIND_IT_HERE ,
-                            prefix: false,
-                            suffix: true  ,
-                            suffixIcon: const Icon(Icons.search ,
-                              color: ColorManager.colorPrimary,
-                            ),
-                          ),
-                        ),
+                        CustomHomeSearch(onPressed: (){
+                          Get.to(()=>HomeSearchScreen(),transition: Transition.downToUp,duration: Duration(
+                            milliseconds: 650,
+                          )
+                          );
+                        }),
                         SizedBox(height: 24.h,),
                       //  CardOffer(),
                         SizedBox(height: 24.h,),

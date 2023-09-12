@@ -3,17 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:value_cleaning/view/screens/check_out/check_out_Screen/check_out_Screen.dart';
-import 'package:value_cleaning/view/screens/picture/picture_screen/picture_screen.dart';
-
 import 'package:value_cleaning/view_model/block/Layout_Cubit.dart';
 import 'package:value_cleaning/view_model/block/Layout_States.dart';
-
 import '../../../../../core/assets_manager/assets_manager.dart';
 import '../../../../../core/color_manager/color_manager.dart';
 import '../../../../../core/style_font_manager/style_manager.dart';
 import '../../../../../core/text_manager/text_manager.dart';
-import '../../../core_widgets/next_button_Widget/next_button_Widget/next_button_Widget.dart';
 
 class PaymentMethodWidget extends StatefulWidget {
   @override

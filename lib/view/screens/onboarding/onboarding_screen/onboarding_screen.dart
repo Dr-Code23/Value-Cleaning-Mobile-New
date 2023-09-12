@@ -2,14 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:value_cleaning/view/screens/onboarding/onboarding_Widget/onboarding_buttons/onboarding_buttons.dart';
-
-
-import '../../../../core/assets_manager/assets_manager.dart';
 import '../../../../core/color_manager/color_manager.dart';
 import '../../../../core/style_font_manager/style_manager.dart';
-import '../../../../core/text_manager/text_manager.dart';
 import '../../../core_widgets/custom_arrow_left/custom_arrow_left.dart';
-import '../../../core_widgets/elevated_button/elevated_button_custom.dart';
 import '../onboarding_Widget/build_dot_widget/build_Dot_widget.dart';
 import '../onboarding_Widget/onboarding_widget/onboarding_widget.dart';
 

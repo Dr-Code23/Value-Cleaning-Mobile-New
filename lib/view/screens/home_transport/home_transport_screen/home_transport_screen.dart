@@ -9,6 +9,7 @@ import 'package:value_cleaning/core/style_font_manager/style_manager.dart';
 import '../../../../core/assets_manager/assets_manager.dart';
 import '../../../../core/color_manager/color_manager.dart';
 import '../../../../core/text_manager/text_manager.dart';
+import '../../../core_widgets/custom_home_search/cusom_home_search.dart';
 import '../../../core_widgets/text_form_field/text_form_field_custom.dart';
 import '../../home/home_widget/custom_category_section_widget/custom_category_section_widget.dart';
 import '../../home/home_widget/our_services_widget/our_services_widget.dart';
@@ -54,33 +55,12 @@ class HomeTransportScreen extends StatelessWidget
                       [
                         TopHome(),
                         SizedBox(height: 24.h,),
-                        Padding(
-                          padding:  EdgeInsets.only(
-                            top: 8.h,
-                            right: 16.w,
-                            bottom: 8.h,
-                          ),
-                          child: InkWell(
-                            onTap: (){
-
-                            },
-                            child: TextFormFieldCustom(validate: (value)
-                            {
-                              return null;
-                            },
-                              onTab: (){
-                                Get.to(()=>TransportSearchScreen(),transition: Transition.downToUp,duration: Duration(
-                                  milliseconds: 650,
-                                )
-                                );
-                              },
-                              hint:TextManager.FIND_IT_HERE ,
-                              prefix: false,
-                              suffix: true  ,
-                              suffixIcon:  SvgPicture.asset(AssetsManager.search,color: ColorManager.colorPrimary,),
-                            ),
-                          ),
-                        ),
+                        CustomHomeSearch(onPressed: (){
+                          Get.to(()=>TransportSearchScreen(),transition: Transition.downToUp,duration: Duration(
+                            milliseconds: 650,
+                          )
+                          );
+                        }),
                         SizedBox(height: 24.h,),
                       //  CardOffer(),
                         SizedBox(height: 24.h,),
