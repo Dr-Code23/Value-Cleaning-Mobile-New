@@ -1,11 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:value_cleaning/core/assets_manager/assets_manager.dart';
-import 'package:value_cleaning/core/style_font_manager/style_manager.dart';
 import 'package:value_cleaning/core/text_manager/text_manager.dart';
-
 import '../../../../core/color_manager/color_manager.dart';
 import '../../../core_widgets/tab_bar_widget/tab_bar_widget.dart';
 import '../../payment/payment_widget/payment_widget.dart';

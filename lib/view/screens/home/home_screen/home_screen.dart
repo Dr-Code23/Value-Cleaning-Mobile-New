@@ -1,20 +1,14 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:value_cleaning/core/style_font_manager/style_manager.dart';
 import 'package:value_cleaning/view/screens/home_search/home_search_screen/home_search_screen.dart';
-
-import '../../../../core/assets_manager/assets_manager.dart';
 import '../../../../core/color_manager/color_manager.dart';
 import '../../../../core/route_manager/page_name.dart';
 import '../../../../core/text_manager/text_manager.dart';
 import '../../../core_widgets/custom_home_search/cusom_home_search.dart';
-import '../../../core_widgets/text_form_field/text_form_field_custom.dart';
-import '../../qr_code/qr_code_screen/qr_code_screen.dart';
-import '../../transport_search/transport_search_screen/transport_search_screen.dart';
 import '../home_widget/card_offer_widget/custom_card_offer_widget.dart';
 import '../home_widget/custom_category_section_widget/custom_category_section_widget.dart';
 import '../home_widget/our_services_widget/our_services_widget.dart';
