@@ -22,7 +22,6 @@ class CustomServicesDetails extends StatelessWidget {
     return Column(
       children: [
         Container(
-          height: 200.h,
           width: 302.w,
           decoration: BoxDecoration(
             boxShadow: [
@@ -42,6 +41,15 @@ class CustomServicesDetails extends StatelessWidget {
                 padding:  EdgeInsets.only(right: 126.w,left: 8.w,top: 8.h,bottom: 14.h),
                 child: Row(
                   children: [
+                    CircleAvatar(
+                      radius: 30.r,
+                      backgroundColor: ColorManager.colorWhite,
+                      child: CircleAvatar(
+                        radius: 30.r,
+                        backgroundImage: NetworkImage("https://th.bing.com/th/id/R.4b38b1945e88a36e2308debb1c766e94?rik=15AY1JjLsPP5PQ&pid=ImgRaw&r=0"),
+                      ),
+                    ),
+                    SizedBox(width: 8.w,),
                     Column(
                       children: [
                         Text(
@@ -55,20 +63,11 @@ class CustomServicesDetails extends StatelessWidget {
 
                       ],
                     ),
-                    SizedBox(width: 8.w,),
-                    CircleAvatar(
-                      radius: 30.r,
-                      backgroundColor: ColorManager.colorWhite,
-                      child: CircleAvatar(
-                        radius: 30.r,
-                        backgroundImage: NetworkImage("https://th.bing.com/th/id/R.4b38b1945e88a36e2308debb1c766e94?rik=15AY1JjLsPP5PQ&pid=ImgRaw&r=0"),
-                      ),
-                    ),
                   ],
                 ),
               ),
               Padding(
-                padding:  EdgeInsets.only(left: 8.w,),
+                padding:  EdgeInsets.only(left: 8.w,bottom: 10.h),
                 child:  Directionality(textDirection: TextDirection.ltr,
                 child: Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco",maxLines: 3,overflow: TextOverflow.ellipsis,style: getBoldStyle(color: ColorManager.colorLightGrey,fontSize: 12),)),
 

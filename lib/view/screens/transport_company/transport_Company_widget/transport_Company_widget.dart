@@ -17,11 +17,18 @@ class AllCustomTransportCompanies extends StatelessWidget {
     return Column(
       children: [
         Padding(
-          padding:  EdgeInsets.only(right: 16.w),
+          padding:  EdgeInsets.only(right: 16.w,left: 16.w),
           child: Container(
             height: 66.h,
             width: 358.w,
             decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                  color: ColorManager.colorBlack.withOpacity(0.20),
+                  blurRadius: 8,
+                  offset:  Offset(0, 8.h),
+                ),
+              ],
               borderRadius: BorderRadius.circular(10.r),
               color: ColorManager.colorWhite,
             ),

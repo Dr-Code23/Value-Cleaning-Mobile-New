@@ -54,6 +54,7 @@ class ALLTransportCompanies extends StatelessWidget {
           Container(
             width: 390.w,
             color: ColorManager.colorScaffold,
+
             child: SizedBox(
               child: ListView.separated(
                 scrollDirection: Axis.vertical,

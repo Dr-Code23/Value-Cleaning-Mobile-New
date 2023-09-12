@@ -7,7 +7,7 @@ import '../../../core/color_manager/color_manager.dart';
 import '../../../core/style_font_manager/style_manager.dart';
 import '../custom_ratting_bar/custom_rating_bar.dart';
 class CustomTransportCompanies extends StatelessWidget {
-  const CustomTransportCompanies({
+  const   CustomTransportCompanies({
     super.key,
     required this.name,
     required  this.imagePath,
@@ -25,8 +25,16 @@ class CustomTransportCompanies extends StatelessWidget {
             height: 66.h,
             width: 358.w,
             decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                  color: ColorManager.colorBlack.withOpacity(0.20),
+                  blurRadius: 8,
+                  offset:  Offset(0, 8.h),
+                ),
+              ],
               borderRadius: BorderRadius.circular(10.r),
               color: ColorManager.colorWhite,
+
             ),
             child: Row(
               children: [

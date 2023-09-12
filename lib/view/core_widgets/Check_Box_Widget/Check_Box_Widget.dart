@@ -26,27 +26,28 @@ class _CheckBoxWidgetState extends State<CheckBoxWidget> {
       children: [
         Row(
           children: [
+            Container(
+              width: 24.w,
+              height: 24.h,
+              child: Checkbox( //only c
+                  activeColor: ColorManager.colorPrimary,
+                  splashRadius: Checkbox.width,//
+                  // eck box
+                  checkColor: Colors.white,
+                  value: check1, //unchecked
+                  onChanged: (bool? value){
+                    //value returned when checkbox is clicked
+                    setState(() {
+                      check1 = value;
+                    });
+                  }
+              ),
+            ),
+
             Text(widget.text!,style: getLight2Style(color: ColorManager.colorGrey,fontSize: 14),),
             // if(widget.x==true)
             //   Text(widget.Price!,style: getLight2Style(color: ColorManager.colorBlack,fontSize: 24),),
           ],
-        ),
-        Container(
-          width: 24.w,
-          height: 24.h,
-          child: Checkbox( //only c
-              activeColor: ColorManager.colorPrimary,
-              splashRadius: Checkbox.width,//
-              // eck box
-              checkColor: Colors.white,
-              value: check1, //unchecked
-              onChanged: (bool? value){
-                //value returned when checkbox is clicked
-                setState(() {
-                  check1 = value;
-                });
-              }
-          ),
         ),
       ],
     );

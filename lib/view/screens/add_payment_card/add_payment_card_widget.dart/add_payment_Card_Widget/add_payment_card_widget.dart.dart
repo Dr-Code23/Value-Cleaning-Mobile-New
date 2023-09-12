@@ -7,6 +7,8 @@ import 'package:value_cleaning/core/style_font_manager/style_manager.dart';
 import 'package:value_cleaning/core/text_manager/text_manager.dart';
 import 'package:value_cleaning/view/core_widgets/Check_Box_Widget/Check_Box_Widget.dart';
 import 'package:value_cleaning/view/core_widgets/elevated_button/elevated_button_custom.dart';
+
+import '../add_paymaent_butttom/add_payment_button.dart';
 class AddPaymentCardWidget extends StatefulWidget {
   const AddPaymentCardWidget({super.key});
 
@@ -66,7 +68,7 @@ class AddPaymentCardWidgetState extends State<AddPaymentCardWidget> {
         Padding(
           padding:  EdgeInsets.only(left: 16.w),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
             CheckBoxWidget(text: TextManager.SAVE_CARD,x: false),
           ],),
@@ -159,6 +161,7 @@ class AddPaymentCardWidgetState extends State<AddPaymentCardWidget> {
                     }),
               ),
             ),
+            AddPaymentButton(),
           ],
         ),
       ],

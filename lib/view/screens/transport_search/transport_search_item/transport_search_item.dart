@@ -17,7 +17,7 @@ class CustomTransportCompaniesSearch extends StatelessWidget {
     return Column(
       children: [
         Padding(
-          padding:  EdgeInsets.only(right: 16.w),
+          padding:  EdgeInsets.only(right: 16.w,left: 16.w),
           child: Container(
             height: 66.h,
             width: 358.w,

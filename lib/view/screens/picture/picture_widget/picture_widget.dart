@@ -27,39 +27,33 @@ class _PictureWidgetState extends State<PictureWidget> {
       listener: (context,state){},
       builder: (context,state){
         return Column(
-          crossAxisAlignment: CrossAxisAlignment.end,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                SizedBox(height: 24.h,),
-                Text(TextManager.PICTURE,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 22),),
-                SizedBox(height: 6.h,),
-                Text(TextManager.PLEASE_UPLOAD_SOME_SAMPLES,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 18),),
-                SizedBox(height: 24.h,),
-                Container(
-                    width: 171.w,
-                    height: 171.h,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(16.w,),
-                        border: Border.all(color: ColorManager.colorDeepGrey)
-                    ),
-                    child: Icon(Icons.add,color: ColorManager.colorDeepGrey,size: 80.sp,)
-                ),
-                SizedBox(height: 16.h,),
-                Container(
-                  width: 171.w,
-                  height: 171.h,
-                  decoration: BoxDecoration(
+            SizedBox(height: 24.h,),
+            Text(TextManager.PICTURE,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 22),),
+            SizedBox(height: 6.h,),
+            Text(TextManager.PLEASE_UPLOAD_SOME_SAMPLES,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 18),),
+            SizedBox(height: 24.h,),
+            Container(
+                width: 171.w,
+                height: 171.h,
+                decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(16.w,),
-                  ),
-                  child: Image.asset(AssetsManager.EXAMBLEPICTURE,fit: BoxFit.cover,),
+                    border: Border.all(color: ColorManager.colorDeepGrey)
                 ),
-                //SvgPicture.asset(AssetsManager.PLUS,width: 10,height: 10,)
-                SizedBox(height: 80.h,),
-                  NextButtonWidget(pushTo: CheckOutScreen()),
-              ],
+                child: Icon(Icons.add,color: ColorManager.colorDeepGrey,size: 80.sp,)
             ),
+            SizedBox(height: 16.h,),
+            Container(
+              width: 171.w,
+              height: 171.h,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(16.w,),
+              ),
+              child: Image.asset(AssetsManager.EXAMBLEPICTURE,fit: BoxFit.cover,),
+            ),
+            //SvgPicture.asset(AssetsManager.PLUS,width: 10,height: 10,)
+            SizedBox(height: 80.h,),
           ],
         );
       },

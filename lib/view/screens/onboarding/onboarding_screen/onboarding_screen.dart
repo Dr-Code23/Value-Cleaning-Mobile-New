@@ -70,19 +70,13 @@ class _OnBordingScreenState extends State<OnBordingScreen> {
                             SizedBox(height: 40.h,),
                             Text(
                               contents[i].title!,
-                              style: TextStyle(
-                                fontSize: 35,
-                                fontWeight: FontWeight.bold,
-                              ),
+                              style: getBoldStyle(color: ColorManager.colorLightBlack,fontSize: 18)
                             ),
                             SizedBox(height: 16.h),
                             Text(
                               contents[i].discription!,
                               textAlign: TextAlign.center,
-                              style: TextStyle(
-                                fontSize: 18,
-                                color: Colors.grey,
-                              ),
+                              style: getBoldStyle(color: ColorManager.colorLightBlack,fontSize: 14)
                             ),
                             SizedBox(height: 40.h),
                           ],
@@ -103,7 +97,7 @@ class _OnBordingScreenState extends State<OnBordingScreen> {
                         ),
                       ),
 
-                      SizedBox(height: 20,),
+                      SizedBox(height: 20.h,),
                       OnBoardingButtons(controller: _controller,currentIndex: currentIndex,)
                     ],
                   )

@@ -31,7 +31,7 @@ class _LayoutScreenState extends State<LayoutScreen> {
         return Scaffold(
           body: layoutCubit.pageList[LayoutCubit.get(context).currentIndex],
           bottomNavigationBar: CurvedNavigationBar(
-            index: 3,
+            index: 0,
             backgroundColor: ColorManager.colorWhite,
             buttonBackgroundColor: ColorManager.colorPrimary,
             height: 69.h,

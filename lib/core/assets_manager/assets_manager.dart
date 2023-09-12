@@ -11,6 +11,10 @@ class AssetsManager
   static const String BACK = '${_imagesPath}back.jpg';
   static const String DEEPCLEANING = '${_imagesPath}deep_cleaning.png';
   static const String EXAMBLEPICTURE = '${_imagesPath}Picture1.png';
+  static const String SOYLENT_CORP = '${_imagesPath}soylent_corp.png';
+  static const String BACK_GROUMD_CARD = '${_imagesPath}back_ground_Card.png';
+  static const String QR_CODE_image = '${_imagesPath}QR_CODE.png';
+  static const String back_Ground = '${_imagesPath}back_Ground.png';
 
 
   // icons
@@ -37,6 +41,10 @@ class AssetsManager
   static const String Receipt = '${_iconsPath}receipt.svg';
   static const String CCLOGO = '${_iconsPath}cclogo.svg';
   static const String search = '${_iconsPath}search.svg';
+  static const String QR_CODE = '${_iconsPath}fi-sr-mode-portrait (1).svg';
+  static const String soylant = '${_iconsPath}soylant_corp.svg';
+  static const String CALL = '${_iconsPath}call.svg';
+  static const String EMAIL = '${_iconsPath}email.svg';
 
 
 

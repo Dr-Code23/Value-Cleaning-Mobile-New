@@ -20,36 +20,34 @@ class ServicesForm extends StatelessWidget {
     return  Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Row(
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+            SizedBox(height: 16.h,),
+            Row(
               children: [
-                SizedBox(height: 16.h,),
                 Text(TextManager.DEEP_CLEANING,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 24),),
-                SizedBox(height: 16.h,),
+                SizedBox(width: 139.w,),
                 Padding(
-                  padding:  EdgeInsets.only(right: 180.w),
-                  child: Row(
-                    children: [
-                      Text("4.5",style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 14),),
-                      SizedBox(width: 16.w,),
-                      CustomRattingBar(),
-                    ],
-                  ),
+                  padding:  EdgeInsets.only(right: 16.w),
+                  child: Text("15 \$ /hr",style: getBoldStyle(color: ColorManager.colorGreen,fontSize: 18),),
                 ),
               ],
             ),
-            Padding(
-              padding:  EdgeInsets.only(right: 16.w),
-              child: Text("15 \$ /hr",style: getBoldStyle(color: ColorManager.colorGreen,fontSize: 18),),
+            SizedBox(height: 16.h,),
+            Row(
+              children: [
+                CustomRattingBar(),
+                SizedBox(width: 16.w,),
+                Text("4.5",style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 14),),
+              ],
             ),
           ],
         ),
         SizedBox(height: 32.h,),
         Text(TextManager.ABOUT_THIS_SERVICE,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 18),),
         SizedBox(height: 16.h,),
-        Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam....",maxLines: 3,overflow: TextOverflow.ellipsis,style: getBoldStyle(color: ColorManager.colorLightGrey,fontSize: 14),),
+        Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam....${TextManager.SEE_ALL}",maxLines: 3,overflow: TextOverflow.ellipsis,style: getBoldStyle(color: ColorManager.colorLightGrey,fontSize: 14),),
         SizedBox(height: 24.h,),
         Container(
           width: 365.w,
@@ -58,30 +56,28 @@ class ServicesForm extends StatelessWidget {
             color: ColorManager.colorWhite,
             borderRadius: BorderRadius.circular(16.r),
           ),
-
           child: Row(
             children: [
-              Text(TextManager.JOBS_DONE,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 16),),
               Padding(
-                padding:  EdgeInsets.only(left: 180),
-                child: Container(
-                  width: 96.w,
-                  height: 48.h,
-                  decoration: BoxDecoration(
-                      color: ColorManager.colorPrimary,
-                      borderRadius: BorderRadius.only(
-                        bottomRight: Radius.circular(24.r),
-                        topRight: Radius.circular(24.r),
-
-                      )
-
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text("151",style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 16),),
-                    ],
-                  ),
+                padding:  EdgeInsets.only(left: 16.w),
+                child: Text(TextManager.JOBS_DONE,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 16),),
+              ),
+              SizedBox(width: 183.w,),
+              Container(
+                width: 96.w,
+                height: 48.h,
+                decoration: BoxDecoration(
+                    color: ColorManager.colorPrimary,
+                    borderRadius: BorderRadius.only(
+                      bottomRight: Radius.circular(24.r),
+                      topRight: Radius.circular(24.r),
+                    )
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("151",style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 16),),
+                  ],
                 ),
               ),
             ],
@@ -92,9 +88,9 @@ class ServicesForm extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Text(TextManager.REVIEWS,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 18),),
+            SizedBox(width: 8.w,),
             Text("(15)",style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 14),),
             SizedBox(width: 210.w,),
-            SizedBox(width: 8.w,),
             InkWell(
                 onTap: (){
                   Get.to(()=>ReviewScreen(),transition: Transition.leftToRight,duration: Duration(

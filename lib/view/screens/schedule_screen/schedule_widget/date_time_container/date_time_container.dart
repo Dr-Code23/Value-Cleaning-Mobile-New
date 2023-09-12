@@ -36,8 +36,8 @@ final bool? x;
           Padding(
             padding:  EdgeInsets.only(right: 18.w),
             child: Container(
-              width: 30.w,
-              height: 30.h,
+              width: 35.w,
+              height: 35.h,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8.r),
                 color:ColorManager.colorPrimary ,

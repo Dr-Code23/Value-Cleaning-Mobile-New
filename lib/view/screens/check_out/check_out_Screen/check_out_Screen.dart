@@ -80,7 +80,6 @@ class CheckOutScreen extends StatelessWidget
                                                     SvgPicture.asset(AssetsManager.CCLOGO,width: 45.w,height: 27.61.h,color: ColorManager.colorWhite,),
                                                     SizedBox(height: 20.19.h,),
                                                     Text("07/24",style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 14),),
-
                                                   ],
                                                 ),
                                               ),
@@ -106,10 +105,7 @@ class CheckOutScreen extends StatelessWidget
                           ],
                         ),
                         SizedBox(height: 16.h,),
-                        Padding(
-                          padding:  EdgeInsets.only(left: 16.w,right: 16.w),
-                          child: CheckOutWidget(),
-                        ),
+                        CheckOutWidget(),
                       ],
                     ),
                   ),

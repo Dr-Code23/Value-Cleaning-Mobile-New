@@ -63,8 +63,7 @@ class PaymentSettingScreenState extends State<PaymentSettingScreen> {
                     ),
                   )
 
-              )
-
+              ),
             ],
           ),
         ),

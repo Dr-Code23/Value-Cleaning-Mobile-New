@@ -8,7 +8,9 @@ import 'package:value_cleaning/view/core_widgets/custom_arrow_left/custom_arrow_
 import 'package:value_cleaning/view/core_widgets/elevated_button/elevated_button_custom.dart';
 import '../../../../core/assets_manager/assets_manager.dart';
 import '../../../../core/color_manager/color_manager.dart';
+import '../../../core_widgets/next_button_Widget/next_button_Widget/next_button_Widget.dart';
 import '../../../core_widgets/tab_bar_widget/tab_bar_widget.dart';
+import '../../picture/picture_screen/picture_screen.dart';
 import '../../reiews/reiews_widget/reiews_widget.dart';
 import '../payment_widget/payment_widget.dart';
 class PaymentMethodScreen extends StatelessWidget
@@ -42,16 +44,21 @@ backgroundColor: ColorManager.colorScaffold,
                               ),
                               color: ColorManager.colorScaffold,
                             ),
-                            child: Padding(
-                              padding:  EdgeInsets.only(bottom: 20.0.h,left: 16.w),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.end,
-                                children:
-                                [
-                                  PaymentMethodWidget(),
-                                  SizedBox(height: 21.h,),
-                                ],
-                              ),
+                            child: Column(
+                              children: [
+                                Padding(
+                                  padding:  EdgeInsets.only(bottom: 20.0.h,left: 16.w,right: 16.w),
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.end,
+                                    children:
+                                    [
+                                      PaymentMethodWidget(),
+                                      SizedBox(height: 21.h,),
+                                    ],
+                                  ),
+                                ),
+                                NextButtonWidget(pushTo: PictureScreen()),
+                              ],
                             ),
                           ),
                         ],

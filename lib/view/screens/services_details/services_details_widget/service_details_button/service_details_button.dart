@@ -84,7 +84,6 @@ class ServiceDetailsButtons extends StatelessWidget {
                 )
 
         )
-
       ],
     );
   }

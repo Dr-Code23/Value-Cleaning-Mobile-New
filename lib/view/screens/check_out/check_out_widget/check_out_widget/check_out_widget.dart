@@ -72,7 +72,7 @@ class _CheckOutWidgetState extends State<CheckOutWidget> {
                 ),
               ),
             ),
-            SizedBox(height: 24.h,),
+            SizedBox(height: 28.h,),
               Column(
               children: [
                 OrderDetailsCard(),

@@ -68,18 +68,16 @@ class HomeTransportScreen extends StatelessWidget
                             {
                               return null;
                             },
+                              onTab: (){
+                                Get.to(()=>TransportSearchScreen(),transition: Transition.downToUp,duration: Duration(
+                                  milliseconds: 650,
+                                )
+                                );
+                              },
                               hint:TextManager.FIND_IT_HERE ,
                               prefix: false,
                               suffix: true  ,
-                              suffixIcon:  InkWell(
-                                onTap: (){
-                                  Get.to(()=>TransportSearchScreen(),transition: Transition.downToUp,duration: Duration(
-                                    milliseconds: 650,
-                                  )
-                                  );
-                                },
-                                child:SvgPicture.asset(AssetsManager.search,color: ColorManager.colorPrimary,),
-                              ),
+                              suffixIcon:  SvgPicture.asset(AssetsManager.search,color: ColorManager.colorPrimary,),
                             ),
                           ),
                         ),

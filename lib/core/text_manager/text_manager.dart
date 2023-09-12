@@ -34,7 +34,7 @@ class TextManager
   static const String COMPANY_ID = "Enter company ID";
   static const String HI = "Hi,Dr Code";
   static const String NEED_SOME_HELP = "Need Some Help ?";
-  static const String FIND_IT_HERE = "find it here";
+  static const String FIND_IT_HERE = "find it here....";
   static const String ALL_CATEGORIES = "All Category";
   static const String OUR_SERVICES = "Our Services";
   static const String TOP_SERVICES = "Top Services";
@@ -83,7 +83,23 @@ class TextManager
   static const String TRANSPORT_COMPANIES = "Transport Companies";
   static const String DOWNLOAD_PDF = "Download as pdf";
   static const String PAYMENT_SETTING = "Payment Setting";
-
   static const String DELETE_CARD = "Delete Card";
+  static const String CUREENT = "Current";
+  static const String CANCELLED = "Cancelled";
+  static const String FINISHED = "Finished";
+  static const String ORDER_HISTORY = "Order History";
+  static const String TEAM_CHECK = "Team Check";
+  static const String RESCHEDULE = "ReSchedule";
+  static const String RATE_EXPERIENCE = "Rate experience";
+  static const String MAKE_NEW_ORDER = "Make it a new order";
+  static const String DETAILS = "Details";
+  static const String CANCEL = "Cancel";
+  static const String SOYLENT_CORP = "Soylent Corp";
+  static const String EMAIL = "E_mail";
+  static const String PHONE_NUMBER = "Phone Number";
+  static const String COMPANY_ID2 = "Company Id";
+  static const String CALL = "call";
+  static const String ADD_CARD = "Add Card";
+
 
 }

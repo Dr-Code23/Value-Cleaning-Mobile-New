@@ -28,10 +28,10 @@ class _PaymentMethodWidgetState extends State<PaymentMethodWidget> {
       listener: (context,state){},
       builder: (context,state){
         return Column(
-          crossAxisAlignment: CrossAxisAlignment.end,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Column(
-              crossAxisAlignment: CrossAxisAlignment.end,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 SizedBox(height: 114.h,),
                 Container(
@@ -87,7 +87,6 @@ class _PaymentMethodWidgetState extends State<PaymentMethodWidget> {
                   ),
                 ),
                 SizedBox(height:111.h),
-                NextButtonWidget(pushTo: PictureScreen()),
               ],
             ),
           ],

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:value_cleaning/core/assets_manager/assets_manager.dart';
 
 import '../../../core/color_manager/color_manager.dart';
 import '../../../core/style_font_manager/style_manager.dart';
@@ -20,32 +21,20 @@ class CustomCardOffer extends StatelessWidget {
       height: 144.h,
       width: 280.w,
       decoration: BoxDecoration(
+        image: DecorationImage(image: AssetImage(imagePath!)),
         borderRadius: BorderRadius.circular(16.r),
         color: Color(color),
       ),
       child: Column(
         children: [
-          Row(
-            children: [
-              Padding(
-                padding:  EdgeInsets.only(right: 4.w,top: 33.h,bottom: 0.h,left: 85.64),
-                child: Image(
-                  width: 75.969.w,
-                  height: 80.h,
-                  image: AssetImage(imagePath),
-                ),
+          Padding(
+            padding:  EdgeInsets.only(top: 33.h,bottom: 63.h,left: 4.w,right: 134.w),
+            child: Text(
+              name,
+              style: getBoldStyle(color: ColorManager.colorWhite ,
+                  fontSize: 32
               ),
-              Padding(
-                padding:  EdgeInsets.only(top: 33.h,bottom: 0.h,left: 4.w),
-                child: Text(
-                  name,
-                  style: getBoldStyle(color: ColorManager.colorWhite ,
-                      fontSize: 32
-                  ),
-                ),
-              ),
-
-            ],
+            ),
           ),
         ],
       ),

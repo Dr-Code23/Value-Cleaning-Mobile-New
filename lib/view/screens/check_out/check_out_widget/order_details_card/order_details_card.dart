@@ -5,7 +5,7 @@ import '../../../../../core/color_manager/color_manager.dart';
 import '../../../../../core/style_font_manager/style_manager.dart';
 import '../../../../../core/text_manager/text_manager.dart';
 
-class OrderDetailsCard extends StatelessWidget {
+class   OrderDetailsCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {

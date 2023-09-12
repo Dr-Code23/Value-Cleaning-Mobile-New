@@ -14,23 +14,23 @@ class CardOffer extends StatelessWidget {
   final List<CardOfferModel> cardOfferModel = [
     CardOfferModel(
       offerName: "30 % off",
-      image: "assets/images/clean.png",
-      color: 0xff369E85,
+      image: "assets/images/back_ground_Card.png",
+      color: 0xff90369E,
     ),
     CardOfferModel(
       offerName: "30 % off",
-      image: "assets/images/clean.png",
+      image: "assets/images/back_ground_Card.png",
       color: 0xff90369E,
 
     ),
     CardOfferModel(
       offerName: "30 % off",
-      image: "assets/images/clean.png",
-      color: 0xff369E85,
+      image: "assets/images/back_ground_Card.png",
+      color: 0xff90369E,
     ),
     CardOfferModel(
       offerName: "30 % off",
-      image: "assets/images/clean.png",
+      image: "assets/images/back_ground_Card.png",
       color: 0xff90369E,
     ),
   ];
@@ -44,7 +44,7 @@ class CardOffer extends StatelessWidget {
         physics: const BouncingScrollPhysics(),
         shrinkWrap: true,
         separatorBuilder: (context, index) => SizedBox(
-          width: 10.w,
+          width: 16.w,
         ),
         itemBuilder: (context, index) {
           return CustomCardOffer(

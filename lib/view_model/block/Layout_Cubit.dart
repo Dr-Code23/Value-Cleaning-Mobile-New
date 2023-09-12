@@ -5,7 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../view/screens/home/home_screen/home_screen.dart';
 import '../../view/screens/home_transport/home_transport_screen/home_transport_screen.dart';
+import '../../view/screens/order_history/order_history_screen/order_history_screen/order_history_screen.dart';
 import '../../view/screens/payment_setting/payment_Setting_Screen/payment_Setting_Screen.dart';
+import '../../view/screens/soylent_corp/soylent_corp_screen/soylent_corp_screen.dart';
 import 'Layout_States.dart';
 
 class LayoutCubit extends Cubit<LayoutState> {
@@ -15,9 +17,9 @@ class LayoutCubit extends Cubit<LayoutState> {
 
   List<Widget> pageList = [
     HomeScreen(),
-    HomeScreen(),
+    OrderHistoryScreen(),
     HomeTransportScreen(),
-    PaymentSettingScreen(),
+    SoylentCorpScreen(),
 
     // ProfileScreen(),
   ];

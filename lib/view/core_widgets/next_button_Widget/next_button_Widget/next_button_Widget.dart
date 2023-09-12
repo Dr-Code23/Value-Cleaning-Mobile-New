@@ -37,9 +37,8 @@ class NextButtonWidget extends StatelessWidget {
             child:Row(
               children: [
                 Padding(
-                    padding:  EdgeInsets.only(right: 100.w,bottom: 10.h,left: 20.w),
+                    padding:  EdgeInsets.only(right: 90.w,bottom: 10.h,left: 50.w),
                     child: Text("(50\$)",style: getBoldStyle(color: ColorManager.colorPrimary,fontSize: 18),)
-
                 ),
                 Row(
                   children: [

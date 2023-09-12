@@ -47,7 +47,7 @@ backgroundColor: ColorManager.colorScaffold,
                   child: Text(TextManager.Verify_Email,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 14),),
                 ),
                 SizedBox(
-                  height: 24.h,
+                  height: 8.h,
                 ),
                 VerifyEmailWidget(),
                 // text Form

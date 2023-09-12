@@ -29,61 +29,62 @@ backgroundColor: ColorManager.colorScaffold,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children:
                   [
-                    Padding(
-                      padding: EdgeInsets.only(top: 136.h,right: 16.w),
-                      child: Column(
-                        children: [
-                          Container(
-                            width: 390.w,
-                            decoration:  BoxDecoration(
-                              borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(24.r),
-                                topRight: Radius.circular(24.r),
+                    Column(
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.only(top: 136.h,right: 16.w),
+                          child: Column(
+                            children: [
+                              Container(
+                                width: 390.w,
+                                decoration:  BoxDecoration(
+                                  borderRadius: BorderRadius.only(
+                                    topLeft: Radius.circular(24.r),
+                                    topRight: Radius.circular(24.r),
+                                  ),
+                                  color: ColorManager.colorScaffold,
+                                ),
+                                child: Padding(
+                                  padding:  EdgeInsets.only(bottom: 20.0.h,left: 16.w),
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children:
+                                    [
+                                      OrderDetailsWidget(),
+                                    ],
+                                  ),
+                                ),
                               ),
-                              color: ColorManager.colorScaffold,
-                            ),
-                            child: Padding(
-                              padding:  EdgeInsets.only(bottom: 20.0.h,left: 16.w),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.end,
-                                children:
-                                [
-                                  OrderDetailsWidget(),
-                                  SizedBox(height: 400.h,),
-                                  Container(
-                                      width: 390.2,
-                                      height: 80.h,
-                                      decoration: BoxDecoration(
-                                        boxShadow: [
-                                          BoxShadow(
-                                            color: ColorManager.colorBlack.withOpacity(0.20),
-                                            blurRadius: 8,
-                                            offset:  Offset(0, 8.h),
-                                          ),
-                                        ],
-                                        borderRadius: BorderRadius.circular(16.r),
-                                        color: ColorManager.colorWhite,
-                                      ),
-                                      child:Padding(
-                                        padding:EdgeInsets.all(16.0.sp),
-                                        child: ElevatedButtonCustom(
-                                            width: 358.w,
-                                            height: 48.h,
-                                            radius: 8,
-                                            colors: ColorManager.colorPrimary,
-                                            widget: Text(TextManager.PAYMENT_CONFIRMATIO,style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 18),)
-
-                                        ),
-                                      )
-
-                                  )
-
-                                ],
-                              ),
-                            ),
+                            ],
                           ),
-                        ],
-                      ),
+                        ),
+                        SizedBox(height: 400.h,),
+                        Container(
+                            width: 390.2,
+                            height: 80.h,
+                            decoration: BoxDecoration(
+                              boxShadow: [
+                                BoxShadow(
+                                  color: ColorManager.colorBlack.withOpacity(0.20),
+                                  blurRadius: 8,
+                                  offset:  Offset(0, 8.h),
+                                ),
+                              ],
+                              borderRadius: BorderRadius.circular(16.r),
+                              color: ColorManager.colorWhite,
+                            ),
+                            child:Padding(
+                              padding:EdgeInsets.all(16.0.sp),
+                              child: ElevatedButtonCustom(
+                                  width: 358.w,
+                                  height: 48.h,
+                                  radius: 8,
+                                  colors: ColorManager.colorPrimary,
+                                  widget: Text(TextManager.PAYMENT_CONFIRMATIO,style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 18),)
+                              ),
+                            )
+                        )
+                      ],
                     ),
                   ],
                 ),

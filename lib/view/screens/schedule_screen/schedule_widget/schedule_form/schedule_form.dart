@@ -76,15 +76,15 @@ int index=0;
             SizedBox(height: 8.h,),
             Row(
               children: [
-                DateTimeContainer(icon: AssetsManager.DATE,text: "september 21,2023",rightPadding: 15,width: 170,),
+                DateTimeContainer(icon: AssetsManager.DATE,text: "september 21,2023",rightPadding: 10,width: 170,),
                 SizedBox(width: 16.w,),
-                DateTimeContainer(icon: AssetsManager.TIME,text: "04:35 pm",rightPadding: 70,width: 170,),
+                  DateTimeContainer(icon: AssetsManager.TIME,text: "04:35 pm",rightPadding: 65,width: 170,),
               ],
             ),
             SizedBox(height: 24.h,),
             Text(TextManager.ADDRESS,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 22),),
             SizedBox(height: 8.h,),
-            DateTimeContainer(icon: AssetsManager.LOCATION,text: "95,Opposite arjun colleage,kariavm plot",rightPadding: 71,width: 358,x: true,),
+            DateTimeContainer(icon: AssetsManager.LOCATION,text: "95,Opposite arjun colleage,kariavm plot",rightPadding: 65,width: 358,x: true,),
             SizedBox(height: 24.h,),
             Text(TextManager.REPEAT,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 22),),
             SizedBox(height: 16.h,),
@@ -139,7 +139,6 @@ int index=0;
             SizedBox(height: 16.h,),
             OtherRowWidget(),
             SizedBox(height: 16.h,),
-            NextButtonWidget(pushTo: CheckOutScreen(),),
           ],
         );
       },

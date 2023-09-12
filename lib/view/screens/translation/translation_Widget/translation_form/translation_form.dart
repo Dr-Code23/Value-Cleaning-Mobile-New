@@ -30,10 +30,11 @@ class CustomTranslateForm extends StatelessWidget {
               ),
               child: Row(
                 children: [
+                  SizedBox(width: 16.w,),
                   SvgPicture.asset(AssetsManager.LANGUAGE),
                   SizedBox(width: 8.w,),
                   Text(TextManager.Language,style: getBoldStyle(color: ColorManager.colorGrey,fontSize: 16.sp),),
-                  SizedBox(width: 80.w,),
+                  SizedBox(width: 70.w,),
                   DropdownButton<Language>(
                     icon:SvgPicture.asset(AssetsManager.Arrow_Down),
                     onChanged: (Language? language) async {
@@ -63,7 +64,7 @@ class CustomTranslateForm extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 37.5.h,),
+            SizedBox(height: 24.h,),
             ElevatedButtonCustom(
               width: 171.w,
               height: 48.h,

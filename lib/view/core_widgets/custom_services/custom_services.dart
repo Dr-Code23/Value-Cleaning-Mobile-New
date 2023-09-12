@@ -29,8 +29,8 @@ class CustomServices extends StatelessWidget {
               );
           },
           child: Container(
-            height: 80.h,
-            width: 90.w,
+            height: 72.h,
+            width: 72.w,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(40.r),
               color: Color(color),

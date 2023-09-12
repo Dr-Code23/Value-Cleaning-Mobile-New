@@ -23,7 +23,7 @@ final Color?color;
         onTap: (){
           onPressed!();
         },
-        child: SvgPicture.asset(AssetsManager.arrow_left,color: color!,),
+        child: SvgPicture.asset(AssetsManager.arrow_left,color: color!),
       ),
     );
   }
