@@ -17,7 +17,7 @@ class EditPhotoCard extends StatelessWidget {
       child: Stack(
         clipBehavior: Clip.none,
         children: [
-          const TabBarWidget(
+          const AppBarWidget(
             text: TextManager.PROFILE_SETTINGS,
             height: 200,
             rightPadding: 80,

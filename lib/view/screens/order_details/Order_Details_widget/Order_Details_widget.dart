@@ -24,11 +24,11 @@ class OrderDetailsWidget extends StatelessWidget {
           ),
         ],
       ),
-      child: Column(
-        children: [
-          Padding(
-            padding:  EdgeInsets.all(16.sp),
-            child: Column (
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          children: [
+            Column (
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
@@ -47,28 +47,28 @@ class OrderDetailsWidget extends StatelessWidget {
                 ),
               ],
             ),
-          ),
-          Container(
-            width: 358.w,
-            height: 40.h,
-            decoration: BoxDecoration(
-                color: ColorManager.colorPrimary,
-                borderRadius: BorderRadius.only(bottomLeft: Radius.circular(16.r),bottomRight: Radius.circular(16.r))
-            ),
-            child:Padding(
-              padding:  EdgeInsets.only(right: 16.w,left: 16.w),
-              child: Row(
-                children: [
-                  Text(TextManager.TOTAL,style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 24),),
-                  SizedBox(width: 210.w,),
-                  Text("690",style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 24),),
-
-                ],
+            SizedBox(height: 16.h,),
+            Container(
+              width: 358.w,
+              height: 40.h,
+              decoration: BoxDecoration(
+                  color: ColorManager.colorPrimary,
+                  borderRadius: BorderRadius.only(bottomLeft: Radius.circular(16.r),bottomRight: Radius.circular(16.r))
               ),
-            ),
+              child:FittedBox(
+                child: Row(
+                  children: [
+                    Text(TextManager.TOTAL,style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 24),),
+                    SizedBox(width: 210.w,),
+                    Text("690",style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 24),),
 
-          ),
-        ],
+                  ],
+                ),
+              ),
+
+            ),
+          ],
+        ),
       ),
     );
   }

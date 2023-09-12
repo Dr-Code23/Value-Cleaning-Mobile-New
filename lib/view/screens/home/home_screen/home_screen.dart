@@ -5,8 +5,8 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:value_cleaning/core/style_font_manager/style_manager.dart';
 import 'package:value_cleaning/view/screens/home_search/home_search_screen/home_search_screen.dart';
+
 import '../../../../core/color_manager/color_manager.dart';
-import '../../../../core/route_manager/page_name.dart';
 import '../../../../core/text_manager/text_manager.dart';
 import '../../../core_widgets/custom_home_search/cusom_home_search.dart';
 import '../home_widget/card_offer_widget/custom_card_offer_widget.dart';
@@ -46,18 +46,25 @@ class HomeScreen extends StatelessWidget
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children:
                       [
-                        TopHome(),
-                        SizedBox(height: 24.h,),
-                        CustomHomeSearch(onPressed: (){
-                          Get.to(()=>HomeSearchScreen(),transition: Transition.downToUp,duration: Duration(
-                            milliseconds: 650,
-                          )
-                          );
-                        }),
-                        SizedBox(height: 24.h,),
-                      //  CardOffer(),
-                        SizedBox(height: 24.h,),
-                        CardOffer(),
+                          const TopHome(),
+                          SizedBox(
+                            height: 24.h,
+                          ),
+                          CustomHomeSearch(onPressed: () {
+                            Get.to(() => HomeSearchScreen(),
+                                transition: Transition.downToUp,
+                                duration: const Duration(
+                                  milliseconds: 650,
+                                ));
+                          }),
+                          SizedBox(
+                            height: 24.h,
+                          ),
+                          //  CardOffer(),
+                          SizedBox(
+                            height: 24.h,
+                          ),
+                          CardOffer(),
                         SizedBox(height: 24.h,),
                         Text(TextManager.ALL_CATEGORIES,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 18),),
                         SizedBox(height: 8.h,),

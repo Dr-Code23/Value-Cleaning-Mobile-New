@@ -21,7 +21,7 @@ class RateExperienceScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const TabBarWidget(
+              const AppBarWidget(
                 text: TextManager.RATE_EXPERIENCE,
                 height: 125,
               ),

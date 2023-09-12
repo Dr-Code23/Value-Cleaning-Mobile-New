@@ -34,48 +34,43 @@ class ServiceDetailsButtons extends StatelessWidget {
                   color: ColorManager.colorWhite,
                 ),
                 child:Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    Padding(
-                      padding:  EdgeInsets.all(16.sp),
-                      child: ElevatedButtonCustom(
-                        width: 172.w,
-                        height: 48.h,
-                        radius: 8,
-                        colors: ColorManager.colorDeepBlue,
-                        widget: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            SvgPicture.asset(AssetsManager.CHAT,color: ColorManager.colorWhite,),
-                            SizedBox(width: 8.w,),
-                            Text(TextManager.CHAT,style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 18),)
-                          ],
-                        ),
+                    ElevatedButtonCustom(
+                      width: 172.w,
+                      height: 48.h,
+                      radius: 8,
+                      colors: ColorManager.colorDeepBlue,
+                      widget: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SvgPicture.asset(AssetsManager.CHAT,color: ColorManager.colorWhite,),
+                          SizedBox(width: 8.w,),
+                          Text(TextManager.CHAT,style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 18),)
+                        ],
                       ),
                     ),
                     Row(
                       children: [
-                        Padding(
-                          padding:  EdgeInsets.only(right: 16.w,top: 16.h,bottom: 16.h),
-                          child: ElevatedButtonCustom(
-                            onPressed: (){
-                              Get.to(()=>ScheduleScreen(),transition: Transition.downToUp,duration: Duration(
-                                milliseconds: 650,
-                              )
-                              );
+                        ElevatedButtonCustom(
+                          onPressed: (){
+                            Get.to(()=>ScheduleScreen(),transition: Transition.downToUp,duration: Duration(
+                              milliseconds: 650,
+                            )
+                            );
 
-                            },
-                            width: 172.w,
-                            height: 48.h,
-                            radius: 8,
-                            colors: ColorManager.colorPrimary,
-                            widget: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                SvgPicture.asset(AssetsManager.ARROW_RIGHT,color: ColorManager.colorWhite,),
-                                SizedBox(width: 8.w,),
-                                Text(TextManager.SCHEDULE,style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 18),)
-                              ],
-                            ),
+                          },
+                          width: 172.w,
+                          height: 48.h,
+                          radius: 8,
+                          colors: ColorManager.colorPrimary,
+                          widget: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              SvgPicture.asset(AssetsManager.ARROW_RIGHT,color: ColorManager.colorWhite,),
+                              SizedBox(width: 8.w,),
+                              Text(TextManager.SCHEDULE,style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 18),)
+                            ],
                           ),
                         ),
                       ],

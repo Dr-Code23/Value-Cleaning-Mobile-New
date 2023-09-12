@@ -62,10 +62,7 @@ class _CheckOutWidgetState extends State<CheckOutWidget> {
                             child: Center(child: Icon(Icons.add,color: ColorManager.colorPrimary,size: 20,))
                         ),
                       ),
-                      Padding(
-                        padding:  EdgeInsets.only(right: 16.w,left: 0.w,),
-                        child: Text("Add Payment Card",style: getBoldStyle(color: ColorManager.colorPrimary,fontSize: 14),),
-                      ),
+                      Text("Add Payment Card",style: getBoldStyle(color: ColorManager.colorPrimary,fontSize: 14),),
                     ],
                   ),
                 ),

@@ -39,7 +39,7 @@ class OrderHistoryScreenState extends State<OrderHistoryScreen> with SingleTicke
             ),
             child: Column(
               children: <Widget>[
-                TabBarWidget(text: TextManager.ORDER_HISTORY,height: 130.h,rightPaddingText: 129,rightPadding: 95.08,),
+                AppBarWidget(text: TextManager.ORDER_HISTORY,height: 130.h,rightPaddingText: 129,rightPadding: 95.08,),
                 Container(
                   child: TabBar(
                       onTap: (value){

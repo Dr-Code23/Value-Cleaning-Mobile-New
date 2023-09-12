@@ -28,16 +28,13 @@ class ServicesForm extends StatelessWidget {
               children: [
                 Text(TextManager.DEEP_CLEANING,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 24),),
                 SizedBox(width: 139.w,),
-                Padding(
-                  padding:  EdgeInsets.only(right: 16.w),
-                  child: Text("15 \$ /hr",style: getBoldStyle(color: ColorManager.colorGreen,fontSize: 18),),
-                ),
+                Text("15 \$ /hr",style: getBoldStyle(color: ColorManager.colorGreen,fontSize: 18),),
               ],
             ),
             SizedBox(height: 16.h,),
             Row(
               children: [
-                CustomRattingBar(),
+                const CustomRattingBar(),
                 SizedBox(width: 16.w,),
                 Text("4.5",style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 14),),
               ],
@@ -55,11 +52,21 @@ class ServicesForm extends StatelessWidget {
           decoration: BoxDecoration(
             color: ColorManager.colorWhite,
             borderRadius: BorderRadius.circular(16.r),
+            boxShadow: [
+              BoxShadow(
+                color: ColorManager.colorBlack.withOpacity(0.20),
+                blurRadius: 8,
+                offset:  Offset(0, 8.h),
+              ),
+
+            ]
           ),
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
+
               Padding(
-                padding:  EdgeInsets.only(left: 16.w),
+                padding: const EdgeInsets.only(left: 8.0),
                 child: Text(TextManager.JOBS_DONE,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 16),),
               ),
               SizedBox(width: 183.w,),

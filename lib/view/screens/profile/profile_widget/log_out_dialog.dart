@@ -26,6 +26,7 @@ Future LogOutDialog(){
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 10.w),
           child: Row(
+            mainAxisSize: MainAxisSize.min,
             children: [
               Expanded(
                 child: ElevatedButtonCustom(

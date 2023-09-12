@@ -40,27 +40,20 @@ class NextButtonWidget extends StatelessWidget {
                     padding:  EdgeInsets.only(right: 90.w,bottom: 10.h,left: 50.w),
                     child: Text("(50\$)",style: getBoldStyle(color: ColorManager.colorPrimary,fontSize: 18),)
                 ),
-                Row(
-                  children: [
-                    Padding(
-                      padding:  EdgeInsets.only(right: 16.w,top: 16.h,bottom: 16.h),
-                      child: ElevatedButtonCustom(
-                        onPressed:onPressed!,
-                        width: 172.w,
-                        height: 48.h,
-                        radius: 8,
-                        colors: ColorManager.colorPrimary,
-                        widget: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            SvgPicture.asset(AssetsManager.ARROW_RIGHT,color: ColorManager.colorWhite,),
-                            SizedBox(width: 8.w,),
-                            Text(TextManager.NEXT,style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 18),)
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
+                ElevatedButtonCustom(
+                  onPressed:onPressed!,
+                  width: 172.w,
+                  height: 48.h,
+                  radius: 8,
+                  colors: ColorManager.colorPrimary,
+                  widget: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SvgPicture.asset(AssetsManager.ARROW_RIGHT,color: ColorManager.colorWhite,),
+                      SizedBox(width: 8.w,),
+                      Text(TextManager.NEXT,style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 18),)
+                    ],
+                  ),
                 ),
               ],
             )

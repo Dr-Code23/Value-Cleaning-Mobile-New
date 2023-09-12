@@ -31,7 +31,7 @@ class PaymentSettingScreenState extends State<PaymentSettingScreen> {
           ),
           child: Column(
             children: <Widget>[
-              TabBarWidget(text: TextManager.PAYMENT_SETTING,rightPadding: 74.08,rightPaddingText: 108,height: 140,bottomIcon: 50,bottomText: 50),
+              AppBarWidget(text: TextManager.PAYMENT_SETTING,rightPadding: 74.08,rightPaddingText: 108,height: 140,bottomIcon: 50,bottomText: 50),
               SizedBox(height: 18.h,),
               PaymentSettingWidget(name: 'Jason Green',color: ColorManager.colorGold,),
               SizedBox(height: 16.h,),

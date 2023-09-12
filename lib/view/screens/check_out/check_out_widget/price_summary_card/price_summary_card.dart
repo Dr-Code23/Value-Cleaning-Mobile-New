@@ -6,12 +6,14 @@ import '../../../../../core/style_font_manager/style_manager.dart';
 import '../../../../../core/text_manager/text_manager.dart';
 
 class PriceSummaryCard extends StatelessWidget {
+  const PriceSummaryCard({super.key});
+
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: 358.w,
-      height: 192.h,
+      height: 265.h,
       decoration: BoxDecoration(
         color: ColorManager.colorWhite,
         borderRadius: BorderRadius.circular(16.r),
@@ -23,11 +25,11 @@ class PriceSummaryCard extends StatelessWidget {
           ),
         ],
       ),
-      child: Column(
-        children: [
-          Padding(
-            padding:  EdgeInsets.all(16.sp),
-            child: Column (
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          children: [
+            Column (
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(TextManager.PRICE_SUMMARY,style: getBoldStyle(color: ColorManager.colorDeepGreen,fontSize: 18),),
@@ -50,19 +52,19 @@ class PriceSummaryCard extends StatelessWidget {
                 Text("........opposite ",style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 14),),
               ],
             ),
-          ),
-          Container(
-            width: 358.w,
-            height: 40.h,
-            decoration: BoxDecoration(
-                color: ColorManager.colorPrimary,
-                borderRadius: BorderRadius.only(bottomLeft: Radius.circular(16.r),bottomRight: Radius.circular(16.r))
+            Container(
+              width: 358.w,
+              height: 40.h,
+              decoration: BoxDecoration(
+                  color: ColorManager.colorPrimary,
+                  borderRadius: BorderRadius.only(bottomLeft: Radius.circular(16.r),bottomRight: Radius.circular(16.r))
+              ),
+              child:Center(child: Text(TextManager.TOTAL,style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 14),)),
+
             ),
-            child:Center(child: Text(TextManager.TOTAL,style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 14),)),
 
-          ),
-
-        ],
+          ],
+        ),
       ),
     );
   }

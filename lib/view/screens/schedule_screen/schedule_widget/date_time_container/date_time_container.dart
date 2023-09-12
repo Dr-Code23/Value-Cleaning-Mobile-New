@@ -45,10 +45,7 @@ final bool? x;
               child: SvgPicture.asset(icon!,color: ColorManager.colorWhite,width: 10,height: 10,),
             ),
           ),
-          Padding(
-            padding:  EdgeInsets.only(right: rightPadding!.w),
-            child: Text(text!,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 12),),
-          ),
+          Text(text!,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 12),),
           if(x==true)
           Padding(
             padding:  EdgeInsets.only(right: 8.w),

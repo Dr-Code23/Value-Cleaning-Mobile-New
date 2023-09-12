@@ -120,7 +120,6 @@ class TextManager
   static const String NEW_PASSWORD= "New Password";
   static const String NOTIFICATIONS= "Notifications";
   static const String DISCOUNT= "Discount";
-  static const String RATE_EXPERIENCE= "Rate experience";
   static const String RATE_OVER_EXPERIENCE= "Rate overall experience";
   static const String SUBMIT_FEEDBACK= "Submit Feedback";
   static const String THANKS_FOR_RATING= "Thanks for rating us";

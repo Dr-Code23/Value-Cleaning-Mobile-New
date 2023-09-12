@@ -24,30 +24,21 @@ class CustomCategory extends StatelessWidget {
         color: Color(color),
       ),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Column(
-            children: [
-              Padding(
-                padding:  EdgeInsets.only(top: 37.h,right: 24.w,left: 24.w),
-                child: Image(
-                  width: 48.w,
-                  height: 42.1.h,
-                  image: AssetImage(imagePath),
-                ),
-              ),
-              SizedBox(height: 15.5.h),
-              Padding(
-                padding:  EdgeInsets.only(right: 10.w,left: 10.w,bottom: 16.w),
-                child: Text(
-                  name,
-                  style: getBoldStyle(color: ColorManager.colorDeepGrey ,
-                      fontSize: 14
-                  ),
-                ),
-              ),
-
-            ],
+          Image(
+            width: 48.w,
+            height: 42.1.h,
+            image: AssetImage(imagePath),
           ),
+          SizedBox(height: 15.5.h),
+          Text(
+            name,
+            style: getBoldStyle(color: ColorManager.colorDeepGrey ,
+                fontSize: 14
+            ),
+          ),
+
         ],
       ),
     );

@@ -16,7 +16,7 @@ class FavouriteScreen extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            const TabBarWidget(text: 'Favourite List',height: 124,rightPadding: 80,),
+            const AppBarWidget(text: 'Favourite List',height: 124,rightPadding: 80,),
             SizedBox(height: 10.h,),
             Expanded(
                 // width: ScreenUtil().screenWidth,

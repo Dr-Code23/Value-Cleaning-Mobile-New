@@ -20,77 +20,79 @@ class OrderDetailsScreen extends StatelessWidget
   {
     return  Scaffold(
 backgroundColor: ColorManager.colorScaffold,
-        body: Stack(
-          children:<Widget> [
-            TabBarWidget(text: TextManager.ORDER_DETAILS,rightPadding: 97.08,rightPaddingText:130,),
-            SafeArea(
-              child: SingleChildScrollView(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children:
-                  [
-                    Column(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.only(top: 136.h,right: 16.w),
-                          child: Column(
-                            children: [
-                              Container(
-                                width: 390.w,
-                                decoration:  BoxDecoration(
-                                  borderRadius: BorderRadius.only(
-                                    topLeft: Radius.circular(24.r),
-                                    topRight: Radius.circular(24.r),
+        body: SafeArea(
+          child: Stack(
+            children:<Widget> [
+              const AppBarWidget(text: TextManager.ORDER_DETAILS,rightPadding: 97.08,rightPaddingText:130,),
+              SafeArea(
+                child: SingleChildScrollView(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children:
+                    [
+                      Column(
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.only(top: 136.h,right: 16.w),
+                            child: Column(
+                              children: [
+                                Container(
+                                  width: 390.w,
+                                  decoration:  BoxDecoration(
+                                    borderRadius: BorderRadius.only(
+                                      topLeft: Radius.circular(24.r),
+                                      topRight: Radius.circular(24.r),
+                                    ),
+                                    color: ColorManager.colorScaffold,
                                   ),
-                                  color: ColorManager.colorScaffold,
-                                ),
-                                child: Padding(
-                                  padding:  EdgeInsets.only(bottom: 20.0.h,left: 16.w),
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children:
-                                    [
-                                      OrderDetailsWidget(),
-                                    ],
+                                  child: Padding(
+                                    padding:  EdgeInsets.only(bottom: 20.0.h,left: 16.w),
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children:
+                                      [
+                                        OrderDetailsWidget(),
+                                      ],
+                                    ),
                                   ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        SizedBox(height: 400.h,),
-                        Container(
-                            width: 390.2,
-                            height: 80.h,
-                            decoration: BoxDecoration(
-                              boxShadow: [
-                                BoxShadow(
-                                  color: ColorManager.colorBlack.withOpacity(0.20),
-                                  blurRadius: 8,
-                                  offset:  Offset(0, 8.h),
                                 ),
                               ],
-                              borderRadius: BorderRadius.circular(16.r),
-                              color: ColorManager.colorWhite,
                             ),
-                            child:Padding(
-                              padding:EdgeInsets.all(16.0.sp),
-                              child: ElevatedButtonCustom(
-                                  width: 358.w,
-                                  height: 48.h,
-                                  radius: 8,
-                                  colors: ColorManager.colorPrimary,
-                                  widget: Text(TextManager.PAYMENT_CONFIRMATIO,style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 18),)
+                          ),
+                          SizedBox(height: 400.h,),
+                          Container(
+                              width: 390.2,
+                              height: 80.h,
+                              decoration: BoxDecoration(
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: ColorManager.colorBlack.withOpacity(0.20),
+                                    blurRadius: 8,
+                                    offset:  Offset(0, 8.h),
+                                  ),
+                                ],
+                                borderRadius: BorderRadius.circular(16.r),
+                                color: ColorManager.colorWhite,
                               ),
-                            )
-                        )
-                      ],
-                    ),
-                  ],
+                              child:Padding(
+                                padding:EdgeInsets.all(8.0.sp),
+                                child: ElevatedButtonCustom(
+                                    width: 358.w,
+                                    height: 48.h,
+                                    radius: 8,
+                                    colors: ColorManager.colorPrimary,
+                                    widget: Text(TextManager.PAYMENT_CONFIRMATIO,style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 18),)
+                                ),
+                              )
+                          )
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ));
   }
 }

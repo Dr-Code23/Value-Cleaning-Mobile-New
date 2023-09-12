@@ -29,7 +29,7 @@ class AddPaymentCardScreenState extends State<AddPaymentCardScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              TabBarWidget(text: TextManager.ADD_PAYMENT_CARD,rightPadding: 63.08,rightPaddingText: 103,height: 150,bottomIcon: 50,bottomText: 50),
+              AppBarWidget(text: TextManager.ADD_PAYMENT_CARD,rightPadding: 63.08,rightPaddingText: 103,height: 150,bottomIcon: 50,bottomText: 50),
               SizedBox(height: 36.h,),
               Padding(
                 padding:  EdgeInsets.only(left: 16.w),

@@ -6,12 +6,14 @@ import '../../../../../core/style_font_manager/style_manager.dart';
 import '../../../../../core/text_manager/text_manager.dart';
 
 class   OrderDetailsCard extends StatelessWidget {
+  const OrderDetailsCard({super.key});
+
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: 358.w,
-      height: 192.h,
+      height: 270.h,
       decoration: BoxDecoration(
         color: ColorManager.colorWhite,
         borderRadius: BorderRadius.circular(16.r),
@@ -23,11 +25,11 @@ class   OrderDetailsCard extends StatelessWidget {
           ),
         ],
       ),
-      child: Column(
-        children: [
-          Padding(
-            padding:  EdgeInsets.all(16.sp),
-            child: Column (
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          children: [
+            Column (
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(TextManager.ORDER_DETAILS,style: getBoldStyle(color: ColorManager.colorDeepGreen,fontSize: 18),),
@@ -50,34 +52,35 @@ class   OrderDetailsCard extends StatelessWidget {
                 Text("opposite.... ",style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 14),),
               ],
             ),
-          ),
-          Row(
-            children: [
-              Container(
-                width: 178.w,
-                height: 40.h,
-                decoration: BoxDecoration(
-                    color: ColorManager.colorPrimary,
-                    borderRadius: BorderRadius.only(bottomLeft: Radius.circular(16.r))
+            SizedBox(height: 16.h,),
+            Row(
+              children: [
+                Expanded(
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: ColorManager.colorPrimary,
+                        borderRadius: BorderRadius.only(bottomLeft: Radius.circular(16.r))
+                    ),
+                    child:Center(child: Text(TextManager.SEE_ALL_DEAILS,style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 14),)),
+
+                  ),
                 ),
-                child:Center(child: Text(TextManager.SEE_ALL_DEAILS,style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 14),)),
+                SizedBox(width: 2.w,),
+                Expanded(
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: ColorManager.colorBlue,
+                        borderRadius: BorderRadius.only(bottomRight: Radius.circular(16.r))
+                    ),
+                    child:Center(child: Text(TextManager.EDIT,style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 14),)),
 
-              ),
-              SizedBox(width: 2.w,),
-              Container(
-                width: 178.w,
-                height: 40.h,
-                decoration: BoxDecoration(
-                    color: ColorManager.colorBlue,
-                    borderRadius: BorderRadius.only(bottomRight: Radius.circular(16.r))
+                  ),
                 ),
-                child:Center(child: Text(TextManager.EDIT,style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 14),)),
+              ],
+            ),
 
-              ),
-            ],
-          ),
-
-        ],
+          ],
+        ),
       ),
     );
   }

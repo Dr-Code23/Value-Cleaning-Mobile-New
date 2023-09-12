@@ -19,7 +19,7 @@ class TermsConditionsScreen extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                const TabBarWidget(
+                const AppBarWidget(
                   text: TextManager.TERMS_AND_CONDITIONS,
                   height: 125,
                   rightPadding: 80,

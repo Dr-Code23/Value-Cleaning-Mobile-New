@@ -48,7 +48,7 @@ class UserData extends StatelessWidget {
           child: Stack(
             clipBehavior: Clip.none,
             children: [
-              const TabBarWidget(
+              const AppBarWidget(
                 text: TextManager.USER_PROFILE,
                 height: 200,
                 rightPadding: 80,

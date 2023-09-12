@@ -49,7 +49,7 @@ class ALLTransportCompanies extends StatelessWidget {
       color: ColorManager.colorScaffold,
       child: Column(
         children: [
-          TabBarWidget(text: TextManager.TRANSPORT_COMPANIES,rightPaddingText: 50,rightPadding: 50,height: 130,isSearch: true),
+          AppBarWidget(text: TextManager.TRANSPORT_COMPANIES,rightPaddingText: 50,rightPadding: 50,height: 130,isSearch: true),
           Container(
             width: 390.w,
             color: ColorManager.colorScaffold,

@@ -6,13 +6,10 @@ import 'package:value_cleaning/core/route_manager/page_name.dart';
 import 'package:value_cleaning/view/screens/profile/profile_widget/user_data_widget.dart';
 
 import '../../../../core/color_manager/color_manager.dart';
-import '../../../../core/style_font_manager/style_manager.dart';
 import '../../../../core/text_manager/text_manager.dart';
-import '../../../core_widgets/custom_top_button/custom_top_button.dart';
-import '../../../core_widgets/tab_bar_widget/tab_bar_widget.dart';
+import '../profile_widget/contact_us_card.dart';
 import '../profile_widget/first_row.dart';
 import '../profile_widget/item_card.dart';
-import '../profile_widget/contact_us_card.dart';
 import '../profile_widget/log_out_dialog.dart';
 
 class ProfileScreen extends StatelessWidget {

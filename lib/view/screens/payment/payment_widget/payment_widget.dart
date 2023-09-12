@@ -10,13 +10,11 @@ import '../../../../../core/color_manager/color_manager.dart';
 import '../../../../../core/style_font_manager/style_manager.dart';
 import '../../../../../core/text_manager/text_manager.dart';
 
-class PaymentMethodWidget extends StatefulWidget {
-  @override
-  State<PaymentMethodWidget> createState() => _PaymentMethodWidgetState();
-}
+class PaymentMethodWidget extends StatelessWidget {
+  const PaymentMethodWidget({super.key});
 
-class _PaymentMethodWidgetState extends State<PaymentMethodWidget> {
-  int index=0;
+ final int index=0;
+
   @override
   Widget build(BuildContext context) {
     return  BlocConsumer<LayoutCubit,LayoutState>(
@@ -81,7 +79,6 @@ class _PaymentMethodWidgetState extends State<PaymentMethodWidget> {
                     ],
                   ),
                 ),
-                SizedBox(height:111.h),
               ],
             ),
           ],

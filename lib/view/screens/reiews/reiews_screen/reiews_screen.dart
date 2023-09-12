@@ -25,7 +25,7 @@ backgroundColor: ColorManager.colorScaffold,
         body: Stack(
           children:<Widget> [
 
-        TabBarWidget(text: TextManager.REVIEWS,),
+        AppBarWidget(text: TextManager.REVIEWS,),
             SafeArea(
               child: SingleChildScrollView(
                 child: Column(

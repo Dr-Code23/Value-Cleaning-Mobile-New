@@ -21,18 +21,16 @@ class CheckOutScreen extends StatelessWidget
             children: [
               Column(
                 children: [
-                  Container(
-                    width: 390,
+                  SizedBox(
                     child: Column(
                       children: [
                         Stack(
                           children: [
-                            TabBarWidget(text: TextManager.CHECK_OUT,rightPadding: 112.08,rightPaddingText: 145,height: 188,bottomIcon: 50,bottomText: 50),
+                            const AppBarWidget(text: TextManager.CHECK_OUT,rightPadding: 112.08,rightPaddingText: 145,height: 188,bottomIcon: 50,bottomText: 50),
                             Padding(
                               padding:  EdgeInsets.only(top: 130.h,left: 16.w,right: 16.w),
                               child: Container(
                                   width: 358.w,
-                                  height: 163.h,
                                   decoration: BoxDecoration(
                                     color: ColorManager.colorWhite,
                                     borderRadius: BorderRadius.circular(16.r),
@@ -44,7 +42,10 @@ class CheckOutScreen extends StatelessWidget
                                       ),
                                     ],
                                   ),
-                                  child: CheckOutCards(),
+                                  child:  Padding(
+                                    padding: EdgeInsets.all(8.0.sp),
+                                    child: const CheckOutCards(),
+                                  ),
 
                               ),
                             ),

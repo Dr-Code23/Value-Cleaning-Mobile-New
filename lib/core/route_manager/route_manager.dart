@@ -25,7 +25,7 @@ List<GetPage> pages  =
 [
 
   GetPage(name: PageName.TRANSLATION_PAGE, page: () => const TranslationScreen()),
-  GetPage(name: PageName.ON_BOARDING, page: () =>  OnBordingScreen()),
+  GetPage(name: PageName.ON_BOARDING, page: () =>  OnBordingScreen() ,),
   GetPage(name: PageName.START_SCREEN, page: () =>  const StartScreen()),
   GetPage(name: PageName.SIGN_UP, page: () =>  const SignUpScreen()),
   GetPage(name: PageName.LOG_IN, page: () =>  const LoginScreen()),

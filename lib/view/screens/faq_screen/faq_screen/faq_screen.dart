@@ -17,7 +17,7 @@ class FaqScreen extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                const TabBarWidget(
+                const AppBarWidget(
                   text: TextManager.FAQS,
                   height: 125,
                   rightPadding: 80,

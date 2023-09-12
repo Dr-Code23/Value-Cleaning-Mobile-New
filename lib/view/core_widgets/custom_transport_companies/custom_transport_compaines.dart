@@ -57,34 +57,33 @@ class CustomTopServices extends StatelessWidget {
                     ),
                   ),
                 ),
-                Padding(
-                  padding:  EdgeInsets.only(right: 90.w,left: 16.w,top: 23.h,bottom: 22.h),
-                  child: Column(
-                    children: [
-                      Text(
-                        name,
-                        style: getBoldStyle(color: ColorManager.colorDeepGrey ,
-                            fontSize: 14
-                        ),
+                SizedBox(width: 20.w,),
+                Column(
+                  children: [
+                    Text(
+                      name,
+                      style: getBoldStyle(color: ColorManager.colorDeepGrey ,
+                          fontSize: 14
                       ),
-                      SizedBox(height: 11.h,),
-                      Text(
-                        price,
-                        style: getBoldStyle(color: Color(0xff20843C) ,
-                            fontSize: 14
-                        ),
+                    ),
+                    SizedBox(height: 11.h,),
+                    Text(
+                      price,
+                      style: getBoldStyle(color: Color(0xff20843C) ,
+                          fontSize: 14
                       ),
-                      SizedBox(height: 8.h,),
-                      Row(
-                        children: [
-                          CustomRattingBar(),
-                          SizedBox(width: 16.w,),
-                          Text("4.5",style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 14),),
-                        ],
-                      ),
-                    ],
-                  ),
+                    ),
+                    SizedBox(height: 8.h,),
+                    Row(
+                      children: [
+                        CustomRattingBar(),
+                        SizedBox(width: 16.w,),
+                        Text("4.5",style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 14),),
+                      ],
+                    ),
+                  ],
                 ),
+                const Spacer(),
                 Padding(
                   padding:  EdgeInsets.only(right: 16.w,top: 24.h,bottom: 64.h),
                   child: SvgPicture.asset(AssetsManager.HEART),

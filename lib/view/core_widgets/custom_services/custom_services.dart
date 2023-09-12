@@ -25,7 +25,7 @@ class CustomServices extends StatelessWidget {
         InkWell(
           onTap: (){
             Get.to(()=> ServicesDetailsScreen(),
-                transition: Transition.rightToLeft,duration: Duration(milliseconds:650)
+                transition: Transition.rightToLeft,duration: const Duration(milliseconds:650)
               );
           },
           child: Container(
