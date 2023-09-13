@@ -49,18 +49,24 @@ class OrderItem extends StatelessWidget {
                 Row(
                   children: [
                     Text("Order #1111",style: getBoldStyle(color: ColorManager.colorDeepGreen,fontSize: 18),),
-                    details!?Spacer():SizedBox(),
-                    details!?Text(TextManager.DETAILS,style: getBoldStyle(color: ColorManager.colorBlue,fontSize: 18),):SizedBox(),
-                    cancel!?Spacer():SizedBox(),
-                    cancel!?Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(16.r)),
-                          color: ColorManager.buttonGrey,
-                        ),
-                        child: Padding(
-                          padding:  EdgeInsets.only(right: 5.w,left: 5.w),
-                          child: Center(child: Text(TextManager.CANCEL,style: getBoldStyle(color: !cancelPressed!?ColorManager.colorLightGrey:ColorManager.colorLightGrey.withOpacity(0.4),fontSize: 12),)),
-                        )):SizedBox(),
+                    details!?Padding(
+                      padding:  EdgeInsets.only(left: 150.w),
+                      child: Text(TextManager.DETAILS,style: getBoldStyle(color: ColorManager.colorBlue,fontSize: 18),),
+                    ):const SizedBox(),
+                    cancel!?Padding(
+                      padding:  EdgeInsets.only(left: 150.w),
+                      child: Container(
+                          width: 69.w,
+                          height: 20.h,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(16.r)),
+                            color: ColorManager.buttonGrey,
+                          ),
+                          child: Padding(
+                            padding:  EdgeInsets.only(bottom: 3.h),
+                            child: Center(child: Text(TextManager.CANCEL,style: getBoldStyle(color: !cancelPressed!?ColorManager.colorLightGrey:ColorManager.colorLightGrey.withOpacity(0.4),fontSize: 12),)),
+                          ))
+                    ):const SizedBox(),
                   ],
                 ),
                 SizedBox(height: 16.h,),
@@ -79,29 +85,22 @@ class OrderItem extends StatelessWidget {
                 child:Center(child: Text(text!,style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 14),)),
               ),
               SizedBox(width: 2.w,),
-              InkWell(
-                onTap: (){
-                  x!?Get.to(()=>QrCodeScreen()!,transition: Transition.leftToRight,duration: Duration(
-                    milliseconds: 650,
-                  )
-                  ):SizedBox();
-                },
-                child: Container(
-                  width: 178.w,
-                  decoration: BoxDecoration(
-                      color: !cancelPressed!?ColorManager.colorBlue:ColorManager.colorBlue.withOpacity(.1),
-                      borderRadius: BorderRadius.only(bottomRight: Radius.circular(16.r))
-                  ),
-                  child:Row(
-                    children: [
-                     x!?Padding(
-                        padding:  EdgeInsets.only(left: 35.w,right: 10.w),
-                        child: SvgPicture.asset(AssetsManager.QR_CODE,color: ColorManager.colorWhite,width: 24.w,height: 24.h,),
-                      ):SizedBox(),
-                       !x!?SizedBox(width: sizedBox!.w,):SizedBox(),
-                      Center(child: Text(text2!,style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 14),)),
-                    ],
-                  ),
+              Container(
+                width: 178.w,
+                height: 40.h,
+                decoration: BoxDecoration(
+                    color: !cancelPressed!?ColorManager.colorBlue:ColorManager.colorBlue.withOpacity(.1),
+                    borderRadius: BorderRadius.only(bottomRight: Radius.circular(16.r))
+                ),
+                child:Row(
+                  children: [
+                   x!?Padding(
+                      padding:  EdgeInsets.only(left: 35.w,right: 10.w),
+                      child: SvgPicture.asset(AssetsManager.QR_CODE,color: ColorManager.colorWhite,width: 24.w,height: 24.h,),
+                    ):const SizedBox(),
+                     !x!?SizedBox(width: sizedBox!.w,):const SizedBox(),
+                    Center(child: Text(text2!,style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 14),)),
+                  ],
                 ),
               ),
             ],

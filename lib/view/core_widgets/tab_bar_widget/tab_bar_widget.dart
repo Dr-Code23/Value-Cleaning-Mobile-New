@@ -31,7 +31,7 @@ class AppBarWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 390.w,
+      width: ScreenUtil().screenWidth,
       height: height!.h,
       decoration: BoxDecoration(
         color: ColorManager.colorGreen,
@@ -41,11 +41,8 @@ class AppBarWidget extends StatelessWidget {
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
-mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          // const Spacer(flex: 4),
-          // Text(text!,style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 22,),),
-          // const Spacer(flex: 1,),
           Padding(
             padding:  EdgeInsets.only(top: 40.h),
             child: CustomLeftArrowIcon(
@@ -58,16 +55,18 @@ mainAxisAlignment: MainAxisAlignment.center,
                   Get.back();
                 }),
           ),
-          Spacer(),
-          Text(text!,style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 22),),
-          Spacer(),
-          if(isSearch!)
-            Spacer(),
-          if(isSearch!)
+          Text(
+            text!,
+            style: getBoldStyle(color: ColorManager.colorWhite, fontSize: 22),
+          ),
+          if (isSearch!)
             Padding(
-         padding:  EdgeInsets.only(right: 16.w,top: 5.h),
-         child: SvgPicture.asset(AssetsManager.search,color: ColorManager.colorWhite,),
-       ),
+              padding: EdgeInsets.only(right: 16.w, top: 60.h, bottom: 40.h),
+              child: SvgPicture.asset(
+                AssetsManager.search,
+                color: ColorManager.colorWhite,
+              ),
+            ),
         ],
       ),
     );

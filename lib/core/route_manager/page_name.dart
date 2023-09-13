@@ -19,7 +19,13 @@ class PageName
   static const String NOTIFICATIONS = '/NOTIFICATIONS_SCREEN';
   static const String RATE_EXPERIENCE = '/RATE_EXPERIENCE_SCREEN';
   static const String CHANGE_CARD = '/CHANGE_CARD';
-  static const String QR_CODE_SCREEN = '/QR_CODE_SCREEN';
+  // static const String QR_CODE_SCREEN = '/QR_CODE_SCREEN';
+  static const String HOME_SEARCH = '/HOME_SEARCH_SCREEN';
+  static const String PAYMENT_SETTINGS = '/PAYMENT_SETTINGS_SCREEN';
+  static const String ADD_PAYMENT_CARD = '/ADD_PAYMENT_CARD_SCREEN';
+  static const String ORDER_DETAILS = '/ORDER_DETAILS_SCREEN';
+  static const String CHECK_OUT = '/CHECK_OUT_SCREEN';
+  static const String QR_CODE = '/QR_CODE_SCREEN';
 
 
 }

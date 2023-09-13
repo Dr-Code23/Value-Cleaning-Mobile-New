@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:value_cleaning/core/route_manager/page_name.dart';
 
 import '../../../../../core/color_manager/color_manager.dart';
 import '../../../../../core/style_font_manager/style_manager.dart';
@@ -16,10 +17,8 @@ class ShowDialogButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return   ElevatedButtonCustom(
         onPressed: (){
-          Navigator.pop(context);
-          Get.to(()=>OrderDetailsScreen(),transition: Transition.rightToLeft,duration: Duration(
-            milliseconds: 650,
-          )
+          Get.back();
+          Get.toNamed(PageName.ORDER_DETAILS
           );
         },
         width: 278.w,

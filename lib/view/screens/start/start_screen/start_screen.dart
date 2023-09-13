@@ -37,7 +37,7 @@ backgroundColor: ColorManager.colorScaffold,
 
                   },
                 ),
-                CustomLogo(),
+                const CustomLogo(),
                 SizedBox(
                   height: 24.h,
                 ),

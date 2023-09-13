@@ -48,6 +48,7 @@ class LoginWidget extends StatelessWidget {
                     children: [
                       const CheckBoxWidget(text: TextManager.REMEMBER_ME,x: false,Price: '9'),
                       Spacer(),
+                      SizedBox(width: 89.w,),
                       InkWell(
                           onTap: (){
                             Get.toNamed(PageName.FORGET_PASSWORD);

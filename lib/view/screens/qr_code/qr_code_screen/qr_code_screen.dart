@@ -13,6 +13,8 @@ import '../qr_code_widget/qr_code_widget.dart';
 
 class QrCodeScreen extends StatefulWidget
 {
+  const QrCodeScreen({super.key});
+
   @override
   State<QrCodeScreen> createState() => _QrCodeScreenState();
 
@@ -32,6 +34,7 @@ class _QrCodeScreenState extends State<QrCodeScreen> {
       });
     });
   }
+  @override
   Widget build(BuildContext context)
   {
 

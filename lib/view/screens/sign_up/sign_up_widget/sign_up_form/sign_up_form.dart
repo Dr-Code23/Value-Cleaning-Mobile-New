@@ -94,7 +94,7 @@ final String? selectedValue;
                 onPressed: () {
                   Get.toNamed(PageName.SIGN_UP);
                 },),
-              SignInWithGoogleOrFaceBook(),
+              const SignInWithGoogleOrFaceBook(),
             ],
           ),
         ),

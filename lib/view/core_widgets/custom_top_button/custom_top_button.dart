@@ -38,7 +38,7 @@ class TopButtons extends StatelessWidget {
                     fontSize: 18.sp, fontWeight: FontWeight.normal,),
               ),
               SizedBox(
-                width: ScreenUtil().setWidth(10),
+                width: 10.w,
               ),
               SvgPicture.asset(image,width: 50.w,height: 50.h,),
             ],

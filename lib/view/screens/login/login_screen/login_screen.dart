@@ -29,14 +29,11 @@ backgroundColor: ColorManager.colorScaffold,
               children: [
                 // back Button
                 // logo
-                CustomLeftArrowIcon(
+                const CustomLeftArrowIcon(
                   top: 60,
                   bottom: 151.02,
                   left: 16,
                   right: 350.08,
-                  onPressed: (){
-
-                  },
                 ),
              const CustomLogo(),
                 SizedBox(height: 40.h,),

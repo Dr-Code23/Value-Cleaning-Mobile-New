@@ -51,7 +51,7 @@ class UserData extends StatelessWidget {
               const AppBarWidget(
                 text: TextManager.USER_PROFILE,
                 height: 200,
-                rightPadding: 80,
+                // rightPadding: 80,
               ),
               Positioned(
                 left: 120.w,
@@ -66,11 +66,14 @@ class UserData extends StatelessWidget {
           ),
         ),
       ),
-      SizedBox(height: 10.h,),
-      Text(
-        'Manar Ahmed ',
-        style: getBoldStyle(color: ColorManager.colorBlack, fontSize: 22),
+      Padding(
+        padding:  EdgeInsets.symmetric(vertical: 10.h),
+        child: Text(
+          'Manar Ahmed ',
+          style: getBoldStyle(color: ColorManager.colorBlack, fontSize: 22),
+        ),
       ),
+
       Text(
         'mnarahmed945@gmail.com',
         style: getLight2Style(color: ColorManager.colorBlack, fontSize: 14),
