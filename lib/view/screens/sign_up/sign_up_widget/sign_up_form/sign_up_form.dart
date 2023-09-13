@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:value_cleaning/core/assets_manager/assets_manager.dart';
 
 import '../../../../../core/color_manager/color_manager.dart';
 import '../../../../../core/route_manager/page_name.dart';
@@ -36,6 +38,8 @@ final String? selectedValue;
                 validate: (String? value) {
                   return null;
                 },
+                suffix: true,
+                suffixIcon:SvgPicture.asset(AssetsManager.LOCATION2),
                 label: TextManager.ENTER_ADDRESS,
               ),
               SizedBox(

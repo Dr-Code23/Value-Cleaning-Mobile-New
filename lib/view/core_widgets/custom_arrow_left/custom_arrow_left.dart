@@ -7,14 +7,17 @@ import '../../../core/color_manager/color_manager.dart';
 class CustomLeftArrowIcon extends StatelessWidget {
   const CustomLeftArrowIcon({
     super.key,
-    required this.onPressed, this.top, this.bottom, this.left, this.right, this.color=ColorManager.colorBlack,
+    required this.onPressed, this.top, this.bottom, this.left, this.right, this.color=ColorManager.colorBlack, this.width=24, this.height=24,
   });
   final Function ? onPressed;
   final double ? top;
   final double ? bottom;
   final double ? left;
   final double ? right;
-final Color?color;
+  final double ? width;
+  final double ? height;
+
+  final Color?color;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -23,7 +26,7 @@ final Color?color;
         onTap: (){
           onPressed!();
         },
-        child: SvgPicture.asset(AssetsManager.arrow_left,color: color!),
+        child: SvgPicture.asset(AssetsManager.arrow_left,color: color!,width: width!.w,height: height!.h,),
       ),
     );
   }

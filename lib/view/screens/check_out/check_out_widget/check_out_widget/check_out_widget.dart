@@ -36,12 +36,10 @@ class _CheckOutWidgetState extends State<CheckOutWidget> {
                   milliseconds: 650,
                 )
                 );
-
               },
               child: Center(
                 child: Container(
-                  width: 185.w,
-                  height: 40.h,
+                  width: 200.w,
                   decoration: BoxDecoration(
                       color: ColorManager.colorWhite,
                       borderRadius: BorderRadius.circular(8.r),
@@ -71,9 +69,9 @@ class _CheckOutWidgetState extends State<CheckOutWidget> {
             SizedBox(height: 28.h,),
               Column(
               children: [
-                OrderDetailsCard(),
+                Center(child: OrderDetailsCard()),
                 SizedBox(height: 16.h,),
-                PriceSummaryCard(),
+                Center(child: PriceSummaryCard()),
                 SizedBox(height: 27.h,),
                 CheckOutButton(),
               ],

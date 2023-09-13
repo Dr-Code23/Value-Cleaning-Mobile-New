@@ -14,7 +14,7 @@ class CustomLogo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text(TextManager.APP_NAME,style: getBoldStyle(color: ColorManager.colorPrimary,fontSize: 40),),
+        Text(TextManager.APP_NAME,style: getBoldStyle(color: ColorManager.colorPrimary,fontSize: 35),),
         SizedBox(height: 8.06,),
         Text(TextManager.APP_Define,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 18),),
       ],

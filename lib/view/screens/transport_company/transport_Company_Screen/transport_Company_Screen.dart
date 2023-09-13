@@ -4,14 +4,8 @@ import 'package:value_cleaning/core/color_manager/color_manager.dart';
 import 'package:value_cleaning/core/text_manager/text_manager.dart';
 import 'package:value_cleaning/view/core_widgets/tab_bar_widget/tab_bar_widget.dart';
 
-import '../../../../../model/card_offer_model/card_offer_model.dart';
-import '../../../../../model/category_model/category_model.dart';
 import '../../../../../model/transport_companies_model/transport_companies_model.dart';
 import '../transport_Company_widget/transport_Company_widget.dart';
-
-
-
-
 class ALLTransportCompanies extends StatelessWidget {
   ALLTransportCompanies({
     super.key,

@@ -24,8 +24,11 @@ backgroundColor: ColorManager.colorWhite,
             Row(
               children: [
                 CustomLeftArrowIcon(
-                    right: 310,
+                    right: 0,
                     left: 16,
+                    color: Colors.red,
+                    width: 30,
+                    height: 30,
                     top: 60,
                     bottom: 181,
                     onPressed: (){
@@ -33,8 +36,8 @@ backgroundColor: ColorManager.colorWhite,
               ],
             ),
             Image.asset(
-              AssetsManager.CLEAN,  width: double.infinity ,
-              height: 262.h,
+              AssetsManager.SOYLENT_CORP,
+              fit: BoxFit.cover,
             ),
             SafeArea(
               child: SingleChildScrollView(
@@ -69,7 +72,6 @@ backgroundColor: ColorManager.colorWhite,
                                 ),
                                 SizedBox(height: 150.h,),
                                 SoylentCorpButtons()
-
                               ],
                             ),
                           ),

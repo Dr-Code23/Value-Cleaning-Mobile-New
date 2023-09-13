@@ -1,4 +1,5 @@
 
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -10,8 +11,14 @@ import 'core/route_manager/page_name.dart';
 import 'core/route_manager/route_manager.dart';
 
 
+
 void main() {
-  runApp(const MyApp());
+  runApp(
+    DevicePreview(
+      enabled: true,
+      builder: (context) => const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -31,6 +38,8 @@ class MyApp extends StatelessWidget {
           builder: (context , child) {
             return GetMaterialApp(
               locale: const Locale('en'),
+              useInheritedMediaQuery: true,
+              builder: DevicePreview.appBuilder,
               debugShowCheckedModeBanner: false,
               initialRoute: PageName.TRANSLATION_PAGE,
               title: 'Everest',

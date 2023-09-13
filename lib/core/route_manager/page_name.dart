@@ -18,6 +18,8 @@ class PageName
   static const String TERMS_CONDITIONS = '/TERMS_CONDITIONS_SCREEN';
   static const String NOTIFICATIONS = '/NOTIFICATIONS_SCREEN';
   static const String RATE_EXPERIENCE = '/RATE_EXPERIENCE_SCREEN';
+  static const String CHANGE_CARD = '/CHANGE_CARD';
+  static const String QR_CODE_SCREEN = '/QR_CODE_SCREEN';
 
 
 }

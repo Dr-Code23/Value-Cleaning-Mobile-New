@@ -129,6 +129,8 @@ class TextManager
   static const String SURE_LOG_OUT= 'Are you sure to log out?';
   static const String YES= 'YES';
   static const String NO= 'NO';
+  static const String PLACE_CODE= 'place the code inside the frame';
+  static const String SELECT_CARD= 'Select Card';
 
 
 

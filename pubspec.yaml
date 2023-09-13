@@ -45,6 +45,10 @@ dependencies:
   flutter_credit_card: ^3.0.7
   confetti: ^0.7.0
   qr_code_scanner: ^1.0.1
+  device_preview: ^1.1.0
+  simple_shadow: ^0.3.1
+
+
 
 
 

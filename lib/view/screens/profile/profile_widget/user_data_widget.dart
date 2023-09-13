@@ -66,6 +66,7 @@ class UserData extends StatelessWidget {
           ),
         ),
       ),
+      SizedBox(height: 10.h,),
       Text(
         'Manar Ahmed ',
         style: getBoldStyle(color: ColorManager.colorBlack, fontSize: 22),

@@ -68,7 +68,7 @@ class OrderHistoryScreenState extends State<OrderHistoryScreen> with SingleTicke
                   padding:  EdgeInsets.all(16.0.sp),
                   child: SizedBox(
                     width: 600.w,
-                    height: 1.sh,
+                    height: 2000.h,
                     child: TabBarView(
                         physics: BouncingScrollPhysics(),
                         controller: controller,

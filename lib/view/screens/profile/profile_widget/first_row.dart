@@ -15,7 +15,7 @@ class FirstRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 15.w,vertical: 10.h),
+      padding: EdgeInsets.symmetric(horizontal: 10.w,vertical: 10.h),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

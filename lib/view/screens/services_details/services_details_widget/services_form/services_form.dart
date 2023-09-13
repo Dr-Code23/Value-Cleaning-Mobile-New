@@ -27,8 +27,11 @@ class ServicesForm extends StatelessWidget {
             Row(
               children: [
                 Text(TextManager.DEEP_CLEANING,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 24),),
-                SizedBox(width: 139.w,),
-                Text("15 \$ /hr",style: getBoldStyle(color: ColorManager.colorGreen,fontSize: 18),),
+                Spacer(),
+                Padding(
+                  padding:  EdgeInsets.only(right: 5.w),
+                  child: Text("15 \$ /hr",style: getBoldStyle(color: ColorManager.colorGreen,fontSize: 18),),
+                ),
               ],
             ),
             SizedBox(height: 16.h,),
@@ -51,7 +54,7 @@ class ServicesForm extends StatelessWidget {
           height: 48.h,
           decoration: BoxDecoration(
             color: ColorManager.colorWhite,
-            borderRadius: BorderRadius.circular(16.r),
+            borderRadius: BorderRadius.circular(24.r),
             boxShadow: [
               BoxShadow(
                 color: ColorManager.colorBlack.withOpacity(0.20),
@@ -62,14 +65,12 @@ class ServicesForm extends StatelessWidget {
             ]
           ),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-
               Padding(
                 padding: const EdgeInsets.only(left: 8.0),
                 child: Text(TextManager.JOBS_DONE,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 16),),
               ),
-              SizedBox(width: 183.w,),
+              Spacer(),
               Container(
                 width: 96.w,
                 height: 48.h,
@@ -97,15 +98,18 @@ class ServicesForm extends StatelessWidget {
             Text(TextManager.REVIEWS,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 18),),
             SizedBox(width: 8.w,),
             Text("(15)",style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 14),),
-            SizedBox(width: 210.w,),
-            InkWell(
-                onTap: (){
-                  Get.to(()=>ReviewScreen(),transition: Transition.leftToRight,duration: Duration(
-                    seconds: 1,
-                  )
-                  );
-                },
-                child: Text(TextManager.SEE_ALL,style: getBoldStyle(color: ColorManager.colorPrimary,fontSize: 14),)),
+           Spacer(),
+            Padding(
+              padding:  EdgeInsets.only(right: 5.w),
+              child: InkWell(
+                  onTap: (){
+                    Get.to(()=>ReviewScreen(),transition: Transition.leftToRight,duration: Duration(
+                      seconds: 1,
+                    )
+                    );
+                  },
+                  child: Text(TextManager.SEE_ALL,style: getBoldStyle(color: ColorManager.colorPrimary,fontSize: 14),)),
+            ),
 
           ],
         ),

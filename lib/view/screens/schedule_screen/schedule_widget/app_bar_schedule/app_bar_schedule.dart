@@ -17,7 +17,7 @@ class AppBarSchedule extends StatelessWidget {
     return Stack(
       children: [
         Padding(
-          padding:EdgeInsets.only(bottom: 16.h,top: 100.h,left: 15.w,right: 16.w),
+          padding:EdgeInsets.only(bottom: 16.h,top: 120.h,left: 15.w,right: 16.w),
           child: Container(
               height: 96.h,
               width: 96.w,
@@ -41,7 +41,8 @@ class AppBarSchedule extends StatelessWidget {
             ),
             SizedBox(height: 15.h,),
             Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
+
               children: [
                 Padding(
                   padding:EdgeInsets.only(left: 135.w),
@@ -57,12 +58,13 @@ class AppBarSchedule extends StatelessWidget {
           children: [
             CustomLeftArrowIcon(
                 color: ColorManager.colorWhite,
-                right: 308,
+                right: 0,
                 left: 16,
                 top: 60,
                 bottom: 135,
                 onPressed: (){
                 }),
+            Spacer(),
             Padding(
               padding:  EdgeInsets.only(bottom: 136.h,right: 19.w,top: 59.h),
               child: SvgPicture.asset(AssetsManager.CHAT,color: ColorManager.colorWhite,),

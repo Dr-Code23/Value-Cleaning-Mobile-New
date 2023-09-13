@@ -14,12 +14,12 @@ import 'Layout_States.dart';
 class LayoutCubit extends Cubit<LayoutState> {
   LayoutCubit() : super(LayoutInitial());
   static LayoutCubit get(context)=>BlocProvider.of<LayoutCubit>(context);
-  int currentIndex=3;
+  int currentIndex=0;
 
   List<Widget> pageList = [
     HomeScreen(),
-    HomeScreen(),
-    HomeScreen(),
+    PaymentSettingScreen(),
+    SoylentCorpScreen(),
     const ProfileScreen(),
   ];
 

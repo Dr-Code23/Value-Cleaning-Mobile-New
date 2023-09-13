@@ -62,40 +62,35 @@ class _OnBordingScreenState extends State<OnBordingScreen> {
                                 contents[i].image!,
                               ),
                             ),
-                            SizedBox(height: 40.h,),
                             Text(
                               contents[i].title!,
                               style: getBoldStyle(color: ColorManager.colorLightBlack,fontSize: 18)
                             ),
                             SizedBox(height: 16.h),
-                            Text(
-                              contents[i].discription!,
-                              textAlign: TextAlign.center,
-                              style: getBoldStyle(color: ColorManager.colorLightBlack,fontSize: 14)
+                            Padding(
+                              padding:  EdgeInsets.only(right: 10.w,left: 10.w),
+                              child: Text(
+                                contents[i].discription!,
+                                textAlign: TextAlign.center,
+                                style: getBoldStyle(color: ColorManager.colorLightBlack,fontSize: 14)
+                              ),
                             ),
-                            SizedBox(height: 40.h),
                           ],
                         );
                       },
                     ),
                   ),
-                  Column(
-                    children: [
-                      Container(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: List.generate(
-                            contents.length,
-                                (index) =>
-                                buildDot(index, context, currentIndex),
-                          ),
-                        ),
+                  Container(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: List.generate(
+                        contents.length,
+                            (index) =>
+                            buildDot(index, context, currentIndex),
                       ),
-
-                      SizedBox(height: 20.h,),
-                      OnBoardingButtons(controller: _controller,currentIndex: currentIndex,)
-                    ],
-                  )
+                    ),
+                  ),
+                  OnBoardingButtons(controller: _controller,currentIndex: currentIndex,)
                 ])
         ),
       ),

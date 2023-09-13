@@ -35,7 +35,7 @@ class AllCustomTransportCompanies extends StatelessWidget {
             child: Row(
               children: [
                 Padding(
-                  padding:  EdgeInsets.only(right: 211.w,left: 8.w,top: 8.h,bottom: 8.h),
+                  padding:  EdgeInsets.only(right: 0.w,left: 8.w,top: 8.h,bottom: 8.h),
                   child: Row(
                     children: [
                       Image(

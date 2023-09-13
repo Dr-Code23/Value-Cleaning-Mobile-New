@@ -13,7 +13,6 @@ class PriceSummaryCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 358.w,
-      height: 265.h,
       decoration: BoxDecoration(
         color: ColorManager.colorWhite,
         borderRadius: BorderRadius.circular(16.r),
@@ -25,11 +24,11 @@ class PriceSummaryCard extends StatelessWidget {
           ),
         ],
       ),
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          children: [
-            Column (
+      child: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column (
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(TextManager.PRICE_SUMMARY,style: getBoldStyle(color: ColorManager.colorDeepGreen,fontSize: 18),),
@@ -52,19 +51,18 @@ class PriceSummaryCard extends StatelessWidget {
                 Text("........opposite ",style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 14),),
               ],
             ),
-            Container(
-              width: 358.w,
-              height: 40.h,
-              decoration: BoxDecoration(
-                  color: ColorManager.colorPrimary,
-                  borderRadius: BorderRadius.only(bottomLeft: Radius.circular(16.r),bottomRight: Radius.circular(16.r))
-              ),
-              child:Center(child: Text(TextManager.TOTAL,style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 14),)),
-
+          ),
+          Container(
+            width: 358.w,
+            decoration: BoxDecoration(
+                color: ColorManager.colorPrimary,
+                borderRadius: BorderRadius.only(bottomLeft: Radius.circular(16.r),bottomRight: Radius.circular(16.r))
             ),
+            child:Center(child: Text(TextManager.TOTAL,style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 14),)),
 
-          ],
-        ),
+          ),
+
+        ],
       ),
     );
   }

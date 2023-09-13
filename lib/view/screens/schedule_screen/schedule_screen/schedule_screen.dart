@@ -1,14 +1,12 @@
 
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/routes/transitions_type.dart';
-import 'package:value_cleaning/core/style_font_manager/style_manager.dart';
-import 'package:value_cleaning/core/text_manager/text_manager.dart';
-import 'package:value_cleaning/view/core_widgets/custom_arrow_left/custom_arrow_left.dart';
-import 'package:value_cleaning/view/core_widgets/elevated_button/elevated_button_custom.dart';
 import '../../../../core/assets_manager/assets_manager.dart';
 import '../../../../core/color_manager/color_manager.dart';
 import '../../../core_widgets/custom_ratting_bar/custom_rating_bar.dart';
@@ -24,15 +22,36 @@ class ScheduleScreen extends StatelessWidget
   Widget build(BuildContext context)
   {
     return  Scaffold(
-backgroundColor: ColorManager.colorBlack,
+backgroundColor: ColorManager.colorScaffold,
       body: Stack(
         children:<Widget> [
-          Image.asset(
-            AssetsManager.BACKGROUND,  width: double.infinity ,color: ColorManager.colorBlack,
-            height: 262.h,
+          Container(
+            decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.blue.withOpacity(0.5), // Shadow color
+                  spreadRadius: 5, // Spread radius
+                  blurRadius: 10, // Blur radius
+                  offset: Offset(0, 3), // Offset in the x and y direction
+                ),
+              ],
+            ),
+            width: double.infinity,
+            child: ImageFiltered(
+              imageFilter: ColorFilter.mode(
+                Colors.black.withOpacity(0.85), // Adjust the color and opacity as needed
+                BlendMode.color, // You can also use different BlendModes
+              ),
+              child: ImageFiltered(
+                imageFilter: ImageFilter.blur(sigmaX: 5.0, sigmaY: 5.0),
+                child: Image.asset(
+                  AssetsManager.BACKGROUND ,
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
           ),
           AppBarSchedule(),
-
           SafeArea(
             child: SingleChildScrollView(
               child: Column(

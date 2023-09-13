@@ -56,6 +56,8 @@ var companyIdController=TextEditingController();
         Text(TextManager.ADDRESS,style: getBoldStyle(color: ColorManager.colorGreen,fontSize: 14),),
         SizedBox(height: 4.h,),
         TextFormFieldCustom(
+          suffix: true,
+          suffixIcon: SvgPicture.asset(AssetsManager.LOCATION2),
           validate: (String? value) {
             return null;
           },

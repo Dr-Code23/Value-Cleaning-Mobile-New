@@ -84,21 +84,6 @@ class AddPaymentCardWidgetState extends State<AddPaymentCardWidget> {
                 ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Align(
-                alignment: AlignmentDirectional.bottomCenter,
-                child: ElevatedButtonCustom(
-                    text: 'Done',
-                    onPressed: () {
-                      if (formKey.currentState!.validate()) {
-                        // Get.to(const DepositDoneView());
-                      } else {
-                        print('invalid!');
-                      }
-                    }),
-              ),
-            ),
             AddPaymentButton(),
           ],
         ),

@@ -18,7 +18,6 @@ class SoylentCorpButtons extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         width: 390.w,
-        height: 80.h,
         decoration: BoxDecoration(
           boxShadow: [
             BoxShadow(
@@ -32,46 +31,45 @@ class SoylentCorpButtons extends StatelessWidget {
         ),
         child:Row(
           children: [
-            Padding(
-              padding:  EdgeInsets.all(16.sp),
-              child: ElevatedButtonCustom(
-                width: 172.w,
-                height: 48.h,
-                radius: 8,
-                colors: ColorManager.colorDeepBlue,
-                widget: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SvgPicture.asset(AssetsManager.EMAIL,color: ColorManager.colorWhite,),
-                    SizedBox(width: 8.w,),
-                    Text(TextManager.EMAIL,style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 18),)
-                  ],
+            Expanded(
+              child: Padding(
+                padding:  EdgeInsets.all(16.sp),
+                child: ElevatedButtonCustom(
+                  width: 172.w,
+                  height: 48.h,
+                  radius: 8,
+                  colors: ColorManager.colorDeepBlue,
+                  widget: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SvgPicture.asset(AssetsManager.EMAIL,color: ColorManager.colorWhite,),
+                      SizedBox(width: 8.w,),
+                      Text(TextManager.EMAIL,style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 18),)
+                    ],
+                  ),
                 ),
               ),
             ),
-            Row(
-              children: [
-                Padding(
-                  padding:  EdgeInsets.only(right: 16.w,top: 16.h,bottom: 16.h),
-                  child: ElevatedButtonCustom(
-                    onPressed: (){
-
-                    },
-                    width: 172.w,
-                    height: 48.h,
-                    radius: 8,
-                    colors: ColorManager.colorPrimary,
-                    widget: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SvgPicture.asset(AssetsManager.CALL,color: ColorManager.colorWhite,),
-                        SizedBox(width: 8.w,),
-                        Text(TextManager.CALL ,style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 18),)
-                      ],
-                    ),
+            Expanded(
+              child: Padding(
+                padding:  EdgeInsets.only(right: 16.w,top: 16.h,bottom: 16.h),
+                child: ElevatedButtonCustom(
+                  onPressed: (){
+                  },
+                  width: 172.w,
+                  height: 48.h,
+                  radius: 8,
+                  colors: ColorManager.colorPrimary,
+                  widget: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SvgPicture.asset(AssetsManager.CALL,color: ColorManager.colorWhite,),
+                      SizedBox(width: 8.w,),
+                      Text(TextManager.CALL ,style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 18),)
+                    ],
                   ),
                 ),
-              ],
+              ),
             ),
           ],
         )

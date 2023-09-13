@@ -20,7 +20,7 @@ class ServiceDetailsButtons extends StatelessWidget {
     return Column(
       children: [
             Container(
-                width: 390.2,
+                width: double.infinity,
                 height: 80.h,
                 decoration: BoxDecoration(
                   boxShadow: [
@@ -36,23 +36,31 @@ class ServiceDetailsButtons extends StatelessWidget {
                 child:Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    ElevatedButtonCustom(
-                      width: 172.w,
-                      height: 48.h,
-                      radius: 8,
-                      colors: ColorManager.colorDeepBlue,
-                      widget: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SvgPicture.asset(AssetsManager.CHAT,color: ColorManager.colorWhite,),
-                          SizedBox(width: 8.w,),
-                          Text(TextManager.CHAT,style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 18),)
-                        ],
+                    Expanded(
+                      child: Padding(
+                        padding:  EdgeInsets.only(left: 5.w),
+                        child: ElevatedButtonCustom(
+                          width: 172.w,
+                          height: 48.h,
+                          radius: 8,
+                          colors: ColorManager.colorDeepBlue,
+                          borderColor:  ColorManager.colorDeepBlue,
+                          widget: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              SvgPicture.asset(AssetsManager.CHAT,color: ColorManager.colorWhite,),
+                              SizedBox(width: 8.w,),
+                              Text(TextManager.CHAT,style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 18),)
+                            ],
+                          ),
+                        ),
                       ),
                     ),
-                    Row(
-                      children: [
-                        ElevatedButtonCustom(
+                    SizedBox(width: 15.w,),
+                    Expanded(
+                      child: Padding(
+                        padding:  EdgeInsets.only(right: 5.w),
+                        child: ElevatedButtonCustom(
                           onPressed: (){
                             Get.to(()=>ScheduleScreen(),transition: Transition.downToUp,duration: Duration(
                               milliseconds: 650,
@@ -73,7 +81,7 @@ class ServiceDetailsButtons extends StatelessWidget {
                             ],
                           ),
                         ),
-                      ],
+                      ),
                     ),
                   ],
                 )

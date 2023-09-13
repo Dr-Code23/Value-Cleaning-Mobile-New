@@ -34,6 +34,7 @@ class BuildItemCard extends StatelessWidget {
           ),child: Padding(
             padding: const EdgeInsets.all(8.0).w,
             child: Row(
+
               children: [
                 SvgPicture.asset(image),
                 SizedBox(

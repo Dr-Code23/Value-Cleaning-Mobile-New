@@ -18,7 +18,6 @@ class CustomCardOffer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 144.h,
       width: 280.w,
       decoration: BoxDecoration(
         image: DecorationImage(image: AssetImage(imagePath!)),

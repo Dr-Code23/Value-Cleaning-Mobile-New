@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -14,15 +15,13 @@ class OtherRowWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Row(
       children: [
-        Padding(
-        padding:  EdgeInsets.only(right: 140.w),
-        child: Row(
+        Row(
           children: [
             Text(TextManager.ROOM,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 18),),
             Text("(15\$)",style: getBoldStyle(color: ColorManager.colorGrey,fontSize: 14),),
           ],
         ),
-      ),
+        Spacer(),
         Container(
           width: 136.w,
           height: 32.h,
@@ -33,29 +32,47 @@ class OtherRowWidget extends StatelessWidget {
           child: Row(
             children: [
               Container(
-                width: 30.w,
-                height: 30.h,
+                width: 35.w,
+                height: 35.h,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8.r),
                   color: ColorManager.colorPrimary,
                 ),
-                child:SvgPicture.asset(AssetsManager.MINUS,width: 5.w,height: 5.h,) ,
-              ),
-              Padding(
-                padding:  EdgeInsets.only(right: 0.w,left: 30.w),
-                child: Text("1"),
-              ),
-              Padding(
-                padding:  EdgeInsets.only(left: 35),
                 child: Container(
-                  width: 30.w,
-                  height: 30.h,
+                  width: 20.w,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8.r),
                     color: ColorManager.colorPrimary,
                   ),
-                  child:SvgPicture.asset(AssetsManager.ADD,width: 19.w,height: 5.h,) ,
+                  child:Padding(
+                    padding:  EdgeInsets.all(4.0.sp),
+                    child: SvgPicture.asset(AssetsManager.MINUS,width: 5.w,height: 5.h,),
+                  ) ,
                 ),
+
+              ),
+              Spacer(),
+              Text("1"),
+              Spacer(),
+              Container(
+                width: 35.w,
+                height: 35.h,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8.r),
+                  color: ColorManager.colorPrimary,
+                ),
+                child: Container(
+                  width: 20.w,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8.r),
+                    color: ColorManager.colorPrimary,
+                  ),
+                  child:Padding(
+                    padding:  EdgeInsets.all(4.0.sp),
+                    child: SvgPicture.asset(AssetsManager.ADD,width: 5.w,height: 5.h,),
+                  ) ,
+                ),
+
               ),
 
             ],

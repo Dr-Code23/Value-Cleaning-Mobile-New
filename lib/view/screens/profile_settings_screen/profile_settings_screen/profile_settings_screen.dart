@@ -29,7 +29,6 @@ class ProfileSettingsScreen extends StatelessWidget {
               SizedBox(
                 height: ScreenUtil().setHeight(10),
               ),
-
               const AccountDataCard()
             ],
           ),

@@ -21,7 +21,7 @@ class NextButtonWidget extends StatelessWidget {
     return Column(
       children: [
         Container(
-            width: 390.2,
+            width: double.infinity,
             height: 80.h,
             decoration: BoxDecoration(
               boxShadow: [
@@ -36,23 +36,25 @@ class NextButtonWidget extends StatelessWidget {
             ),
             child:Row(
               children: [
+                Spacer(),
+                Text("(50\$)",style: getBoldStyle(color: ColorManager.colorPrimary,fontSize: 18),),
+                Spacer(),
                 Padding(
-                    padding:  EdgeInsets.only(right: 90.w,bottom: 10.h,left: 50.w),
-                    child: Text("(50\$)",style: getBoldStyle(color: ColorManager.colorPrimary,fontSize: 18),)
-                ),
-                ElevatedButtonCustom(
-                  onPressed:onPressed!,
-                  width: 172.w,
-                  height: 48.h,
-                  radius: 8,
-                  colors: ColorManager.colorPrimary,
-                  widget: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SvgPicture.asset(AssetsManager.ARROW_RIGHT,color: ColorManager.colorWhite,),
-                      SizedBox(width: 8.w,),
-                      Text(TextManager.NEXT,style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 18),)
-                    ],
+                  padding:  EdgeInsets.only(right: 5.w),
+                  child: ElevatedButtonCustom(
+                    onPressed:onPressed!,
+                    width: 172.w,
+                    height: 48.h,
+                    radius: 8,
+                    colors: ColorManager.colorPrimary,
+                    widget: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        SvgPicture.asset(AssetsManager.ARROW_RIGHT,color: ColorManager.colorWhite,),
+                        SizedBox(width: 8.w,),
+                        Text(TextManager.NEXT,style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 18),)
+                      ],
+                    ),
                   ),
                 ),
               ],

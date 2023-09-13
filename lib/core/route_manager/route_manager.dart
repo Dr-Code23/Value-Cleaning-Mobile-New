@@ -1,12 +1,14 @@
 
 import 'package:get/get_navigation/src/routes/get_route.dart';
 import 'package:value_cleaning/core/route_manager/page_name.dart';
+import 'package:value_cleaning/view/screens/change_card/change_card_screen/change_card_screen.dart';
 import 'package:value_cleaning/view/screens/faq_screen/faq_screen/faq_screen.dart';
 import 'package:value_cleaning/view/screens/favourite_screen/favourite_screen/favourite_screen.dart';
 import 'package:value_cleaning/view/screens/home/home_screen/home_screen.dart';
 import 'package:value_cleaning/view/screens/notifications_screen/notifications_screen/notifications_screen.dart';
 import 'package:value_cleaning/view/screens/profile/profile_screen/profile_screen.dart';
 import 'package:value_cleaning/view/screens/profile_settings_screen/profile_settings_screen/profile_settings_screen.dart';
+import 'package:value_cleaning/view/screens/qr_code/qr_code_screen/qr_code_screen.dart';
 import 'package:value_cleaning/view/screens/rate_experience_screen/rate_experience_screen/rate_experience_screen.dart';
 import 'package:value_cleaning/view/screens/services_details/services_details_screen/services_details_screen.dart';
 import 'package:value_cleaning/view/screens/terms_and_conditions_screen/terms_and_conditions_screen/terms_and_conditions_screen.dart';
@@ -42,6 +44,8 @@ List<GetPage> pages  =
   GetPage(name: PageName.FAQ, page: () =>   const FaqScreen()),
   GetPage(name: PageName.NOTIFICATIONS, page: () =>   const NotificationsScreen()),
   GetPage(name: PageName.RATE_EXPERIENCE, page: () =>   const RateExperienceScreen()),
+  GetPage(name: PageName.CHANGE_CARD, page: () =>   const ChangeCardScreen()),
+  GetPage(name: PageName.QR_CODE_SCREEN, page: () =>    QrCodeScreen()),
 
 
 ];

@@ -59,6 +59,7 @@ class AssetsManager
   static const String CLEANING = '${_iconsPath}cleaning.svg';
   static const String GIFT = '${_iconsPath}gift.svg';
   static const String TERMS_CONDITIONS = '${_iconsPath}terms_and_conditions.svg';
+  static const String LOCATION2 = '${_iconsPath}location2.svg';
 
 
 

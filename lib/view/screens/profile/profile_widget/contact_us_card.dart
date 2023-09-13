@@ -59,7 +59,6 @@ class _ContactUsCardState extends State<ContactUsCard> {
                BuildItemCard(text: TextManager.PHONE_CALL,onTap: (){},image: AssetsManager.PHONE_CALL),
                BuildItemCard(text: TextManager.WEBSITE,onTap: (){},image: AssetsManager.WEBSITE),
                BuildItemCard(text: TextManager.EMAIL_ADDRESS,onTap: (){},image: AssetsManager.EMAIL),
-
              ],
              onExpansionChanged: (isExpanded){
                print('Expanded $isExpanded');

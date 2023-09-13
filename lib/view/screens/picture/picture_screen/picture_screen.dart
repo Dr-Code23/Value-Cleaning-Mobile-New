@@ -1,4 +1,6 @@
 
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -23,6 +25,32 @@ class PictureScreen extends StatelessWidget
         backgroundColor: Colors.black,
         body: Stack(
           children:<Widget> [
+            Container(
+              decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.blue.withOpacity(0.5), // Shadow color
+                    spreadRadius: 5, // Spread radius
+                    blurRadius: 10, // Blur radius
+                    offset: Offset(0, 3), // Offset in the x and y direction
+                  ),
+                ],
+              ),
+              width: double.infinity,
+              child: ImageFiltered(
+                imageFilter: ColorFilter.mode(
+  Colors.black.withOpacity(0.85), // Adjust the color and opacity as needed
+  BlendMode.color, // You can also use different BlendModes
+  ),
+                child: ImageFiltered(
+                  imageFilter: ImageFilter.blur(sigmaX: 5.0, sigmaY: 5.0),
+                  child: Image.asset(
+                    AssetsManager.BACKGROUND ,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+            ),
             AppBarSchedule(),
             SafeArea(
               child: SingleChildScrollView(
@@ -55,12 +83,14 @@ class PictureScreen extends StatelessWidget
                                     ],
                                   ),
                                 ),
-                                NextButtonWidget(onPressed: (){
-                                  Get.to(()=>PaymentMethodScreen()!,transition: Transition.leftToRight,duration: Duration(
-                                    milliseconds: 650,
-                                  )
-                                  );
-                                },),
+                                Center(
+                                  child: NextButtonWidget(onPressed: (){
+                                    Get.to(()=>PaymentMethodScreen()!,transition: Transition.leftToRight,duration: Duration(
+                                      milliseconds: 650,
+                                    )
+                                    );
+                                  },),
+                                ),
                               ],
                             ),
                           ),

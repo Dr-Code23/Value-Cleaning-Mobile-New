@@ -22,7 +22,6 @@ class NotificationsScreen extends StatelessWidget {
               // width: ScreenUtil().screenWidth,
               // height: 700.h,
                 child: ListView.separated(itemBuilder:(context,index)=> const NotificationsCard(), separatorBuilder: (context,index)=> SizedBox(height: 10.h,), itemCount: 10))
-
           ],
         ),
       ),

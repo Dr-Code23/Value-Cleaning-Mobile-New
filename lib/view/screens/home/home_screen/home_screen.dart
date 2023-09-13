@@ -25,6 +25,7 @@ class HomeScreen extends StatelessWidget
       backgroundColor: ColorManager.colorScaffold,
       body: SafeArea(
         child: SingleChildScrollView(
+          physics: BouncingScrollPhysics(),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children:
@@ -61,9 +62,6 @@ class HomeScreen extends StatelessWidget
                             height: 24.h,
                           ),
                           //  CardOffer(),
-                          SizedBox(
-                            height: 24.h,
-                          ),
                           CardOffer(),
                         SizedBox(height: 24.h,),
                         Text(TextManager.ALL_CATEGORIES,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 18),),

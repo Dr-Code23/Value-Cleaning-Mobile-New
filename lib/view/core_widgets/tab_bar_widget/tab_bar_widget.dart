@@ -41,33 +41,35 @@ class AppBarWidget extends StatelessWidget {
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
+mainAxisAlignment: MainAxisAlignment.center,
         children: [
           // const Spacer(flex: 4),
           // Text(text!,style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 22,),),
           // const Spacer(flex: 1,),
           Padding(
-            padding:  EdgeInsets.only(top: 20.0.h),
+            padding:  EdgeInsets.only(top: 40.h),
             child: CustomLeftArrowIcon(
                 color: ColorManager.colorWhite,
-                right:rightPadding!.w,
+                right:0,
                 left: 16.w,
-                top: 20.h,
+                top: 0.h,
                 bottom: bottomIcon!,
                 onPressed: (){
                   Get.back();
                 }),
           ),
+          Spacer(),
           Text(text!,style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 22),),
+          Spacer(),
           if(isSearch!)
-          Padding(
-         padding:  EdgeInsets.only(right: 16.w,top: 60.h,bottom: 40.h),
+            Spacer(),
+          if(isSearch!)
+            Padding(
+         padding:  EdgeInsets.only(right: 16.w,top: 5.h),
          child: SvgPicture.asset(AssetsManager.search,color: ColorManager.colorWhite,),
        ),
         ],
       ),
-
     );
-
-
   }
 }

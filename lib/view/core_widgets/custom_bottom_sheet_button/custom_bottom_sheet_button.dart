@@ -20,7 +20,7 @@ class CustomBottomSheetButton extends StatelessWidget {
           onPressed: () {
             onPressed!();
           },
-          height: 70.h,
+          height: 60.h,
           colors: ColorManager.colorPrimary,
           widget: Text(
             text!,

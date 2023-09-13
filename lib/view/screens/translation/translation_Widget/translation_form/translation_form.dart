@@ -60,11 +60,10 @@ class CustomTranslateForm extends StatelessWidget {
                     )
                         .toList(),
                   ),
-                  SizedBox(height: 24.h,),
                 ],
               ),
             ),
-            SizedBox(height: 24.h,),
+            SizedBox(height: 30.h,),
             ElevatedButtonCustom(
               width: 171.w,
               height: 48.h,

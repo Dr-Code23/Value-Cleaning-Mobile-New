@@ -24,13 +24,13 @@ final int ?index;
           width: 109!.w,
           height: 40!.h,
           decoration: BoxDecoration(
-            // boxShadow: [
-            //   LayoutCubit.get(context).repeatClick!=index? BoxShadow(
-            //     color: ColorManager.colorBlack.withOpacity(0.20),
-            //     blurRadius: 4,
-            //     offset:  Offset(0, 4.h),
-            //   ):BoxShadow(),
-            // ],
+            boxShadow: [
+              LayoutCubit.get(context).repeatClick!=index? BoxShadow(
+                color: ColorManager.colorBlack.withOpacity(0.20),
+                blurRadius: 4,
+                offset:  Offset(0, 4.h),
+              ):BoxShadow(),
+            ],
 
             borderRadius: BorderRadius.circular(8.r),
             color: LayoutCubit.get(context).repeatClick==index?ColorManager.colorPrimary:ColorManager.colorWhite ,

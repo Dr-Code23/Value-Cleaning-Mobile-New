@@ -21,7 +21,6 @@ final int ?index;
       listener: (context,state){},
       builder: (context,state){
         return Container(
-
           decoration: BoxDecoration(
             boxShadow: [
               LayoutCubit.get(context).serviceClickDown!=index? BoxShadow(
@@ -30,7 +29,6 @@ final int ?index;
                 offset:  Offset(0, 8.h),
               ):BoxShadow(),
             ],
-
             borderRadius: BorderRadius.circular(8.r),
             color: LayoutCubit.get(context).serviceClickDown==index?ColorManager.colorPrimary:ColorManager.colorWhite ,
           ),

@@ -25,25 +25,32 @@ class ServicesDetailsScreen extends StatelessWidget
 
       body: Stack(
         children:<Widget> [
+          Container(
+            width: double.infinity,
+            child: Image.asset(
+              AssetsManager.BACKGROUND ,
+             fit: BoxFit.cover,
+            ),
+          ),
           Row(
             children: [
               CustomLeftArrowIcon(
-                  right: 310,
+                color: ColorManager.colorWhite,
+                  right: 0,
                   left: 22,
                   top: 60,
                   bottom: 181,
+                  width: 35,
+                  height: 35,
                   onPressed: (){
                   }),
+              Spacer(),
               Padding(
                 padding:  EdgeInsets.only(bottom: 181.99.h,right: 16.w,top: 60.h),
-                child: SvgPicture.asset(AssetsManager.HEART,color: ColorManager.colorPrimary,),
+                child: SvgPicture.asset(AssetsManager.HEART,color: ColorManager.colorWhite,width: 35.w,height: 35.h),
               ),
             ],
           ),
-      Image.asset(
-        AssetsManager.CLEAN,  width: double.infinity ,
-        height: 262.h,
-      ),
           SafeArea(
             child: SingleChildScrollView(
               child: Column(

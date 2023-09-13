@@ -7,11 +7,11 @@ import '../../../../core/color_manager/color_manager.dart';
 import '../../../../core/style_font_manager/style_manager.dart';
 import '../../../../core/text_manager/text_manager.dart';
 
-class PaymentSettingWidget extends StatelessWidget {
+class ChangeCardWidget extends StatelessWidget {
 final String? name;
 final Color? color;
 
-  const PaymentSettingWidget({super.key, this.name, this.color});
+  const ChangeCardWidget({super.key, this.name, this.color});
   @override
   Widget build(BuildContext context) {
     return  Padding(

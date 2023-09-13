@@ -46,7 +46,6 @@ class ProfileScreen extends StatelessWidget {
               padding:  EdgeInsets.symmetric(vertical: 10.h),
               child: const ContactUsCard(),
             ),
-
             BuildItemCard(
                 text: TextManager.LOG_OUT,
                 onTap: () {

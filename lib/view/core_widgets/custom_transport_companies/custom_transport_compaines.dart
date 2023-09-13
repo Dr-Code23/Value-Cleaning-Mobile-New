@@ -26,7 +26,6 @@ class CustomTopServices extends StatelessWidget {
         Padding(
           padding:  EdgeInsets.only(right: 16.w),
           child: Container(
-            height: 125.h,
             width: 358.w,
             decoration: BoxDecoration(
               boxShadow: [
@@ -60,6 +59,7 @@ class CustomTopServices extends StatelessWidget {
                 SizedBox(width: 20.w,),
                 Column(
                   children: [
+                    SizedBox(height: 10.h,),
                     Text(
                       name,
                       style: getBoldStyle(color: ColorManager.colorDeepGrey ,

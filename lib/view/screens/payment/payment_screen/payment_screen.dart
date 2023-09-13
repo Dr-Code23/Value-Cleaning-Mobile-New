@@ -61,6 +61,7 @@ backgroundColor: ColorManager.colorScaffold,
                                     ],
                                   ),
                                 ),
+                                SizedBox(height: 100.h,),
                                 NextButtonWidget(onPressed: (){
                                   Get.to(()=>CheckOutScreen()!,transition: Transition.leftToRight,duration: Duration(
                                     milliseconds: 650,

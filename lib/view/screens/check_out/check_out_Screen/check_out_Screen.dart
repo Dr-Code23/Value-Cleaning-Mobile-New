@@ -42,10 +42,7 @@ class CheckOutScreen extends StatelessWidget
                                       ),
                                     ],
                                   ),
-                                  child:  Padding(
-                                    padding: EdgeInsets.all(8.0.sp),
-                                    child: const CheckOutCards(),
-                                  ),
+                                  child:  const CheckOutCards(),
 
                               ),
                             ),
