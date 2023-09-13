@@ -81,14 +81,12 @@ class _OnBordingScreenState extends State<OnBordingScreen> {
                   ),
                   Column(
                     children: [
-                      Container(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: List.generate(
-                            contents.length,
-                                (index) =>
-                                buildDot(index, context, currentIndex),
-                          ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: List.generate(
+                          contents.length,
+                              (index) =>
+                              buildDot(index, context, currentIndex),
                         ),
                       ),
 

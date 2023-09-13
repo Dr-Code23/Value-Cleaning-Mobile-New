@@ -13,7 +13,7 @@ import '../onboarding_widget/onboarding_widget.dart';
 class OnBoardingButtons extends StatelessWidget {
 final  PageController? controller;
 final int? currentIndex;
-  const OnBoardingButtons({this.controller, this.currentIndex});@override
+  const OnBoardingButtons({super.key, this.controller, this.currentIndex});@override
   Widget build(BuildContext context) {
     return  Row(
       children: [
@@ -32,7 +32,7 @@ final int? currentIndex;
 
               }
               controller?.nextPage(
-                duration: Duration(milliseconds: 100),
+                duration: const Duration(milliseconds: 100),
                 curve: Curves.bounceIn,
               );
             },
@@ -52,7 +52,7 @@ final int? currentIndex;
               Get.toNamed(PageName.START_SCREEN);
 
               controller?.nextPage(
-                duration: Duration(milliseconds: 100),
+                duration: const Duration(milliseconds: 100),
                 curve: Curves.bounceIn,
               );
             },

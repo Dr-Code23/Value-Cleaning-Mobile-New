@@ -45,6 +45,7 @@ dependencies:
   flutter_credit_card: ^3.0.7
   confetti: ^0.7.0
   qr_code_scanner: ^1.0.1
+  lottie: ^2.5.0
 
 
 
@@ -84,6 +85,7 @@ flutter:
     - assets/icons/
     - assets/images/
     - assets/svg/
+    - assets/animation/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

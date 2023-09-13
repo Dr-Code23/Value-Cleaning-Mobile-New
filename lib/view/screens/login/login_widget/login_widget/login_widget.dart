@@ -65,7 +65,6 @@ class LoginWidget extends StatelessWidget {
 
                   },),
                   const SignInWithGoogleOrFaceBook(),
-                  const SignInWithGoogleOrFaceBook(),
 
                 ],
               ),

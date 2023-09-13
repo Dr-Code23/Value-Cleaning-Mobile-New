@@ -62,7 +62,7 @@ class OrderItem extends StatelessWidget {
                             padding:  EdgeInsets.only(bottom: 3.h),
                             child: Center(child: Text(TextManager.CANCEL,style: getBoldStyle(color: !cancelPressed!?ColorManager.colorLightGrey:ColorManager.colorLightGrey.withOpacity(0.4),fontSize: 12),)),
                           ))
-                    ):SizedBox(),
+                    ):const SizedBox(),
                   ],
                 ),
                 SizedBox(height: 16.h,),

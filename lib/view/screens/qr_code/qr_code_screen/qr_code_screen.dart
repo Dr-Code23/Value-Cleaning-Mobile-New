@@ -20,6 +20,8 @@ import '../../services_details/services_details_widget/services_details_review/s
 import '../../services_details/services_details_widget/services_form/services_form.dart';
 class QrCodeScreen extends StatefulWidget
 {
+  const QrCodeScreen({super.key});
+
   @override
   State<QrCodeScreen> createState() => _QrCodeScreenState();
 
@@ -39,6 +41,7 @@ class _QrCodeScreenState extends State<QrCodeScreen> {
       });
     });
   }
+  @override
   Widget build(BuildContext context)
   {
 

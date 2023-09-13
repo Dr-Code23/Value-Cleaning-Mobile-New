@@ -37,7 +37,7 @@ String selectedValue=TextManager.USER;
               child: RadioListTile(
                 contentPadding: EdgeInsets.zero,
                 activeColor: ColorManager.colorPrimary,
-                title: Text(TextManager.USER),
+                title: const Text(TextManager.USER),
                 value: TextManager.USER,
                 groupValue: selectedValue,
                 onChanged: (value) {
@@ -51,7 +51,7 @@ String selectedValue=TextManager.USER;
               child: RadioListTile(
                 contentPadding: EdgeInsets.zero,
                 activeColor: ColorManager.colorPrimary,
-                title: Text(TextManager.COMPANY),
+                title: const Text(TextManager.COMPANY),
                 value: TextManager.COMPANY,
                 groupValue: selectedValue,
                 onChanged: (value) {
@@ -72,7 +72,7 @@ String selectedValue=TextManager.USER;
                     selectedValue = value as String;
                   });
                 },
-                title: Text(TextManager.SHIPPING_COMPANY),
+                title: const Text(TextManager.SHIPPING_COMPANY),
               ),
             ),
           ],

@@ -43,7 +43,11 @@ class FirstRow extends StatelessWidget {
                 text: TextManager.PAYMENT_SETTINGS,
                 image: AssetsManager.CREDIT_CARD,
                 cardColor: ColorManager.colorBlueLight,
-                onTapFunx: () {},
+                onTapFunx: () {
+                  Get.toNamed(
+                    PageName.PAYMENT_SETTINGS,
+                  );
+                },
               ),
             ),
           ),
