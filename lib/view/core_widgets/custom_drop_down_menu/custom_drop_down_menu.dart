@@ -1,73 +1,111 @@
+import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../../core/assets_manager/assets_manager.dart';
-import '../../../core/color_manager/color_manager.dart';
-import '../../../core/style_font_manager/style_manager.dart';
-
-class CustomDropDownMenu extends StatelessWidget {
-  const CustomDropDownMenu(
-      {Key? key,
-      required this.text,
-      this.width = double.infinity,
-      required this.onChanged,
-      this.radius = 16,
-        this.height=80,
-      this.items, })
-      : super(key: key);
-  final String text;
-  final double width;
-  final double radius;
-  final double height;
-
-  // final DropdownMenuItem<String> items;
-  final void Function(String?) onChanged;
-  final List<String>? items; // List of items for the dropdown menu.
+class CustomButtonTest extends StatefulWidget {
+  const CustomButtonTest({Key? key}) : super(key: key);
 
   @override
+  State<CustomButtonTest> createState() => _CustomButtonTestState();
+}
+
+class _CustomButtonTestState extends State<CustomButtonTest> {
+  @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(vertical: 8.h),
-      child: Container(
-        padding: EdgeInsets.symmetric(horizontal:15.w,vertical: 15.h),
-        width: width.w,
-       height: height.h,
-       decoration: BoxDecoration(
-          color: ColorManager.colorWhite,
-            borderRadius: BorderRadius.circular(radius.r),
-             border: Border.all(width: 1.r, color: ColorManager.colorBlack)),
-        child:
-          Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Expanded(
-              child: DropdownButton<String>(
-
-                onChanged: onChanged,
-                value: text,
-                items: items!.map<DropdownMenuItem<String>>((String value) {
-                  return DropdownMenuItem<String>(
-                    enabled: true,
-                    value: value,
-                    child: Text(value),
-                  );
-                }).toList(),
-                alignment: Alignment.center,
-                icon: SvgPicture.asset(AssetsManager.Arrow_Down),
-                isExpanded: true,
-                iconSize: 14,
-                style: getBoldStyle(fontSize: 20, color: ColorManager.colorBlack),
-               borderRadius: BorderRadius.circular(radius.r),
-               autofocus: true,
-               underline: const SizedBox(),
-               // isDense: true,
-
-              ),
+    return Scaffold(
+      body: Center(
+        child: DropdownButtonHideUnderline(
+          child: DropdownButton2(
+            customButton: const Icon(
+              Icons.list,
+              size: 46,
+              color: Colors.red,
             ),
-          ],
+            // customItemsIndexes: const [3],
+            // customItemsHeight: 8,
+            items: [
+              ...MenuItems.firstItems.map(
+                (item) => DropdownMenuItem<MenuItem>(
+                  value: item,
+                  child: MenuItems.buildItem(item),
+                ),
+              ),
+              const DropdownMenuItem<Divider>(enabled: false, child: Divider()),
+              ...MenuItems.secondItems.map(
+                (item) => DropdownMenuItem<MenuItem>(
+                  value: item,
+                  child: MenuItems.buildItem(item),
+                ),
+              ),
+            ],
+            onChanged: (value) {
+              MenuItems.onChanged(context, value as MenuItem);
+            },
+            // itemHeight: 48,
+            // itemWidth: 160,
+            // itemPadding: const EdgeInsets.only(left: 16, right: 16),
+            // dropdownPadding: const EdgeInsets.symmetric(vertical: 6),
+            // dropdownBorderRadius: BorderRadius.circular(4),
+            // dropdownBorder: null,
+            // dropdownColor: Colors.redAccent,
+            // elevation: 8,
+            // offset: const Offset(0, 8),
+          ),
         ),
       ),
     );
+  }
+}
+
+class MenuItem {
+  final String text;
+  final IconData icon;
+
+  const MenuItem({
+    required this.text,
+    required this.icon,
+  });
+}
+
+class MenuItems {
+  static const List<MenuItem> firstItems = [home, share, settings];
+  static const List<MenuItem> secondItems = [logout];
+
+  static const home = MenuItem(text: 'Home', icon: Icons.home);
+  static const share = MenuItem(text: 'Share', icon: Icons.share);
+  static const settings = MenuItem(text: 'Settings', icon: Icons.settings);
+  static const logout = MenuItem(text: 'Log Out', icon: Icons.logout);
+
+  static Widget buildItem(MenuItem item) {
+    return Row(
+      children: [
+        Icon(item.icon, color: Colors.white, size: 22),
+        const SizedBox(
+          width: 10,
+        ),
+        Text(
+          item.text,
+          style: const TextStyle(
+            color: Colors.white,
+          ),
+        ),
+      ],
+    );
+  }
+
+  static onChanged(BuildContext context, MenuItem item) {
+    switch (item) {
+      case MenuItems.home:
+        //Do something
+        break;
+      case MenuItems.settings:
+        //Do something
+        break;
+      case MenuItems.share:
+        //Do something
+        break;
+      case MenuItems.logout:
+        //Do something
+        break;
+    }
   }
 }
