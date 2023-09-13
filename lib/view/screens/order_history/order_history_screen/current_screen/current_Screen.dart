@@ -15,22 +15,23 @@ class CurrentScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        OrderItem(
+        const OrderItem(
           text2: TextManager.TEAM_CHECK,
-          x: true,
-        ),
-        SizedBox(height: 24.h,),
-        OrderItem(
-          text2: TextManager.RESCHEDULE,
-          cancel: true,
-          x: false,
+          teamCheck: true,
 
         ),
         SizedBox(height: 24.h,),
-        OrderItem(
+        const OrderItem(
           text2: TextManager.RESCHEDULE,
           cancel: true,
-          x: false,
+          teamCheck: false,
+
+        ),
+        SizedBox(height: 24.h,),
+        const OrderItem(
+          text2: TextManager.RESCHEDULE,
+          cancel: true,
+          teamCheck: false,
           cancelPressed: true,
 
         ),

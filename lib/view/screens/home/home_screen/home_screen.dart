@@ -17,7 +17,7 @@ import '../home_widget/top_home/top_home.dart';
 import '../home_widget/top_services_widget/top_services_widget.dart';
 class HomeScreen extends StatelessWidget
 {
-   HomeScreen({super.key});
+   const HomeScreen({super.key});
   // Initial Selected Value
   @override
   Widget build(BuildContext context)
@@ -26,7 +26,7 @@ class HomeScreen extends StatelessWidget
       backgroundColor: ColorManager.colorScaffold,
       body: SafeArea(
         child: SingleChildScrollView(
-          physics: BouncingScrollPhysics(),
+          physics: const BouncingScrollPhysics(),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children:
@@ -60,7 +60,7 @@ class HomeScreen extends StatelessWidget
                             child: CardOffer(),
                           ),
                           //  CardOffer(),
-                          CardOffer(),
+                          // CardOffer(),
                         SizedBox(height: 24.h,),
                         Text(TextManager.ALL_CATEGORIES,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 18),),
                         SizedBox(height: 8.h,),

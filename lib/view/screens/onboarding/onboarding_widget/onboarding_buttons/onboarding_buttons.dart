@@ -38,7 +38,7 @@ final int? currentIndex;
               );
             },
           ),
-        ),
+        )),
         Expanded(
           child: Padding(
             padding: EdgeInsets.only(top: 30.h, bottom: 60.h,left: 16.w,right: 16.w),
@@ -60,7 +60,7 @@ final int? currentIndex;
             },
           ),
         ),
-
+        ),
       ],
     );
 

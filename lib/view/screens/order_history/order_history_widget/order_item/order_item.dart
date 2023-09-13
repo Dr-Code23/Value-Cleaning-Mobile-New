@@ -8,6 +8,7 @@ import 'package:value_cleaning/view/screens/qr_code/qr_code_screen/qr_code_scree
 
 import '../../../../../core/assets_manager/assets_manager.dart';
 import '../../../../../core/color_manager/color_manager.dart';
+import '../../../../../core/route_manager/page_name.dart';
 import '../../../../../core/style_font_manager/style_manager.dart';
 import '../../../../../core/text_manager/text_manager.dart';
 import '../card_defination/card_definaion.dart';
@@ -15,14 +16,14 @@ import '../card_defination/card_definaion.dart';
 class OrderItem extends StatelessWidget {
   final String? text;
   final String? text2;
-  final bool? x;
+  final bool? teamCheck;
   final double? sizedBox;
   final bool? details;
   final bool? cancel;
   final bool? cancelPressed;
 
 
-  const OrderItem({super.key, this.text2, this.x=false, this.text=TextManager.SEE_ALL_DEAILS, this.sizedBox=51, this.details=false, this.cancel=false, this.cancelPressed=false});
+  const OrderItem({super.key, this.text2, this.teamCheck=false, this.text=TextManager.SEE_ALL_DEAILS, this.sizedBox=51, this.details=false, this.cancel=false, this.cancelPressed=false});
 
   @override
   Widget build(BuildContext context) {
@@ -70,7 +71,7 @@ class OrderItem extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: 16.h,),
-                CardDefinition(),
+                const CardDefinition(),
               ],
             ),
           ),
@@ -94,11 +95,17 @@ class OrderItem extends StatelessWidget {
                 ),
                 child:Row(
                   children: [
-                   x!?Padding(
-                      padding:  EdgeInsets.only(left: 35.w,right: 10.w),
-                      child: SvgPicture.asset(AssetsManager.QR_CODE,color: ColorManager.colorWhite,width: 24.w,height: 24.h,),
-                    ):const SizedBox(),
-                     !x!?SizedBox(width: sizedBox!.w,):const SizedBox(),
+                   teamCheck!?
+                   InkWell(
+                     onTap: (){
+                       Get.toNamed(PageName.QR_CODE);
+                     },
+                     child: Padding(
+                        padding:  EdgeInsets.only(left: 35.w,right: 10.w),
+                        child: SvgPicture.asset(AssetsManager.QR_CODE,color: ColorManager.colorWhite,width: 24.w,height: 24.h,),
+                      ),
+                   ):const SizedBox(),
+                     !teamCheck!?SizedBox(width: sizedBox!.w,):const SizedBox(),
                     Center(child: Text(text2!,style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 14),)),
                   ],
                 ),

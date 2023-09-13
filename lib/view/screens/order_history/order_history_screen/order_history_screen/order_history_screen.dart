@@ -41,6 +41,12 @@ class OrderHistoryScreenState extends State<OrderHistoryScreen> with SingleTicke
               children: <Widget>[
                 AppBarWidget(text: TextManager.ORDER_HISTORY,height: 130.h,rightPaddingText: 129,rightPadding: 95.08,),
                 Container(
+                  width:557.58.w,
+                  height: 59.58.h,
+                  decoration: BoxDecoration(
+                    color: ColorManager.colorScaffold,
+                    borderRadius: BorderRadius.circular(17.r),
+                  ),
                   child: TabBar(
                       onTap: (value){
                         setState(() {
@@ -55,12 +61,6 @@ class OrderHistoryScreenState extends State<OrderHistoryScreen> with SingleTicke
                         TabBarItem(text: TextManager.CANCELLED,color:currentIndex==1?ColorManager.colorDeepGreen:ColorManager.colorGrey),
                         TabBarItem(text: TextManager.FINISHED,color:currentIndex==2?ColorManager.colorDeepGreen:ColorManager.colorGrey),
                       ]
-                  ),
-                  width:557.58.w,
-                  height: 59.58.h,
-                  decoration: BoxDecoration(
-                    color: ColorManager.colorScaffold,
-                    borderRadius: BorderRadius.circular(17.r),
                   ),
                 ),
                 const SizedBox(height: 40.42,),

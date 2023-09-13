@@ -11,7 +11,7 @@ class CancelledScreen extends StatelessWidget {
     return OrderItem(
       text2: TextManager.RESCHEDULE,
       sizedBox: 51,
-      x: false,
+      teamCheck: false,
     );
   }
 }
