@@ -1,10 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:value_cleaning/view/screens/qr_code/qr_code_screen/qr_code_screen.dart';
 
 import '../../../../../core/assets_manager/assets_manager.dart';
 import '../../../../../core/color_manager/color_manager.dart';
@@ -17,13 +14,22 @@ class OrderItem extends StatelessWidget {
   final String? text;
   final String? text2;
   final bool? teamCheck;
+  final bool? rateExperience;
   final double? sizedBox;
   final bool? details;
   final bool? cancel;
   final bool? cancelPressed;
 
-
-  const OrderItem({super.key, this.text2, this.teamCheck=false, this.text=TextManager.SEE_ALL_DEAILS, this.sizedBox=51, this.details=false, this.cancel=false, this.cancelPressed=false});
+  const OrderItem(
+      {super.key,
+      this.text2,
+      this.teamCheck = false,
+      this.rateExperience = false,
+      this.text = TextManager.SEE_ALL_DEAILS,
+      this.sizedBox = 51,
+      this.details = false,
+      this.cancel = false,
+      this.cancelPressed = false});
 
   @override
   Widget build(BuildContext context) {
@@ -78,22 +84,55 @@ class OrderItem extends StatelessWidget {
           Row(
             children: [
               Container(
-                width: 178.w,
-                decoration: BoxDecoration(
-                    color: ColorManager.colorPrimary,
-                    borderRadius: BorderRadius.only(bottomLeft: Radius.circular(16.r))
+                  width: 178.w,
+                  height: 40.h,
+
+                  decoration: BoxDecoration(
+                      color: ColorManager.colorPrimary,
+                      borderRadius: BorderRadius.only(bottomLeft: Radius.circular(16.r))
+                  ),
+                  child:Center(child: Text(text!,style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 14),)),
                 ),
-                child:Center(child: Text(text!,style: getBoldStyle(color: ColorManager.colorWhite,fontSize: 14),)),
+
+              // rateExperience!
+              //     ? InkWell(
+              //         onTap: () {
+              //           Get.toNamed(PageName.RATE_EXPERIENCE);
+              //         },
+              //         child: Container(
+              //           width: 178.w,
+              //           height: 40.h,
+              //           decoration: BoxDecoration(
+              //               color: ColorManager.colorPrimary,
+              //               borderRadius: BorderRadius.only(
+              //                   bottomLeft: Radius.circular(16.r))),
+              //         ))
+              //     : const SizedBox(),
+              // !rateExperience!
+              //     ? SizedBox(
+              //         width: sizedBox!.w,
+              //       )
+              //     : const SizedBox(),
+              // Center(
+              //     child: Text(
+              //   text!,
+              //   style:
+              //       getBoldStyle(color: ColorManager.colorWhite, fontSize: 14),
+              // )),
+
+              SizedBox(
+                width: 2.w,
               ),
-              SizedBox(width: 2.w,),
               Container(
                 width: 178.w,
                 height: 40.h,
                 decoration: BoxDecoration(
-                    color: !cancelPressed!?ColorManager.colorBlue:ColorManager.colorBlue.withOpacity(.1),
-                    borderRadius: BorderRadius.only(bottomRight: Radius.circular(16.r))
-                ),
-                child:Row(
+                    color: !cancelPressed!
+                        ? ColorManager.colorBlue
+                        : ColorManager.colorBlue.withOpacity(.1),
+                    borderRadius:
+                        BorderRadius.only(bottomRight: Radius.circular(16.r))),
+                child: Row(
                   children: [
                    teamCheck!?
                    InkWell(

@@ -16,49 +16,47 @@ class RateExperienceScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ColorManager.colorScaffold,
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              const AppBarWidget(
-                text: TextManager.RATE_EXPERIENCE,
-                height: 125,
-              ),
-              SizedBox(
-                height: 50.h,
-              ),
-              const RateCard(),
-              Padding(
-                padding: EdgeInsets.all(16.sp),
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(16.sp),
-                    color: ColorManager.colorWhite,
-                    boxShadow: const [
-                      BoxShadow(
-                          blurRadius: 2,
-                          color: ColorManager.colorGrey2,
-                          offset: Offset(0, 0),
-                          spreadRadius: 1)
-                    ],
-                  ),
-                  child: TextFormFieldCustom(
-                    maxLines: 5,
-                    validate: (String? value) {
-                      if (value!.isEmpty) {
-                        return 'Filed Required';
-                      }
-                      return null;
-                    },
-                    hint: 'write something.......',
-                    boarderColorSide: ColorManager.colorWhite,
-                    boarderColor: ColorManager.colorWhite,
-                  ),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            const AppBarWidget(
+              text: TextManager.RATE_EXPERIENCE,
+              height: 125,
+            ),
+            SizedBox(
+              height: 50.h,
+            ),
+            const RateCard(),
+            Padding(
+              padding: EdgeInsets.all(16.sp),
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(16.sp),
+                  color: ColorManager.colorWhite,
+                  boxShadow: const [
+                    BoxShadow(
+                        blurRadius: 2,
+                        color: ColorManager.colorGrey2,
+                        offset: Offset(0, 0),
+                        spreadRadius: 1)
+                  ],
+                ),
+                child: TextFormFieldCustom(
+                  maxLines: 5,
+                  validate: (String? value) {
+                    if (value!.isEmpty) {
+                      return 'Filed Required';
+                    }
+                    return null;
+                  },
+                  hint: 'write something.......',
+                  boarderColorSide: ColorManager.colorWhite,
+                  boarderColor: ColorManager.colorWhite,
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
       bottomSheet: CustomBottomSheetButton(
