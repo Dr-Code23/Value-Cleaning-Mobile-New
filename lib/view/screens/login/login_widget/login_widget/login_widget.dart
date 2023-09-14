@@ -22,56 +22,54 @@ class LoginWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Form(
-        child:  Column(
-          children: [
-            Padding(
-              padding:  EdgeInsets.only(right: 32.w,left: 32.w),
-              child: Column(
-                children: [
-                  TextFormFieldCustom(
-                    validate: (String? value) {
-                      return null;
-                    },
-                    label: TextManager.ENTER_EMAIL,
-                  ),
-                  SizedBox(
-                    height: 16.h,
-                  ),
-                  TextFormFieldCustom(
-                    validate: (String? value) {
-                      return null;
-                    },
-                    label: TextManager.ENTER_PASSWORD,
-                  ),
-                  SizedBox(height: 16.h,),
-                  Row(
-                    children: [
-                      const CheckBoxWidget(text: TextManager.REMEMBER_ME,x: false,Price: '9'),
-                      SizedBox(width: 89.w,),
-                      InkWell(
-                          onTap: (){
-                            Get.toNamed(PageName.FORGET_PASSWORD);
+      child:  Column(
+        children: [
+          Padding(
+            padding:  EdgeInsets.only(right: 32.w,left: 32.w),
+            child: Column(
+              children: [
+                TextFormFieldCustom(
+                  validate: (String? value) {
+                    return null;
+                  },
+                  label: TextManager.ENTER_EMAIL,
+                ),
+                SizedBox(
+                  height: 16.h,
+                ),
+                TextFormFieldCustom(
+                  validate: (String? value) {
+                    return null;
+                  },
+                  label: TextManager.ENTER_PASSWORD,
+                ),
+                SizedBox(height: 16.h,),
+                Row(
+                  children: [
+                    const CheckBoxWidget(text: TextManager.REMEMBER_ME,x: false,Price: '9'),
+                    Spacer(),
+                    InkWell(
+                        onTap: (){
+                          Get.toNamed(PageName.FORGET_PASSWORD);
+                        },
+                        child: Text(TextManager.FORGET_PASSWORD,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 14),)),
 
-                          },
-                          child: Text(TextManager.FORGET_PASSWORD,style: getBoldStyle(color: ColorManager.colorDeepGrey,fontSize: 14),)),
-                      SizedBox(width: 89.w,),
-                      const CheckBoxWidget(text: TextManager.REMEMBER_ME,x: false,Price: '9'),
+                  ],
+                ),
+                SizedBox(height: 56.h,),
+                ButtonValuCustom(text: TextManager.LOG_IN,colorManager: ColorManager.colorPrimary,onPressed: (){
+                  Get.toNamed(PageName.LAYOUT);
 
-                    ],
-                  ),
-                  SizedBox(height: 56.h,),
-                  ButtonValuCustom(text: TextManager.LOG_IN,colorManager: ColorManager.colorPrimary,onPressed: (){
-                    Get.toNamed(PageName.LAYOUT);
+                },),
+                const SignInWithGoogleOrFaceBook(),
 
-                  },),
-                  const SignInWithGoogleOrFaceBook(),
-
-                ],
-              ),
+              ],
             ),
-          ],
-        ),
+          ),
+        ],
+      ),
 
     );
   }
 }
+

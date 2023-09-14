@@ -14,6 +14,7 @@ class FinishedScreen extends StatelessWidget {
       sizedBox: 27,
       details: true,
       x: false,
+
     );
   }
 }

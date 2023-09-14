@@ -1,4 +1,6 @@
 
+import 'package:device_preview/device_preview.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -11,11 +13,17 @@ import 'core/route_manager/route_manager.dart';
 
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    DevicePreview(
+    enabled: !kReleaseMode,
+    builder: (context) => const MyApp(), // Wrap your app
+  ),);
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({super.key}
+
+      );
 
   @override
   Widget build(BuildContext context) {
@@ -33,6 +41,7 @@ class MyApp extends StatelessWidget {
               locale: const Locale('en'),
               debugShowCheckedModeBanner: false,
               initialRoute: PageName.TRANSLATION_PAGE,
+              builder: DevicePreview.appBuilder,
               title: 'Everest',
               getPages: pages,
               theme: ThemeData(

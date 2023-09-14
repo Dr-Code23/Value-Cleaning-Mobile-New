@@ -1,4 +1,3 @@
-import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 
 class CustomButtonTest extends StatefulWidget {
@@ -14,12 +13,12 @@ class _CustomButtonTestState extends State<CustomButtonTest> {
     return Scaffold(
       body: Center(
         child: DropdownButtonHideUnderline(
-          child: DropdownButton2(
-            customButton: const Icon(
-              Icons.list,
-              size: 46,
-              color: Colors.red,
-            ),
+          child: DropdownButton(
+            // customButton: const Icon(
+            //   Icons.list,
+            //   size: 46,
+            //   color: Colors.red,
+            // ),
             // customItemsIndexes: const [3],
             // customItemsHeight: 8,
             items: [

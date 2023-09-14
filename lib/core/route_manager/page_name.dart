@@ -24,6 +24,7 @@ class PageName
   static const String ORDER_DETAILS = '/ORDER_DETAILS_SCREEN';
   static const String CHECK_OUT = '/CHECK_OUT_SCREEN';
   static const String QR_CODE = '/QR_CODE_SCREEN';
+  static const String CHANGE_CARD = '/CHANGE_CARD_SCREEN';
 
 
 }
