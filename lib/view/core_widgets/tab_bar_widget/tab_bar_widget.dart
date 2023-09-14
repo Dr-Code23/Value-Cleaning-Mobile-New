@@ -20,13 +20,13 @@ class AppBarWidget extends StatelessWidget {
 
   const AppBarWidget(
       {super.key,
-      this.text,
-      this.rightPadding = 114,
-      this.rightPaddingText = 154,
-      this.height = 124,
-      this.bottomIcon = 40,
-      this.bottomText = 39,
-      this.isSearch = false});
+        this.text,
+        this.rightPadding = 114,
+        this.rightPaddingText = 154,
+        this.height = 124,
+        this.bottomIcon = 40,
+        this.bottomText = 39,
+        this.isSearch = false});
 
   @override
   Widget build(BuildContext context) {
@@ -43,22 +43,21 @@ class AppBarWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Padding(
-            padding:  EdgeInsets.only(top: 40.h),
-            child: CustomLeftArrowIcon(
-                color: ColorManager.colorWhite,
-                right:0,
-                left: 16.w,
-                top: 0.h,
-                bottom: bottomIcon!,
-                onPressed: (){
-                  Get.back();
-                }),
-          ),
+          CustomLeftArrowIcon(
+              color: ColorManager.colorWhite,
+              right:0,
+              left: 16.w,
+              top: 60.h,
+              bottom: bottomIcon!,
+              onPressed: (){
+                Get.back();
+              }),
+          const Spacer(),
           Text(
             text!,
             style: getBoldStyle(color: ColorManager.colorWhite, fontSize: 22),
           ),
+          const Spacer(),
           if (isSearch!)
             Padding(
               padding: EdgeInsets.only(right: 16.w, top: 60.h, bottom: 40.h),
@@ -72,3 +71,5 @@ class AppBarWidget extends StatelessWidget {
     );
   }
 }
+
+

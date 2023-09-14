@@ -6,10 +6,6 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/routes/transitions_type.dart';
 import 'package:value_cleaning/core/style_font_manager/style_manager.dart';
 import 'package:value_cleaning/core/text_manager/text_manager.dart';
-import 'package:value_cleaning/view/core_widgets/custom_arrow_left/custom_arrow_left.dart';
-import 'package:value_cleaning/view/core_widgets/elevated_button/elevated_button_custom.dart';
-import 'package:value_cleaning/view/screens/check_out/check_out_Screen/check_out_Screen.dart';
-import '../../../../core/assets_manager/assets_manager.dart';
 import '../../../../core/color_manager/color_manager.dart';
 import '../../../../core/route_manager/page_name.dart';
 import '../../../core_widgets/next_button_Widget/next_button_Widget/next_button_Widget.dart';
@@ -26,49 +22,49 @@ class PaymentMethodScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: ColorManager.colorScaffold,
-        body: SafeArea(
-          child: SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                const AppBarWidget(
-                  text: TextManager.PAYMENT_METHOD,
+        body: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              const AppBarWidget(
+                text: TextManager.PAYMENT_METHOD,
+              ),
+              Container(
+                width: 390.w,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(24.r),
+                    topRight: Radius.circular(24.r),
+                  ),
+                  color: ColorManager.colorScaffold,
                 ),
-                Container(
-                  width: 390.w,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(24.r),
-                      topRight: Radius.circular(24.r),
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(
+                          bottom: 20.0.h, left: 16.w, right: 16.w),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          const PaymentMethodWidget(),
+                          SizedBox(
+                            height: 21.h,
+                          ),
+                        ],
+                      ),
                     ),
-                    color: ColorManager.colorScaffold,
-                  ),
-                  child: Column(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.only(
-                            bottom: 20.0.h, left: 16.w, right: 16.w),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.end,
-                          children: [
-                            const PaymentMethodWidget(),
-                            SizedBox(
-                              height: 21.h,
-                            ),
-                          ],
-                        ),
-                      ),
-                      NextButtonWidget(
-                        onPressed: () {
-                          Get.toNamed(PageName.CHECK_OUT);
-                        },
-                      ),
-                    ],
-                  ),
+                    NextButtonWidget(
+                      onPressed: () {
+                        Get.toNamed(PageName.CHECK_OUT);
+                      },
+                    ),
+                  ],
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ));
   }
 }
+
+

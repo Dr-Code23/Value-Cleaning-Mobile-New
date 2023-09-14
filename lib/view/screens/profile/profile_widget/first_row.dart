@@ -20,35 +20,29 @@ class FirstRow extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Expanded(
-            child: Padding(
-              padding:  EdgeInsets.all(5.sp),
-              child: TopButtons(
-                  text: TextManager.FAVOURITE_LIST,
-                  image: AssetsManager.FAV,
-                  cardColor: ColorManager.colorFav,
-                  onTapFunx: () {
-                    Get.toNamed(
-                      PageName.FAVOURITE,
-                    );
-                  }),
-            ),
+            child: TopButtons(
+                text: TextManager.FAVOURITE_LIST,
+                image: AssetsManager.FAV,
+                cardColor: ColorManager.colorFav,
+                onTapFunx: () {
+                  Get.toNamed(
+                    PageName.FAVOURITE,
+                  );
+                }),
           ),
           SizedBox(
             width: 20.w,
           ),
           Expanded(
-            child: Padding(
-              padding:  EdgeInsets.all(5.sp),
-              child: TopButtons(
-                text: TextManager.PAYMENT_SETTINGS,
-                image: AssetsManager.CREDIT_CARD,
-                cardColor: ColorManager.colorBlueLight,
-                onTapFunx: () {
-                  Get.toNamed(
-                    PageName.PAYMENT_SETTINGS,
-                  );
-                },
-              ),
+            child: TopButtons(
+              text: TextManager.PAYMENT_SETTINGS,
+              image: AssetsManager.CREDIT_CARD,
+              cardColor: ColorManager.colorBlueLight,
+              onTapFunx: () {
+                Get.toNamed(
+                  PageName.PAYMENT_SETTINGS,
+                );
+              },
             ),
           ),
         ],
@@ -56,3 +50,5 @@ class FirstRow extends StatelessWidget {
     );
   }
 }
+
+

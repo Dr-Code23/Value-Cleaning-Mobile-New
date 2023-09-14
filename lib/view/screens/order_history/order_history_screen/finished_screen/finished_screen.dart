@@ -13,7 +13,8 @@ class FinishedScreen extends StatelessWidget {
       text2: TextManager.MAKE_NEW_ORDER,
       sizedBox: 27,
       details: true,
-      teamCheck: false,
+      x: false,
+
     );
   }
 }

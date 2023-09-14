@@ -187,4 +187,12 @@ List<GetPage> pages = [
       transitionDuration: const Duration(
         milliseconds: 250,
       )),
+  // GetPage(
+  //     name: PageName.CHANGE_CARD,
+  //     page: () => const ChangeCardScreen(),
+  //     transition: Transition.rightToLeft,
+  //     transitionDuration: const Duration(
+  //       milliseconds: 250,
+  //     )),
+
 ];
